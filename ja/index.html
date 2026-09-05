@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NanoBio Materials 対象 health, energy and environment—research by Dr. Arivazhagan Rajendran at Kyoto University spanning nucleic-acid chemistry, DNA nanotechnology, functional nanomaterials and CO₂ reduction.">
+  <meta name="theme-color" content="#081722">
+  <title>NanoBio Materials | Arivazhagan Rajendran</title>
+  <style>
+    :root {
+      --ink: #081722;
+      --ink-soft: #122734;
+      --paper: #f4f7f6;
+      --white: #ffffff;
+      --text: #17232b;
+      --muted: #64727b;
+      --line: #d8e0df;
+      --cyan: #18c6c8;
+      --cyan-soft: #dff7f5;
+      --amber: #ffb547;
+      --red: #ee684f;
+      --health: #f06c82;
+      --energy: #ffb547;
+      --environment: #54c98f;
+      --max: 1180px;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    ::selection { background: var(--cyan); color: var(--ink); }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -5rem;
+      z-index: 1000;
+      padding: .65rem 1rem;
+      background: var(--amber);
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      background: rgba(8, 23, 34, .88);
+      border-bottom: 1px solid rgba(255, 255, 255, .11);
+      backdrop-filter: blur(18px);
+    }
+    .nav-wrap {
+      width: min(var(--max), calc(100% - 2rem));
+      height: 72px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      white-space: nowrap;
+    }
+    .brand-mark {
+      width: 33px;
+      height: 33px;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      background: var(--cyan);
+      border-radius: 50%;
+      font: 700 .82rem/1 var(--serif);
+    }
+    .nav-links { display: flex; align-items: center; gap: .9rem; }
+    .nav-links a {
+      color: rgba(255,255,255,.78);
+      text-decoration: none;
+      font-size: .83rem;
+      font-weight: 650;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--white); }
+    .nav-links .nav-contact {
+      padding: .6rem .9rem;
+      color: var(--ink);
+      background: var(--amber);
+      border-radius: 999px;
+    }
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,.18);
+      color: white;
+      background: transparent;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 760px;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 78% 20%, rgba(24,198,200,.22), transparent 31%),
+        linear-gradient(122deg, var(--ink) 0%, #0b1f2d 62%, #0f3240 100%);
+    }
+    .hero::be対象e {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .18;
+      background-image:
+        linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, black, transparent 84%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -8rem;
+      bottom: -12rem;
+      width: 34rem;
+      aspect-ratio: 1;
+      border: 80px solid rgba(238,104,79,.13);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(var(--max), calc(100% - 2rem));
+      margin: auto;
+      padding: 158px 0 104px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.22fr) minmax(330px, .78fr);
+      gap: clamp(3rem, 8vw, 7rem);
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 1.25rem;
+      color: var(--cyan);
+      font-size: .78rem;
+      font-weight: 850;
+      letter-spacing: .18em;
+      text-trans対象m: uppercase;
+    }
+    .hero h1 {
+      max-width: 830px;
+      margin: 0;
+      font: 400 clamp(3.4rem, 7.5vw, 7.1rem)/.92 var(--serif);
+      letter-spacing: -.055em;
+    }
+    .hero h1 span { color: var(--amber); }
+    .hero-mission {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .55rem;
+      margin: 1.35rem 0 0;
+      color: rgba(255,255,255,.62);
+      font-size: .9rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-trans対象m: uppercase;
+    }
+    .mission-word { padding: .36rem .66rem; border: 1px solid currentColor; border-radius: 999px; }
+    .mission-word.health { color: var(--health); }
+    .mission-word.energy { color: var(--energy); }
+    .mission-word.environment { color: var(--environment); }
+    .hero-name { margin: 1.7rem 0 0; color: var(--white); font-size: 1rem; font-weight: 800; }
+    .hero-name span { display: block; margin-top: .15rem; color: rgba(255,255,255,.55); font-size: .82rem; font-weight: 600; }
+    .hero-lede {
+      max-width: 690px;
+      margin: 1rem 0 0;
+      color: rgba(255,255,255,.78);
+      font-size: clamp(1.08rem, 2vw, 1.27rem);
+      line-height: 1.55;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .72rem 1.1rem;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      color: var(--white);
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 800;
+      transition: trans対象m .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .button:hover { trans対象m: translateY(-2px); border-color: rgba(255,255,255,.55); }
+    .button.primary { color: var(--ink); background: var(--cyan); border-color: var(--cyan); }
+    .button .arrow { margin-left: .6rem; font-size: 1.08rem; }
+
+    .portrait-stage { position: relative; justify-self: end; width: min(100%, 410px); }
+    .portrait-frame {
+      position: relative;
+      margin: 0 1.2rem 1.2rem 0;
+      padding: .72rem;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 1.2rem;
+      box-shadow: 30px 32px 0 var(--cyan);
+      trans対象m: rotate(1.5deg);
+    }
+    .portrait-frame img {
+      width: 100%;
+      aspect-ratio: 1.06;
+      object-fit: cover;
+      border-radius: .75rem;
+      filter: saturate(.82) contrast(1.04);
+    }
+    .portrait-note {
+      position: absolute;
+      left: -2.1rem;
+      bottom: -2rem;
+      max-width: 245px;
+      padding: 1rem 1.1rem;
+      color: var(--ink);
+      background: var(--amber);
+      box-shadow: 0 20px 60px rgba(0,0,0,.2);
+      trans対象m: rotate(-2deg);
+    }
+    .portrait-note strong { display: block; font: 700 1.05rem/1.2 var(--serif); }
+    .portrait-note span { display: block; margin-top: .35rem; font-size: .77rem; line-height: 1.4; }
+
+    .metrics {
+      position: relative;
+      z-index: 2;
+      width: min(var(--max), calc(100% - 2rem));
+      margin: -58px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) 1.5fr;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 70px rgba(16,34,45,.12);
+    }
+    .metric { min-height: 122px; padding: 1.35rem 1.5rem; border-right: 1px solid var(--line); }
+    .metric:last-child { border-right: 0; }
+    .metric strong { display: block; color: var(--ink); font: 400 2.35rem/1 var(--serif); letter-spacing: -.04em; }
+    .metric span { display: block; margin-top: .45rem; color: var(--muted); font-size: .8rem; font-weight: 750; letter-spacing: .05em; text-trans対象m: uppercase; }
+    .metric.affiliation { display: flex; flex-direction: column; justify-content: center; }
+    .metric.affiliation strong { font-size: 1.2rem; line-height: 1.25; }
+    .metric.affiliation span { text-trans対象m: none; letter-spacing: 0; line-height: 1.45; }
+
+    .section { padding: clamp(5.4rem, 10vw, 8.5rem) 0; }
+    .section-inner { width: min(var(--max), calc(100% - 2rem)); margin: auto; }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(230px, .52fr) minmax(0, 1.48fr);
+      gap: 3rem;
+      align-items: end;
+      margin-bottom: 3.4rem;
+    }
+    .kicker { color: var(--red); font-size: .78rem; font-weight: 850; letter-spacing: .16em; text-trans対象m: uppercase; }
+    .section-head h2 { margin: .6rem 0 0; color: var(--ink); font: 400 clamp(2.4rem, 5vw, 4.3rem)/1 var(--serif); letter-spacing: -.045em; }
+    .section-head p { max-width: 690px; margin: 0; color: var(--muted); font-size: 1.06rem; }
+    #academic-path .section-head { grid-template-columns: minmax(0, 1.12fr) minmax(280px, .88fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: end; }
+    #academic-path .section-head p { max-width: 520px; justify-self: end; }
+
+    .pillars { padding-top: clamp(4.5rem, 8vw, 7rem); }
+    .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .pillar-card {
+      position: relative;
+      min-height: 310px;
+      overflow: hidden;
+      padding: clamp(1.7rem, 3vw, 2.4rem);
+      color: var(--white);
+      background: var(--ink-soft);
+      border-top: 5px solid var(--pillar-color);
+    }
+    .pillar-card::after {
+      content: "";
+      position: absolute;
+      right: -4.5rem;
+      bottom: -5.3rem;
+      width: 12rem;
+      aspect-ratio: 1;
+      border: 38px solid color-mix(in srgb, var(--pillar-color) 24%, transparent);
+      border-radius: 50%;
+    }
+    .pillar-card.health { --pillar-color: var(--health); }
+    .pillar-card.energy { --pillar-color: var(--energy); }
+    .pillar-card.environment { --pillar-color: var(--environment); }
+    .pillar-label { color: var(--pillar-color); font-size: .75rem; font-weight: 850; letter-spacing: .16em; text-trans対象m: uppercase; }
+    .pillar-card h3 { margin: 1rem 0 .75rem; font: 400 clamp(2rem, 3.5vw, 3rem)/1 var(--serif); }
+    .pillar-card p { position: relative; z-index: 1; margin: 0; color: rgba(255,255,255,.68); }
+    .pillar-card ul { position: relative; z-index: 1; margin: 1.4rem 0 0; padding: 0; list-style: none; }
+    .pillar-card li { padding: .45rem 0; border-top: 1px solid rgba(255,255,255,.12); font-size: .84rem; font-weight: 650; }
+
+    .research-path {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 2.2rem;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+    .path-step { position: relative; padding: 1rem 1.15rem; color: var(--ink); font-size: .82rem; font-weight: 800; }
+    .path-step:not(:last-child) { border-right: 1px solid var(--line); }
+    .path-step:not(:last-child)::after { content: "→"; position: absolute; z-index: 1; right: -.65rem; top: 50%; width: 1.3rem; trans対象m: translateY(-50%); color: var(--red); background: var(--white); text-align: center; }
+
+    .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .research-card {
+      min-height: 300px;
+      padding: clamp(1.8rem, 4vw, 3.1rem);
+      background: rgba(255,255,255,.48);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      transition: background .25s ease, trans対象m .25s ease;
+    }
+    .research-card:hover { position: relative; z-index: 1; background: var(--white); trans対象m: translateY(-3px); }
+    .card-number { color: var(--cyan); font: 700 .85rem/1 var(--serif); }
+    .research-card h3 { margin: 2rem 0 .8rem; color: var(--ink); font: 400 clamp(1.55rem, 3vw, 2.15rem)/1.1 var(--serif); }
+    .research-card p { margin: 0; color: var(--muted); }
+    .research-tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.4rem; }
+    .research-tags span { padding: .26rem .58rem; background: var(--cyan-soft); border-radius: 999px; color: #1a5b5d; font-size: .74rem; font-weight: 750; }
+    .direction-strip {
+      margin-top: 1.8rem;
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      color: var(--white);
+      background: var(--ink);
+    }
+    .direction-strip strong { font-family: var(--serif); font-size: 1.18rem; }
+    .direction-strip span { color: rgba(255,255,255,.67); font-size: .88rem; text-align: right; }
+    .direction-strip a { color: var(--amber); font-weight: 800; text-underline-offset: .2rem; }
+    .network-block { margin-top: 1rem; padding: clamp(1.5rem, 3vw, 2.2rem); background: var(--white); border: 1px solid var(--line); }
+    .network-block h3 { margin: 0 0 1rem; color: var(--ink); font: 400 clamp(1.45rem, 2.8vw, 2rem)/1.1 var(--serif); }
+    .network-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 1.5rem; margin: 0; padding: 0; list-style: none; }
+    .network-grid li { padding: .75rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+    .network-grid a { color: var(--ink); font-weight: 800; text-underline-offset: .2rem; }
+
+    .publications { color: var(--white); background: var(--ink); }
+    .publications .section-head h2 { color: var(--white); }
+    .publications .section-head p { color: rgba(255,255,255,.62); }
+    .filter-row { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 1.5rem; }
+    .filter-button {
+      padding: .55rem .85rem;
+      color: rgba(255,255,255,.68);
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 999px;
+      font: 750 .82rem/1 var(--sans);
+      cursor: pointer;
+    }
+    .filter-button[aria-pressed="true"] { color: var(--ink); background: var(--amber); border-color: var(--amber); }
+    .publication-list { border-top: 1px solid rgba(255,255,255,.14); }
+    .publication-item {
+      display: grid;
+      grid-template-columns: 82px 1fr auto;
+      gap: 1.4rem;
+      align-items: start;
+      padding: 1.45rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+    .publication-item[hidden] { display: none; }
+    .pub-year { color: var(--cyan); font-family: var(--serif); font-size: 1.18rem; }
+    .pub-title { margin: 0; max-width: 780px; font-size: 1rem; font-weight: 650; line-height: 1.5; }
+    .pub-meta { margin: .4rem 0 0; color: rgba(255,255,255,.54); font-size: .84rem; }
+    .pub-link {
+      align-self: center;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: color .2s ease, border-color .2s ease, trans対象m .2s ease;
+    }
+    .pub-link:hover { color: var(--cyan); border-color: var(--cyan); trans対象m: translate(2px, -2px); }
+    .archive-link { margin-top: 2rem; display: inline-flex; color: var(--amber); font-weight: 800; text-underline-offset: .25rem; }
+
+    .funding-section { background: #eaf1f0; }
+    .funding-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .funding-card { display: flex; min-height: 250px; padding: clamp(1.5rem, 3vw, 2.2rem); flex-direction: column; background: var(--white); border-top: 4px solid var(--cyan); }
+    .funding-card.featured { color: var(--white); background: var(--ink-soft); border-color: var(--amber); }
+    .funding-period { color: var(--red); font-size: .74rem; font-weight: 850; letter-spacing: .08em; text-trans対象m: uppercase; }
+    .funding-card.featured .funding-period { color: var(--amber); }
+    .funding-card h3 { margin: 1.2rem 0 .7rem; color: var(--ink); font: 400 clamp(1.45rem, 2.7vw, 2rem)/1.08 var(--serif); }
+    .funding-card.featured h3 { color: var(--white); }
+    .funding-card p { margin: 0 0 1.2rem; color: var(--muted); }
+    .funding-card.featured p { color: rgba(255,255,255,.7); }
+    .funding-card a { margin-top: auto; color: var(--red); font-weight: 850; text-underline-offset: .22rem; }
+    .funding-card.featured a { color: var(--amber); }
+    .funding-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 1rem; background: var(--line); border: 1px solid var(--line); }
+    .funding-notes span { padding: 1rem 1.1rem; background: rgba(255,255,255,.7); font-size: .86rem; }
+    .funding-notes strong { display: block; color: var(--red); font-size: .76rem; }
+
+    .profile-section { background: #eaf1f0; }
+    .profile-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .academic-card { padding: clamp(2rem, 5vw, 3.5rem); color: var(--white); background: var(--ink-soft); }
+    .academic-card h3 { margin: 0 0 1.8rem; color: var(--amber); font: 400 clamp(1.9rem, 4vw, 2.7rem)/1 var(--serif); }
+    .career { margin: 0; padding: 0; list-style: none; }
+    .career li { position: relative; padding: 0 0 1.45rem 1.7rem; color: rgba(255,255,255,.74); border-left: 1px solid rgba(255,255,255,.2); }
+    .career li::be対象e { content: ""; position: absolute; left: -5px; top: .42rem; width: 9px; height: 9px; background: var(--cyan); border: 2px solid var(--ink-soft); border-radius: 50%; }
+    .career li:last-child { padding-bottom: 0; }
+    .career strong { display: block; margin-bottom: .2rem; color: var(--white); font-size: .96rem; }
+    .career a { color: var(--white); font-weight: 700; text-decoration-color: var(--cyan); text-underline-offset: .2rem; }
+    .career a:hover, .career a:focus-visible { color: var(--cyan); }
+    .activity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+    .activity-card { padding: 1.5rem; border-top: 4px solid var(--cyan); background: var(--white); }
+    .activity-card:nth-child(2) { border-color: var(--amber); }
+    .activity-card:nth-child(3) { border-color: var(--health); }
+    .activity-card h3 { margin: 0 0 .65rem; color: var(--ink); font: 400 1.45rem/1.1 var(--serif); }
+    .activity-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .activity-card a { display: inline-flex; margin-top: 1rem; color: var(--red); font-size: .84rem; font-weight: 850; text-underline-offset: .2rem; }
+    .section-more { margin-top: 1.8rem; display: inline-flex; color: var(--red); font-weight: 850; text-underline-offset: .25rem; }
+
+    .highlight-grid { display: grid; grid-template-columns: minmax(280px, .8fr) 1.2fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+    .cover-card { position: relative; width: min(100%, 520px); margin: auto; padding: 0 18% 14% 0; }
+    .cover-card::be対象e {
+      content: "";
+      position: absolute;
+      inset: 2rem 4% 3% 2rem;
+      background: var(--amber);
+    }
+    .cover-card img {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+      box-shadow: 0 28px 60px rgba(16,34,45,.18);
+    }
+    .cover-card .cover-secondary {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 54%;
+      height: auto;
+      border: 7px solid var(--paper);
+      trans対象m: rotate(2deg);
+    }
+    .highlight-copy h3 { margin: 0 0 1rem; color: var(--ink); font: 400 clamp(2rem, 4vw, 3.25rem)/1.05 var(--serif); letter-spacing: -.04em; }
+    .highlight-copy > p { color: var(--muted); }
+    .highlight-list { margin: 2rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .highlight-list li { display: grid; grid-template-columns: 100px 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .highlight-list time { color: var(--red); font-weight: 850; font-size: .82rem; }
+    .highlight-list span { font-weight: 650; }
+    .highlight-list a { color: inherit; text-underline-offset: .2rem; }
+
+    .news { background: var(--white); }
+    .news-grid { display: grid; grid-template-columns: 1fr; }
+    .news-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .news-list li { display: grid; grid-template-columns: 125px 1fr; gap: 1rem; padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
+    .news-list time { color: var(--muted); font-size: .82rem; font-weight: 750; }
+    .news-list p { margin: 0; }
+    .news-list a { color: var(--red); font-weight: 750; text-underline-offset: .2rem; }
+    .institutional-news { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+    .institutional-story { display: flex; min-height: 235px; padding: clamp(1.5rem, 3vw, 2.2rem); flex-direction: column; color: var(--white); background: linear-gradient(140deg,#103646,var(--ink)); text-decoration: none; }
+    .institutional-story.newspaper { background: linear-gradient(140deg,#853b2f,#4c211b); }
+    .institutional-story span { color: var(--cyan); font-size: .75rem; font-weight: 850; letter-spacing: .09em; text-trans対象m: uppercase; }
+    .institutional-story.newspaper span { color: var(--amber); }
+    .institutional-story strong { margin: 1.2rem 0; font: 400 clamp(1.45rem, 3vw, 2.15rem)/1.12 var(--serif); }
+    .institutional-story em { margin-top: auto; color: rgba(255,255,255,.78); font-size: .82rem; font-style: normal; font-weight: 800; }
+    .teaching-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .teaching-panel { padding: clamp(1.7rem, 4vw, 3rem); background: var(--paper); }
+    .teaching-panel.accent { color: var(--white); background: var(--red); }
+    .teaching-panel h3 { margin: 0 0 1rem; font: 400 2rem/1.1 var(--serif); }
+    .teaching-panel > p { margin: 0; color: var(--muted); font-size: .86rem; }
+    .teaching-panel.accent > p { color: rgba(255,255,255,.78); }
+    .course-list { margin: 1.2rem 0 0; padding: 0; list-style: none; }
+    .course-list li { padding: .72rem 0; border-bottom: 1px solid rgba(100,114,123,.22); }
+    .course-list small { display: block; margin-top: .12rem; font-size: .75rem; opacity: .8; }
+    .teaching-panel.accent .course-list li { border-color: rgba(255,255,255,.28); }
+
+    .contact { position: relative; overflow: hidden; color: var(--white); background: #0c2631; }
+    .contact::after { content: ""; position: absolute; right: -11rem; top: -13rem; width: 33rem; aspect-ratio: 1; border: 90px solid rgba(24,198,200,.09); border-radius: 50%; }
+    .contact-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(3rem, 8vw, 7rem); }
+    .contact h2 { margin: 0; max-width: 650px; font: 400 clamp(2.7rem, 6vw, 5.1rem)/.98 var(--serif); letter-spacing: -.05em; }
+    .contact h2 span { color: var(--cyan); }
+    .contact-lede { margin: 1.5rem 0 0; max-width: 640px; color: rgba(255,255,255,.65); }
+    .candidate-note { margin-top: 2rem; padding: 1.2rem 1.3rem; border-left: 3px solid var(--amber); background: rgba(255,255,255,.06); color: rgba(255,255,255,.78); }
+    .contact-details { align-self: end; border-top: 1px solid rgba(255,255,255,.18); }
+    .contact-row { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+    .contact-row span { display: block; color: var(--cyan); font-size: .73rem; font-weight: 850; letter-spacing: .13em; text-trans対象m: uppercase; }
+    .contact-row a, .contact-row p { display: block; margin: .25rem 0 0; color: var(--white); text-decoration: none; }
+    .contact-row a:hover { color: var(--amber); }
+    .profile-links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+    .profile-links a { padding: .55rem .8rem; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; color: white; text-decoration: none; font-size: .82rem; font-weight: 750; }
+    .profile-links a:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    footer { padding: 1.5rem 0; color: #8da0aa; background: var(--ink); font-size: .8rem; }
+    .footer-inner { width: min(var(--max), calc(100% - 2rem)); margin: auto; display: flex; justify-content: space-between; gap: 1rem; }
+
+    @media (max-width: 900px) {
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 1rem;
+        right: 1rem;
+        display: none;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: .3rem;
+        background: #0d2330;
+        border: 1px solid rgba(255,255,255,.14);
+        box-shadow: 0 20px 50px rgba(0,0,0,.25);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: .65rem .5rem; }
+      .nav-links .nav-contact { text-align: center; margin-top: .4rem; }
+      .hero-inner { grid-template-columns: 1fr; padding-top: 135px; }
+      .portrait-stage { justify-self: start; width: min(72vw, 390px); margin-top: .5rem; }
+      .metrics { grid-template-columns: repeat(3, 1fr); }
+      .metric.affiliation { grid-column: 1 / -1; border-top: 1px solid var(--line); }
+      .metric:nth-child(3) { border-right: 0; }
+      .section-head, .highlight-grid, .news-grid, .teaching-grid, .contact-inner, .profile-grid { grid-template-columns: 1fr; }
+      #academic-path .section-head { grid-template-columns: 1fr; align-items: start; }
+      #academic-path .section-head p { justify-self: start; }
+      .pillar-grid { grid-template-columns: 1fr; }
+      .activity-grid { grid-template-columns: 1fr; }
+      .funding-notes { grid-template-columns: 1fr; }
+      .section-head { gap: 1.2rem; }
+      .contact-details { max-width: 650px; }
+    }
+
+    @media (max-width: 640px) {
+      .hero { min-height: auto; }
+      .hero-inner { padding-bottom: 108px; }
+      .hero h1 { font-size: clamp(3rem, 16vw, 4.8rem); }
+      .portrait-stage { width: calc(100% - 1.2rem); }
+      .portrait-note { left: .5rem; }
+      .metrics { margin-top: -32px; grid-template-columns: 1fr 1fr; }
+      .metric { min-height: 106px; padding: 1rem; }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(3) { border-top: 1px solid var(--line); border-right: 1px solid var(--line); }
+      .metric.affiliation { grid-column: auto; border-top: 1px solid var(--line); }
+      .metric strong { font-size: 1.85rem; }
+      .metric.affiliation strong { font-size: .95rem; }
+      .metric.affiliation span { font-size: .7rem; }
+      .research-grid { grid-template-columns: 1fr; }
+      .network-grid { grid-template-columns: 1fr; }
+      .funding-grid, .institutional-news { grid-template-columns: 1fr; }
+      .research-path { grid-template-columns: 1fr; }
+      .path-step:not(:last-child) { border-right: 0; border-bottom: 1px solid var(--line); }
+      .path-step:not(:last-child)::after { content: "↓"; right: 1rem; top: auto; bottom: -.65rem; trans対象m: none; }
+      .direction-strip { align-items: flex-start; flex-direction: column; }
+      .direction-strip span { text-align: left; }
+      .publication-item { grid-template-columns: 62px 1fr; }
+      .pub-link { grid-column: 2; justify-self: start; }
+      .highlight-list li, .news-list li { grid-template-columns: 1fr; gap: .2rem; }
+      .cover-card { width: min(100%, 390px); }
+      .footer-inner { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::be対象e, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  
+.language-switcher{position:fixed;z-index:250;right:1rem;bottom:1rem;display:flex;gap:.25rem;padding:.3rem;background:rgba(8,23,34,.92);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.language-switcher a{padding:.42rem .65rem;border-radius:999px;color:rgba(255,255,255,.72);font:700 .78rem/1.2 Inter,system-ui,sans-serif;text-decoration:none}.language-switcher a.active{background:#18c6c8;color:#081722}@media(max-width:560px){.language-switcher{right:.6rem;bottom:.6rem}.language-switcher a{padding:.4rem .52rem;font-size:.72rem}}
+</style>
+</head>
+<body>
+  <nav class="language-switcher" aria-label="Language"><a href="../ta/index.html" lang="ta">தமிழ்</a><a href="../en/index.html" lang="en">English</a><a class="active" href="../ja/index.html" lang="ja">日本語</a></nav>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <nav class="nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html#top" aria-label="Arivazhagan Rajendran, home">
+        <span class="brand-mark">AR</span>
+        <span>Arivazhagan Rajendran</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="research.html">研究</a>
+        <a href="funding.html">研究費</a>
+        <a href="publications.html">研究業績</a>
+        <a href="presentations.html">学会発表</a>
+        <a href="highlights.html">ハイライト</a>
+        <a href="news.html">ニュース</a>
+        <a href="teaching.html">教育</a>
+        <a href="academic.html">学歴・職歴</a>
+        <a class="nav-contact" href="#contact">連絡先</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">分子精密性・機能性材料・持続可能な未来</p>
+          <h1>NanoBio <span>Materials</span></h1>
+          <div class="hero-mission" aria-label="研究 applications">
+            <span>対象</span><span class="mission-word health">健康</span><span class="mission-word energy">エネルギー</span><span class="mission-word environment">環境</span>
+          </div>
+          <p class="hero-name">Arivazhagan Rajendran <span>准教授 · Integrated 研究 Center 対象 Carbon Negative Science, Institute of Advanced エネルギー, Kyoto University</span></p>
+          <p class="hero-lede">核酸化学とDNAナノテクノロジーを、有機・無機・ハイブリッドナノ材料と融合し、生命医科学、クリーンエネルギー、CO₂還元のための機能システムを創出します。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="research.html">研究を見る <span class="arrow">→</span></a>
+            <a class="button" href="publications.html">主要研究業績</a>
+          </div>
+        </div>
+        <div class="portrait-stage" aria-label="Portrait of Dr. Arivazhagan Rajendran">
+          <div class="portrait-frame">
+            <img src="profile.webp" alt="Dr. Arivazhagan Rajendran" width="454" height="430">
+          </div>
+          <div class="portrait-note">
+            <strong>Integrated 研究 Center 対象 Carbon Negative Science</strong>
+            <span>Institute of Advanced エネルギー, Kyoto University · Uji, Japan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="研究 profile snapshot">
+      <div class="metric"><strong>49</strong><span>研究業績</span></div>
+      <div class="metric"><strong>3,386</strong><span>Google Scholar citations · 889 since 2021</span></div>
+      <div class="metric"><strong>26 / 33</strong><span>h-index / i10-index<br>Since 2021: 15 / 21</span></div>
+      <div class="metric affiliation"><strong>Integrated 研究 Center 対象 Carbon Negative Science</strong><span>Institute of Advanced エネルギー, Kyoto University</span></div>
+    </section>
+
+    <section class="section pillars" aria-labelledby="mission-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><span class="kicker">研究ミッション</span><h2 id="mission-title">一つの材料基盤から、三つの世界的課題へ。</h2></div>
+          <p>ナノバイオ材料は、生体分子のプログラム可能性と先端材料の光学・電子・触媒機能を融合し、基礎化学を社会的価値へつなげます。</p>
+        </div>
+        <div class="pillar-grid">
+          <article class="pillar-card health">
+            <span class="pillar-label">01 · 健康</span>
+            <h3>ナノスケールの精密性</h3>
+            <p>Programmable nucleic-acid structures and biofunctional nanomaterials 対象 understanding, sensing and influencing biological systems.</p>
+            <ul><li>DNA origami and nano-bio interfaces</li><li>Biomolecular stability and recognition</li><li>Biofunctional nanoparticles</li></ul>
+          </article>
+          <article class="pillar-card energy">
+            <span class="pillar-label">02 · エネルギー</span>
+            <h3>変換のための材料</h3>
+            <p>Organic, inorganic and hybrid nanomaterials engineered to harvest, store and trans対象m energy more efficiently.</p>
+            <ul><li>Photocatalysis and electrocatalysis</li><li>Low-dimensional catalytic materials</li><li>Solar-driven chemical conversion</li></ul>
+          </article>
+          <article class="pillar-card environment">
+            <span class="pillar-label">03 · 環境</span>
+            <h3>低炭素社会に向けた化学</h3>
+            <p>Functional materials and sustainable processes that turn environmental challenges into opportunities 対象 resource recovery.</p>
+            <ul><li>CO₂ reduction and utilization</li><li>Carbon-negative science</li><li>Green synthesis and catalysis</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><span class="kicker">研究基盤</span><h2>分子情報から材料機能へ。</h2></div>
+          <p>The research programme grows from a long-standing foundation in nucleic-acid chemistry and DNA nanotechnology into a broader plat対象m of organic, inorganic and hybrid nanomaterials 対象 health, energy and environmental applications.</p>
+        </div>
+        <div class="research-path" aria-label="Evolution of the research programme">
+          <div class="path-step">核酸化学</div>
+          <div class="path-step">DNA nanotechnology</div>
+          <div class="path-step">NanoBio interfaces</div>
+          <div class="path-step">Functional nanomaterials</div>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <span class="card-number">01</span>
+            <h3>核酸化学</h3>
+            <p>Recognition, folding and function of non-canonical DNA structures, DNA–protein complexes and small-molecule interactions.</p>
+            <div class="research-tags"><span>G-quadruplex</span><span>i-Motif</span><span>Molecular recognition</span></div>
+          </article>
+          <article class="research-card">
+            <span class="card-number">02</span>
+            <h3>DNAナノテクノロジー・DNAオリガミ</h3>
+            <p>Programmable assembly, ligation and stabilization of 2D and 3D DNA origami, including addressable scaffolds 対象 nano-bio applications.</p>
+            <div class="research-tags"><span>Self-assembly</span><span>Ligation</span><span>High-speed AFM</span></div>
+          </article>
+          <article class="research-card">
+            <span class="card-number">03</span>
+            <h3>有機ナノ材料</h3>
+            <p>Molecularly designed soft and carbon-based nanomaterials 対象 light harvesting, molecular recognition and bio-related function.</p>
+            <div class="research-tags"><span>Organic nanoassemblies</span><span>Photochemistry</span><span>Biointerfaces</span></div>
+          </article>
+          <article class="research-card">
+            <span class="card-number">04</span>
+            <h3>無機・ハイブリッドナノ材料</h3>
+            <p>Nanoparticles, heterostructures and low-dimensional catalysts designed 対象 energy conversion, CO₂ reduction and carbon-negative science.</p>
+            <div class="research-tags"><span>Nanohybrids</span><span>Electrocatalysis</span><span>CO₂ reduction</span></div>
+          </article>
+        </div>
+        <div class="direction-strip"><strong>現在の研究方向</strong><span>Organic and inorganic nanomaterials · light-assisted CO₂ reduction · low-dimensional catalytic systems</span></div>
+        <div class="network-block">
+          <h3>国際共同研究ネットワーク</h3>
+          <ul class="network-grid">
+            <li><a href="https://www.ewha.ac.kr/ewhaen/index.do" target="_blank" rel="noopener">Ewha Womans University</a> · single-molecule analysis of enzyme mechanisms and inhibitor action · since 2014</li>
+            <li><a href="https://medschool.vanderbilt.edu/" target="_blank" rel="noopener">Vanderbilt University School of Medicine</a> · molecular mechanisms of topoisomerases · 2017–2024</li>
+            <li><a href="https://vtu.ac.in/" target="_blank" rel="noopener">Visvesvaraya Technological University</a> · stable DNA nanomaterials · since 2017</li>
+            <li><a href="https://nitc.ac.in/" target="_blank" rel="noopener">National Institute of Technology Calicut</a> · DNA nanotechnology 対象 single-molecule analysis · since 2018</li>
+            <li><a href="https://www.amrita.edu/" target="_blank" rel="noopener">Amrita Vishwa Vidyapeetham</a> · metal-oxide nanomaterials 対象 biological applications · since 2023</li>
+            <li><a href="https://www.kmu.edu.tw/index.php/en-gb/" target="_blank" rel="noopener">Kaohsiung Medical University</a> · nanomaterials 対象 energy and environmental applications · since 2025</li>
+          </ul>
+        </div>
+        <a class="section-more" href="research.html">View the complete research profile →</a>
+      </div>
+    </section>
+
+    <section class="section funding-section" id="funding">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><span class="kicker">研究支援</span><h2>主要研究費</h2></div>
+          <p>Competitive and institutional support 対象 DNA nanotechnology, nucleic-acid chemistry and functional nanomaterials.</p>
+        </div>
+        <div class="funding-grid">
+          <article class="funding-card featured">
+            <span class="funding-period">2021–2024 · Principal Investigator</span>
+            <h3>Grant-in-Aid 対象 Scientific 研究 (C)</h3>
+            <p>Retroviral integration into topologically interlocked DNAs to probe DNA structure and screen viral inhibitors.</p>
+            <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K05274/" target="_blank" rel="noopener">KAKENHI 21K05274 ↗</a>
+          </article>
+          <article class="funding-card">
+            <span class="funding-period">2016–2018 · Principal Investigator</span>
+            <h3>Grant-in-Aid 対象 Young Scientists (B)</h3>
+            <p>DNA-origami plat対象m 対象 screening anticancer drugs that target topoisomerases.</p>
+            <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-16K17934/" target="_blank" rel="noopener">KAKENHI 16K17934 ↗</a>
+          </article>
+          <article class="funding-card">
+            <span class="funding-period">2015–2018 · Co-Investigator</span>
+            <h3>Grant-in-Aid 対象 Scientific 研究 (A)</h3>
+            <p>Chemical tools 対象 precise detection of modification and damage in the human genome.</p>
+            <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-15H02189/" target="_blank" rel="noopener">KAKENHI 15H02189 ↗</a>
+          </article>
+          <article class="funding-card">
+            <span class="funding-period">2012–2017 · Co-Investigator</span>
+            <h3>Grant-in-Aid 対象 Scientific 研究 (S)</h3>
+            <p>Control and elucidation of gene expression at the molecular level.</p>
+            <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24225005/" target="_blank" rel="noopener">KAKENHI 24225005 ↗</a>
+          </article>
+        </div>
+        <div class="funding-notes" aria-label="Additional research support">
+          <span><strong>2025</strong> <a href="https://www.iae.kyoto-u.ac.jp/en" target="_blank" rel="noopener">IAE Joint 研究: advanced catalysts 対象 photoelectrochemical CO₂ conversion</a></span>
+          <span><strong>2025</strong> <a href="https://www.iae.kyoto-u.ac.jp/en" target="_blank" rel="noopener">IAE international industry–government–academia collaborative research support</a></span>
+          <span><strong>2024 award · 2025–27 project</strong> <a href="https://hirose-isf.or.jp/research-grants/" target="_blank" rel="noopener">Hirose Foundation research grant</a></span>
+          <span><strong>2021–22</strong> <a href="funding.html">Two IAE Joint 研究 projects on stable DNA origami and chemical stabilization</a></span>
+          <span><strong>2020</strong> <a href="https://fund.kyoto-u.ac.jp/" target="_blank" rel="noopener">Kyoto University Foundation research grant</a></span>
+        </div>
+        <a class="section-more" href="funding.html">View the complete funding list →</a>
+      </div>
+    </section>
+
+    <section class="section publications" id="publications">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><span class="kicker">主要研究業績</span><h2>研究業績</h2></div>
+          <p>Recent and representative contributions spanning nucleic-acid chemistry, DNA nanotechnology, NanoBio interfaces and functional materials 対象 energy and the environment.</p>
+        </div>
+        <div class="filter-row" aria-label="Filter publications">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All selected</button>
+          <button class="filter-button" type="button" data-filter="dna" aria-pressed="false">DNA &amp; nano-bio</button>
+          <button class="filter-button" type="button" data-filter="energy" aria-pressed="false">Materials &amp; energy</button>
+        </div>
+        <div class="publication-list">
+          <article class="publication-item" data-topic="energy">
+            <div class="pub-year">2026</div>
+            <div><h3 class="pub-title">High-energy Ni²⁺/Bi³⁺ layered double hydroxide/MXene heterostructure electrode using a supercritical fluid approach</h3><p class="pub-meta">ACS Applied Nano Materials · Vol. 9, 11031–11044</p></div>
+            <a class="pub-link" href="https://doi.org/10.1021/acsanm.6c01451" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
+          </article>
+          <article class="publication-item" data-topic="energy">
+            <div class="pub-year">2026</div>
+            <div><h3 class="pub-title">Green-fabricated zinc sulfide nanoparticles with dual antidiabetic and anticancer efficacy</h3><p class="pub-meta">Applied Materials Today · Vol. 49, 103152</p></div>
+            <a class="pub-link" href="https://doi.org/10.1016/j.apmt.2026.103152" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
+          </article>
+          <article class="publication-item" data-topic="dna">
+            <div class="pub-year">2024</div>
+            <div><h3 class="pub-title">Near quantitative ligation results in resistance of DNA origami against nuclease and cell lysate</h3><p class="pub-meta">Small Methods · Vol. 8, 2300999</p></div>
+            <a class="pub-link" href="https://doi.org/10.1002/smtd.202300999" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
+          </article>
+          <article class="publication-item" data-topic="dna">
+            <div class="pub-year">2022</div>
+            <div><h3 class="pub-title">Topologically-interlocked minicircles as probes of DNA topology and DNA–protein interactions</h3><p class="pub-meta">Chemistry – A European Journal</p></div>
+            <a class="pub-link" href="https://doi.org/10.1002/chem.202200108" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
+          </article>
+          <article class="publication-item" data-topic="dna">
+            <div class="pub-year">2021</div>
+            <div><h3 class="pub-title">Stabilization and structural changes of 2D DNA origami by enzymatic ligation</h3><p class="pub-meta">Nucleic Acids 研究 · Vol. 49, 7884–7900</p></div>
+            <a class="pub-link" href="https://doi.org/10.1093/nar/gkab611" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
+          </article>
+          <article class="publication-item" data-topic="dna">
+            <div class="pub-year">2011</div>
+            <div><h3 class="pub-title">Programmed two-dimensional self-assembly of multiple DNA origami jigsaw pieces</h3><p class="pub-meta">ACS Nano · Vol. 5, 665–671 · Journal front cover</p></div>
+            <a class="pub-link" href="https://doi.org/10.1021/nn1031627" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
+          </article>
+        </div>
+        <a class="archive-link" href="publications.html">View the complete list of 49 publications →</a>
+      </div>
+    </section>
+
+    <section class="section" id="highlights">
+      <div class="section-inner">
+        <div class="highlight-grid">
+          <figure class="cover-card" aria-label="Selected journal highlights">
+            <img src="chembiochem-highlight-cropped.png" alt="ChemBioChem highlight 対象 the review Nucleic-Acid-Templated Enzyme Cascades" width="635" height="838" loading="lazy">
+            <img class="cover-secondary" src="chem-eur-highlight.png" alt="Chemistry – A European Journal 2022 cover featuring topologically interlocked DNA" width="705" height="936" loading="lazy">
+          </figure>
+          <div class="highlight-copy">
+            <span class="kicker">ハイライト</span>
+            <h3>研究 recognized across journals, media and scientific communities.</h3>
+            <p>Work on DNA origami, nucleic-acid structure and nano-bio systems has appeared on journal covers and in international science reporting.</p>
+            <ul class="highlight-list">
+              <li><time>2023–24</time><span>研究 highlighted by <a href="https://www.kyoto-u.ac.jp/ja/research-news/2023-11-02" target="_blank" rel="noopener">Kyoto University</a>, <a href="https://sj.jst.go.jp/news/202401/n0123-01k.html" target="_blank" rel="noopener">JST</a>, <a href="https://www.technologyreview.jp/n/2023/11/07/321500/" target="_blank" rel="noopener">MIT Technology Review</a> and <a href="https://www.nikkei.com/article/DGXZQOUC16AD30W4A210C2000000/" target="_blank" rel="noopener">Nikkei</a>.</span></li>
+              <li><time>2022</time><span><a href="https://doi.org/10.1002/chem.202200838" target="_blank" rel="noopener">Chemistry – A European Journal front cover</a> and <a href="https://doi.org/10.1002/chem.202200839" target="_blank" rel="noopener">researcher profile</a>.</span></li>
+              <li><time>2017</time><span>ChemBioChem profile highlight and <a href="https://doi.org/10.1002/cbic.201600703" target="_blank" rel="noopener">Readers’ Choice review</a> on nucleic-acid-templated enzyme cascades.</span></li>
+              <li><time>2011</time><span><a href="https://doi.org/10.1021/nn1031627" target="_blank" rel="noopener">ACS Nano front cover article</a> and ISNAC Outstanding Poster Presentation Award.</span></li>
+            </ul>
+            <a class="section-more" href="highlights.html">View all covers, highlights and awards →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section news" id="news">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><span class="kicker">最新情報</span><h2>最新ニュース</h2></div>
+          <p>Recent research, collaboration and academic milestones. The complete chronological archive is available below.</p>
+        </div>
+        <div class="institutional-news" aria-label="Kyoto University research highlights">
+          <a class="institutional-story" href="https://www.kyoto-u.ac.jp/ja/research-news/2023-11-02" target="_blank" rel="noopener">
+            <span>Kyoto University · 2 Nov 2023</span>
+            <strong>University research news: a new stabilization method expands the possibilities of DNA origami.</strong>
+            <em>Read the official release ↗</em>
+          </a>
+          <a class="institutional-story newspaper" href="https://www.kyoto-up.org/archives/7236" target="_blank" rel="noopener">
+            <span>Kyoto University ニュースpaper · 16 Nov 2023</span>
+            <strong>DNA origami stabilization succeeds by efficiently joining breaks in the structure.</strong>
+            <em>Read the newspaper feature ↗</em>
+          </a>
+        </div>
+        <div class="news-grid">
+          <ol class="news-list">
+            <li><time>19 May 2026</time><p>研究 article accepted in <a href="https://doi.org/10.1021/acsanm.6c01451" target="_blank" rel="noopener"><em>ACS Applied Nano Materials</em></a>.</p></li>
+            <li><time>14 Feb 2026</time><p>研究 article accepted in <a href="https://doi.org/10.1016/j.apmt.2026.103152" target="_blank" rel="noopener"><em>Applied Materials Today</em></a>.</p></li>
+            <li><time>16 Jan 2026</time><p>Hosted three visiting students from <a href="https://www.postech.ac.kr/eng/" target="_blank" rel="noopener">POSTECH</a>, South Korea, 対象 research discussion.</p></li>
+            <li><time>24 Nov 2025</time><p>研究 article accepted in <a href="https://doi.org/10.1016/j.molstruc.2025.144859" target="_blank" rel="noopener"><em>Journal of Molecular Structure</em></a>.</p></li>
+            <li><time>2025</time><p>Received two internal research grants from the <a href="funding.html">Institute of Advanced エネルギー, Kyoto University</a> 対象 CO₂-conversion nanomaterials.</p></li>
+            <li><time>01 Jul 2025</time><p>Two internship students from <a href="https://vtu.ac.in/" target="_blank" rel="noopener">Visvesvaraya Technological University</a> joined the group.</p></li>
+            <li><time>01 Dec 2024</time><p>Received a research grant from the <a href="https://hirose-isf.or.jp/research-grants/" target="_blank" rel="noopener">Hirose Foundation</a>.</p></li>
+          </ol>
+        </div>
+        <a class="section-more" href="news.html">View the complete news list →</a>
+      </div>
+    </section>
+
+    <section class="section profile-section" id="academic-path">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><span class="kicker">学歴・職歴</span><h2>学歴・研究歴・職歴</h2></div>
+          <p>A single chronological record of academic qualifications and professional appointments.</p>
+        </div>
+        <div class="profile-grid">
+          <article class="academic-card">
+            <h3>学歴・職歴の全記録</h3>
+            <ol class="career">
+              <li><strong>February 2015–present</strong>准教授, <a href="https://icans.iae.kyoto-u.ac.jp/en/" target="_blank" rel="noopener">Integrated 研究 Center 対象 Carbon Negative Science</a>, <a href="https://www.iae.kyoto-u.ac.jp/en" target="_blank" rel="noopener">Institute of Advanced エネルギー</a>, <a href="https://www.kyoto-u.ac.jp/en" target="_blank" rel="noopener">Kyoto University</a></li>
+              <li><strong>September 2013–January 2015</strong>Assistant Professor, <a href="https://www1.tara.tsukuba.ac.jp/en/" target="_blank" rel="noopener">TARA</a>, <a href="https://www.tsukuba.ac.jp/en/" target="_blank" rel="noopener">University of Tsukuba</a></li>
+              <li><strong>January 2010–August 2013</strong>CREST and JSPS Postdoctoral 研究er in DNA nanotechnology, WPI-iCeMS and Department of Chemistry, <a href="https://www.kyoto-u.ac.jp/en" target="_blank" rel="noopener">Kyoto University</a></li>
+              <li><strong>October 2008–December 2009</strong>Postdoctoral 研究er in nucleic-acid chemistry, <a href="https://www.konan-u.ac.jp/english/center/fiber/" target="_blank" rel="noopener">FIBER</a>, <a href="https://www.konan-u.ac.jp/english/" target="_blank" rel="noopener">Konan University</a></li>
+              <li><strong>October 2005–September 2008</strong>Ph.D. in Chemistry (Analytical Chemistry), <a href="https://www.chem.tohoku.ac.jp/english/" target="_blank" rel="noopener">Tohoku University</a>, Japan</li>
+              <li><strong>January–September 2005</strong>研究 student, <a href="https://clri.org/" target="_blank" rel="noopener">CSIR–Central Leather 研究 Institute</a>, India</li>
+              <li><strong>September–December 2004</strong>研究 student in computational chemistry, <a href="https://www.cec.mpg.de/en/institute/history" target="_blank" rel="noopener">Max Planck Institute 対象 Bioinorganic Chemistry</a>, Germany</li>
+              <li><strong>October 2003–August 2004</strong>研究 student, <a href="https://www.chem.tohoku.ac.jp/english/" target="_blank" rel="noopener">Tohoku University</a>, Japan</li>
+              <li><strong>July 2001–June 2003</strong>M.Sc. in Inorganic Chemistry, <a href="https://unom.ac.in/" target="_blank" rel="noopener">University of Madras</a>, India</li>
+              <li><strong>July 1998–June 2001</strong>B.Sc. in Chemistry, <a href="https://www.gacmenkrishnagiri.org/" target="_blank" rel="noopener">Government Arts College, Krishnagiri</a>, affiliated with <a href="https://www.periyaruniversity.ac.in/" target="_blank" rel="noopener">Periyar University</a>, India</li>
+            </ol>
+          </article>
+        </div>
+        <div class="activity-grid">
+          <article class="activity-card"><h3>研究指導</h3><p>Supervision and guidance of doctoral, master’s, undergraduate and international internship researchers. Verified recent projects include DNA nanomaterials, nanoparticle catalysis and CO₂ conversion.</p><a href="service.html">Complete mentoring record →</a></article>
+          <article class="activity-card"><h3>学術貢献</h3><p>Institute committee work, journal peer review and membership of professional chemistry and nucleic-acid societies.</p><a href="service.html">Complete service record →</a></article>
+          <article class="activity-card"><h3>社会・科学アウトリーチ</h3><p>Science classes, laboratory visits, conference organization, invited educational programmes and open teaching resources.</p><a href="service.html">Complete outreach record →</a></article>
+        </div>
+        <a class="section-more" href="academic.html">View the complete academic path →</a>
+      </div>
+    </section>
+
+    <section class="section" id="teaching">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><span class="kicker">教育</span><h2>エネルギーと社会のための化学</h2></div>
+          <p>Courses connect fundamental physical chemistry with contemporary questions in sustainable energy and carbon management.</p>
+        </div>
+        <div class="teaching-grid">
+          <article class="teaching-panel accent">
+            <span class="kicker" style="color:#fff4df">大学院</span>
+            <h3><a href="https://www.energy.kyoto-u.ac.jp/en/" target="_blank" rel="noopener">大学院 School of エネルギー Science</a></h3>
+            <p>Verified teaching record, 2022–present · English</p>
+            <ul class="course-list"><li>From Carbon Neutral to Carbon Negative <small>(2022–present)</small></li><li>Fundamental エネルギー Science <small>(2024–present)</small></li><li>International Seminar on エネルギー Science (Group Study) <small>(2025–present)</small></li></ul>
+          </article>
+          <article class="teaching-panel">
+            <span class="kicker">学部</span>
+            <h3><a href="https://www.kyoto-u.ac.jp/en/about/profile/faculty/organizations/liberal-arts-1" target="_blank" rel="noopener">Institute 対象 Liberal Arts and Sciences</a></h3>
+            <p>Annual teaching record, 2015–present · English</p>
+            <ul class="course-list">
+              <li>Essentials of Basic Physical Chemistry</li>
+              <li>Basic Physical Chemistry: Thermodynamics</li>
+              <li>Basic Physical Chemistry: Quantum Theory</li>
+              <li>Chemistry of Sustainable エネルギー</li>
+            </ul>
+          </article>
+        </div>
+        <a class="section-more" href="teaching.html">View the complete teaching record →</a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-inner contact-inner">
+        <div>
+          <span class="eyebrow">連絡先・共同研究</span>
+          <h2>次世代の <span>ナノバイオ材料を共に創りましょう。</span></h2>
+          <p class="contact-lede">研究 discussions and collaboration enquiries in nucleic-acid chemistry, DNA nanotechnology, organic and inorganic nanomaterials, energy conversion and CO₂ reduction are welcome.</p>
+          <div class="candidate-note"><strong>Prospective researchers:</strong> Ph.D. and postdoctoral enquiries are welcome, particularly from candidates applying 対象 external scholarships. Please review the relevant funding guidelines and include a focused research idea when contacting.</div>
+        </div>
+        <div class="contact-details">
+          <div class="contact-row"><span>メール</span><a href="mailto:raji@iae.kyoto-u.ac.jp">raji@iae.kyoto-u.ac.jp</a></div>
+          <div class="contact-row"><span>電話</span><a href="tel:+81774383556">+81 774 38 3556</a></div>
+          <div class="contact-row"><span>所属</span><p>Integrated 研究 Center 対象 Carbon Negative Science, Institute of Advanced エネルギー, Kyoto University</p></div>
+          <div class="contact-row"><span>住所</span><p>M-576E, Main Building, Gokasho, Uji, Kyoto 611-0011, Japan</p></div>
+          <div class="profile-links">
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=vxClbUAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://orcid.org/0000-0002-9319-6107" target="_blank" rel="noopener">ORCID</a>
+            <a href="https://researchmap.jp/raji?lang=en" target="_blank" rel="noopener">researchmap</a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=24588211000" target="_blank" rel="noopener">Scopus</a>
+            <a href="https://www.youtube.com/channel/UCT0iRR_tV-L2G5TfsHmifww" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://kdb.iimc.kyoto-u.ac.jp/profile/en.13d6dd8e6f9e6665.html" target="_blank" rel="noopener">Kyoto University profile</a>
+            <a href="https://www.iae.kyoto-u.ac.jp/en" target="_blank" rel="noopener">Institute of Advanced エネルギー</a>
+            <a href="https://icans.iae.kyoto-u.ac.jp/en/" target="_blank" rel="noopener">ICaNS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner"><span>© 2026 Arivazhagan Rajendran</span><span>研究map checked 5 September 2026 · Google Scholar metrics last verified 4 September 2026.</span></div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('#nav-links');
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      menuButton.textContent = isOpen ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').対象Each(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation');
+      menuButton.textContent = '☰';
+    }));
+
+    const filters = document.querySelectorAll('.filter-button');
+    const publications = document.querySelectorAll('.publication-item');
+    filters.対象Each(button => button.addEventListener('click', () => {
+      const selected = button.dataset.filter;
+      filters.対象Each(item => item.setAttribute('aria-pressed', String(item === button)));
+      publications.対象Each(item => {
+        item.hidden = selected !== 'all' && item.dataset.topic !== selected;
+      });
+    }));
+  </script>
+</body>
+</html>
