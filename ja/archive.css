@@ -82,3 +82,21 @@ html[lang="ja"] .kicker{letter-spacing:.07em;text-transform:none}
 html[lang="ja"] h3{font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;letter-spacing:0;text-wrap:balance;word-break:normal;overflow-wrap:normal}
 
 html[lang="ja"] .tail-guard{white-space:nowrap}
+
+
+/* v7 Japanese archive typography refinement */
+html[lang="ja"] body{line-height:1.72}
+html[lang="ja"] .intro{padding:clamp(4.2rem,8vw,6.7rem) 0}
+html[lang="ja"] .intro h1{max-width:980px;font-family:"Noto Sans CJK JP","Yu Gothic","Meiryo",sans-serif;font-size:clamp(2.15rem,4.3vw,3.4rem);font-weight:650;line-height:1.35;letter-spacing:.01em;text-wrap:balance}
+html[lang="ja"] .intro h1.nowrap-title{white-space:nowrap;font-size:clamp(2.05rem,4vw,3rem)}
+html[lang="ja"] .intro p{line-height:1.75}
+html[lang="ja"] .toolbar{align-items:flex-start;gap:1.2rem}
+html[lang="ja"] .toolbar h2{font-family:"Noto Sans CJK JP","Yu Gothic","Meiryo",sans-serif;font-size:clamp(1.75rem,3vw,2.45rem);font-weight:650;line-height:1.4;letter-spacing:.01em;text-wrap:balance}
+html[lang="ja"] .toolbar h2.nowrap-title{white-space:nowrap}
+html[lang="ja"] .year{font-size:clamp(1.55rem,2.6vw,2rem);line-height:1.35;letter-spacing:.01em}
+html[lang="ja"] .year.nowrap-title{white-space:nowrap}
+html[lang="ja"] .entry h3{line-height:1.62;text-wrap:pretty}
+html[lang="ja"] .entry p{line-height:1.72}
+html[lang="ja"] .summary strong{line-height:1.35}
+html[lang="ja"] .feature-cover figcaption strong{line-height:1.4}
+@media(max-width:720px){html[lang="ja"] .intro h1{font-size:clamp(1.85rem,8vw,2.55rem);line-height:1.38}html[lang="ja"] .intro h1.nowrap-title{font-size:clamp(1.75rem,7.5vw,2.3rem)}html[lang="ja"] .toolbar h2{font-size:clamp(1.55rem,6.6vw,2rem);line-height:1.42}html[lang="ja"] .year{font-size:clamp(1.45rem,6.2vw,1.8rem)}}

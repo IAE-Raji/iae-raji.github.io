@@ -627,6 +627,43 @@
       html[lang="ta"] .direction-strip span { text-align: left; }
     }
 
+
+/* v7 Tamil visual refinement: slightly smaller display type, more breathing room, safer complex-script shaping. */
+html[lang="ta"] body{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;line-height:1.72}
+html[lang="ta"] :is(.eyebrow,.kicker,.pillar-label,.funding-period,.institutional-story span,.contact-row span,.metric span){letter-spacing:0;text-transform:none;line-height:1.55}
+html[lang="ta"] .hero-mission{letter-spacing:0;gap:.5rem}
+html[lang="ta"] .hero-lede{line-height:1.72}
+html[lang="ta"] .section-head{grid-template-columns:minmax(430px,.95fr) minmax(0,1.05fr);gap:clamp(1.8rem,4vw,3rem);align-items:start;margin-bottom:3.4rem}
+html[lang="ta"] .section-head>div{min-width:0}
+html[lang="ta"] .section-head .kicker{display:block;margin-bottom:.7rem}
+html[lang="ta"] .section-head h2{margin:0;font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.9rem,2.55vw,2.15rem);font-weight:650;line-height:1.55;letter-spacing:0;text-wrap:balance;overflow-wrap:normal;word-break:normal}
+html[lang="ta"] .section-head p{padding-top:.15rem;line-height:1.75}
+html[lang="ta"] .section-head h2.nowrap-title{white-space:nowrap;font-size:clamp(1.75rem,2.45vw,2.05rem)}
+html[lang="ta"] .section-head h2.compact-two-line{font-size:clamp(1.78rem,2.35vw,1.9rem);line-height:1.55}
+html[lang="ta"] .pillar-card{padding:clamp(1.65rem,2.7vw,2.15rem)}
+html[lang="ta"] .pillar-card h3{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.3rem,1.75vw,1.5rem);font-weight:650;line-height:1.58;letter-spacing:0;text-wrap:balance;min-height:4.7em;margin:.9rem 0 .8rem}
+html[lang="ta"] .pillar-card p{line-height:1.72}
+html[lang="ta"] .research-card h3{font-size:clamp(1.35rem,2.25vw,1.85rem);line-height:1.55;margin:1.6rem 0 .8rem}
+html[lang="ta"] .research-card p{line-height:1.72}
+html[lang="ta"] .network-block h3{font-size:clamp(1.35rem,2.15vw,1.75rem);line-height:1.55}
+html[lang="ta"] .funding-card h3{font-size:1.02rem;line-height:1.72}
+html[lang="ta"] .highlight-copy h3{font-size:clamp(1.65rem,2.9vw,2.35rem);line-height:1.5}
+html[lang="ta"] .institutional-story strong{line-height:1.7}
+html[lang="ta"] .teaching-panel h3{line-height:1.62}
+html[lang="ta"] .metric.affiliation strong{font-size:1.04rem;line-height:1.55}
+html[lang="ta"] .portrait-note strong{line-height:1.5}
+html[lang="ta"] .contact h2{max-width:720px;font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.95rem,3.7vw,3.15rem);font-weight:650;line-height:1.5;letter-spacing:0;text-wrap:balance}
+html[lang="ta"] .contact h2 .contact-line{display:block;color:inherit}
+html[lang="ta"] .contact h2 .contact-line:last-child{color:var(--cyan)}
+html[lang="ta"] .contact-lede{line-height:1.75}
+@media(max-width:960px){html[lang="ta"] .section-head{grid-template-columns:minmax(340px,.88fr) minmax(0,1.12fr)}}
+@media(max-width:760px){html[lang="ta"] .section-head{grid-template-columns:1fr;gap:1rem;margin-bottom:2.7rem}html[lang="ta"] .section-head h2{font-size:clamp(1.5rem,6.2vw,1.8rem);line-height:1.6}html[lang="ta"] .section-head h2.nowrap-title{font-size:clamp(1.34rem,5.7vw,1.65rem);white-space:nowrap}html[lang="ta"] .section-head h2.compact-two-line{font-size:clamp(1.45rem,5.9vw,1.72rem)}html[lang="ta"] .pillar-card h3{min-height:0;font-size:clamp(1.32rem,5.5vw,1.62rem)}html[lang="ta"] .contact h2{font-size:clamp(1.85rem,8vw,2.65rem)}}
+@media(max-width:420px){html[lang="ta"] .section-head h2.nowrap-title{font-size:clamp(1.32rem,5.8vw,1.62rem)}html[lang="ta"] .metric.affiliation strong{font-size:.9rem}}
+
+
+html[lang="ta"] .title-line{display:block}
+html[lang="ta"] #mission-title{font-size:clamp(1.75rem,2.25vw,1.9rem)}
+@media(max-width:760px){html[lang="ta"] #mission-title{font-size:clamp(1.42rem,5.8vw,1.65rem)}}
 </style>
 </head>
 <body>
@@ -659,7 +696,7 @@
 <p class="eyebrow">மூலக்கூறு துல்லியம் · செயல்பாட்டு பொருட்கள் · நிலைத்த எதிர்காலம்</p>
 <h1>NanoBio <span>Materials</span></h1>
 <div aria-label="ஆராய்ச்சி பயன்பாடுகள்" class="hero-mission">
-<span>க்கான</span><span class="mission-word health">ஆரோக்கியம்</span><span class="mission-word energy">ஆற்றல்</span><span class="mission-word environment">சுற்றுச்சூழல்</span>
+<span class="mission-word health">ஆரோக்கியம்</span><span class="mission-word energy">ஆற்றல்</span><span class="mission-word environment">சுற்றுச்சூழல்</span>
 </div>
 <p class="hero-name">Arivazhagan Rajendran <span>இளநிலை இணைப் பேராசிரியர் · கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம், கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம்</span></p>
 <p class="hero-lede">நியூக்ளிக் அமில வேதியியல் மற்றும் DNA நானோ தொழில்நுட்பத்தை கரிம, அகர மற்றும் கலப்பு நானோப் பொருட்களுடன் இணைத்து, உயிர்மருத்துவம், தூய ஆற்றல் மற்றும் CO₂ குறைப்பிற்கான செயல்பாட்டு அமைப்புகளை உருவாக்குகிறோம்.</p>
@@ -688,25 +725,25 @@
 <section aria-labelledby="mission-title" class="section pillars">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">ஆராய்ச்சி நோக்கம்</span><h2 id="mission-title">ஒரே பொருள் தளம். மூன்று உலகளாவிய தேவைகள்.</h2></div>
+<div><span class="kicker">ஆராய்ச்சி நோக்கம்</span><h2 id="mission-title"><span class="title-line">ஒரே பொருள் தளம்.</span><span class="title-line">மூன்று உலகளாவிய தேவைகள்.</span></h2></div>
 <p>NanoBio Materials உயிரியல் அமைப்புகளின் மூலக்கூறு நிரலாக்கத்தன்மையை மேம்பட்ட பொருட்களின் ஒளியியல், மின்னியல் மற்றும் வினையூக்க செயல்பாடுகளுடன் இணைத்து, அடிப்படை வேதியியலை நடைமுறைப் பயன்பாட்டுடன் தொடர்புபடுத்துகிறது.</p>
 </div>
 <div class="pillar-grid">
 <article class="pillar-card health">
 <span class="pillar-label">01 · ஆரோக்கியம்</span>
-<h3>நானோ அளவிலான துல்லியம்</h3>
+<h3><span class="title-line">நானோ அளவிலான</span><span class="title-line">துல்லியம்</span></h3>
 <p>உயிரியல் அமைப்புகளைப் புரிந்துகொள்ள, உணர மற்றும் கட்டுப்படுத்த நிரலாக்கக்கூடிய நியூக்ளிக் அமில அமைப்புகள் மற்றும் உயிர்செயல்பாட்டு நானோப் பொருட்கள்.</p>
 <ul><li>DNA ஒரிகாமி மற்றும் NanoBio இடைமுகங்கள்</li><li>உயிர்மூலக்கூறு நிலைத்தன்மை மற்றும் அடையாளம்</li><li>உயிர்செயல்பாட்டு நானோ துகள்கள்</li></ul>
 </article>
 <article class="pillar-card energy">
 <span class="pillar-label">02 · ஆற்றல்</span>
-<h3>மாற்றத்திற்கான பொருட்கள்</h3>
+<h3><span class="title-line">மாற்றத்திற்கான</span><span class="title-line">பொருட்கள்</span></h3>
 <p>ஆற்றலை அதிக திறனுடன் சேகரிக்க, சேமிக்க மற்றும் மாற்ற வடிவமைக்கப்பட்ட கரிம, அகர மற்றும் கலப்பு நானோப் பொருட்கள்.</p>
 <ul><li>ஒளிவினையூக்கம் மற்றும் மின்வினையூக்கம்</li><li>குறைந்த பரிமாண வினையூக்கிப் பொருட்கள்</li><li>சூரியஒளி இயக்கும் வேதியியல் மாற்றம்</li></ul>
 </article>
 <article class="pillar-card environment">
 <span class="pillar-label">03 · சுற்றுச்சூழல்</span>
-<h3>குறைந்த கார்பன் எதிர்காலத்திற்கான வேதியியல்</h3>
+<h3><span class="title-line">குறைந்த கார்பன்</span><span class="title-line">எதிர்காலத்திற்கான</span><span class="title-line">வேதியியல்</span></h3>
 <p>சுற்றுச்சூழல் சவால்களை வள மீட்பு வாய்ப்புகளாக மாற்றும் செயல்பாட்டு பொருட்கள் மற்றும் நிலைத்த செயல்முறைகள்.</p>
 <ul><li>CO₂ குறைப்பு மற்றும் பயன்பாடு</li><li>கார்பன் நெகட்டிவ் அறிவியல்</li><li>பசுமைத் தயாரிப்பு மற்றும் வினையூக்கம்</li></ul>
 </article>
@@ -716,7 +753,7 @@
 <section class="section" id="research">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">ஆராய்ச்சி அடித்தளம்</span><h2>மூலக்கூறு தகவலிலிருந்து பொருள் செயல்பாடு வரை.</h2></div>
+<div><span class="kicker">ஆராய்ச்சி அடித்தளம்</span><h2><span class="title-line">மூலக்கூறு தகவலிலிருந்து</span><span class="title-line">பொருள் செயல்பாடு வரை.</span></h2></div>
 <p>நியூக்ளிக் அமில வேதியியல் மற்றும் DNA நானோ தொழில்நுட்பத்தில் உருவான நீண்டகால அடித்தளத்திலிருந்து, ஆரோக்கியம், ஆற்றல் மற்றும் சுற்றுச்சூழல் பயன்பாடுகளுக்கான கரிம, அகர மற்றும் கலப்பு நானோப் பொருட்கள் தளமாக ஆய்வு விரிகிறது.</p>
 </div>
 <div aria-label="ஆராய்ச்சி திட்டத்தின் வளர்ச்சி" class="research-path">
@@ -769,7 +806,7 @@
 <section class="section funding-section" id="funding">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">ஆராய்ச்சி ஆதரவு</span><h2>தேர்ந்தெடுக்கப்பட்ட ஆராய்ச்சி நிதி.</h2></div>
+<div><span class="kicker">ஆராய்ச்சி ஆதரவு</span><h2 class="compact-two-line"><span class="title-line">தேர்ந்தெடுக்கப்பட்ட</span><span class="title-line">ஆராய்ச்சி நிதி.</span></h2></div>
 <p>DNA நானோ தொழில்நுட்பம், நியூக்ளிக் அமில வேதியியல் மற்றும் செயல்பாட்டு நானோப் பொருட்களுக்கான போட்டித் திறன் மற்றும் நிறுவன ஆதரவு.</p>
 </div>
 <div class="funding-grid">
@@ -811,7 +848,7 @@
 <section class="section publications" id="publications">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">தேர்ந்தெடுக்கப்பட்ட ஆய்வுகள்</span><h2>ஆய்வு வெளியீடுகள்</h2></div>
+<div><span class="kicker">தேர்ந்தெடுக்கப்பட்ட ஆய்வுகள்</span><h2 class="nowrap-title">ஆய்வு வெளியீடுகள்</h2></div>
 <p>நியூக்ளிக் அமில வேதியியல், DNA நானோ தொழில்நுட்பம், NanoBio இடைமுகங்கள் மற்றும் ஆற்றல்/சுற்றுச்சூழலுக்கான செயல்பாட்டு பொருட்கள் குறித்த அண்மைய மற்றும் பிரதிநிதித் தொடர்கள்.</p>
 </div>
 <div aria-label="வெளியீடுகளை வடிகட்டுக" class="filter-row">
@@ -879,7 +916,7 @@
 <section class="section news" id="news">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">புதுப்பிப்புகள்</span><h2>அண்மைய செய்திகள்</h2></div>
+<div><span class="kicker">புதுப்பிப்புகள்</span><h2 class="nowrap-title">அண்மைய செய்திகள்</h2></div>
 <p>அண்மைய ஆராய்ச்சி, கூட்டாண்மை மற்றும் கல்விச் சாதனைகள். முழுமையான காலவரிசைப் பதிவு கீழே உள்ளது.</p>
 </div>
 <div aria-label="கியோட்டோ பல்கலைக்கழக ஆராய்ச்சி சிறப்பம்சங்கள்" class="institutional-news">
@@ -911,7 +948,7 @@
 <section class="section profile-section" id="academic-path">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">கல்வி மற்றும் பணிப் பயணம்</span><h2>கல்வி மற்றும் பணிநியமனங்கள்.</h2></div>
+<div><span class="kicker">கல்வி மற்றும் பணிப் பயணம்</span><h2><span class="title-line">கல்வி மற்றும்</span><span class="title-line">பணிநியமனங்கள்.</span></h2></div>
 <p>கல்வித் தகுதிகள் மற்றும் பணிநியமனங்களின் ஒரே காலவரிசைப் பதிவு.</p>
 </div>
 <div class="profile-grid">
@@ -942,7 +979,7 @@
 <section class="section" id="teaching">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">கற்பித்தல்</span><h2>ஆற்றல் மற்றும் சமூகத்திற்கான வேதியியல்.</h2></div>
+<div><span class="kicker">கற்பித்தல்</span><h2><span class="title-line">ஆற்றல் மற்றும்</span><span class="title-line">சமூகத்திற்கான வேதியியல்.</span></h2></div>
 <p>பாடங்கள் அடிப்படை இயற்பியல் வேதியியலை நிலைத்த ஆற்றல் மற்றும் கார்பன் மேலாண்மையின் தற்போதைய கேள்விகளுடன் இணைக்கின்றன.</p>
 </div>
 <div class="teaching-grid">
@@ -971,7 +1008,7 @@
 <div class="section-inner contact-inner">
 <div>
 <span class="eyebrow">தொடர்பு மற்றும் வாய்ப்புகள்</span>
-<h2>அடுத்த <span>NanoBio பொருளை உருவாக்குவோம்.</span></h2>
+<h2><span class="contact-line">அடுத்த NanoBio பொருளை</span><span class="contact-line">உருவாக்குவோம்.</span></h2>
 <p class="contact-lede">நியூக்ளிக் அமில வேதியியல், DNA நானோ தொழில்நுட்பம், கரிம மற்றும் அகர நானோப் பொருட்கள், ஆற்றல் மாற்றம் மற்றும் CO₂ குறைப்பு தொடர்பான ஆராய்ச்சி கலந்துரையாடல்கள் மற்றும் கூட்டாண்மை தொடர்புகளை வரவேற்கிறோம்.</p>
 <div class="candidate-note"><strong>ஆராய்ச்சியில் இணைய விரும்புவோர்:</strong> முனைவர் மற்றும் முதுநிலை ஆராய்ச்சி தொடர்புகளை, குறிப்பாக வெளிப்புற உதவித்தொகைக்கு விண்ணப்பிக்கும் ஆராய்ச்சியாளர்களிடமிருந்து, வரவேற்கிறோம். தொடர்பு கொள்வதற்கு முன் பொருத்தமான நிதி வழிகாட்டுதல்களைப் பார்த்து, தெளிவான ஆராய்ச்சி யோசனையைச் சேர்க்கவும்.</div>
 </div>

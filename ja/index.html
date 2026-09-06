@@ -635,6 +635,31 @@
       html[lang="ja"] .direction-strip span { text-align: left; }
     }
 
+
+/* v7 Japanese visual refinement: clean CJK spacing, keep short display headings on one line. */
+html[lang="ja"]{line-break:strict;word-break:normal}
+html[lang="ja"] body{font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;line-height:1.72}
+html[lang="ja"] :is(.eyebrow,.kicker,.pillar-label,.funding-period,.institutional-story span,.contact-row span,.metric span){letter-spacing:.035em;text-transform:none;line-height:1.5}
+html[lang="ja"] .hero-mission{letter-spacing:.035em}
+html[lang="ja"] .section-head{grid-template-columns:minmax(400px,.9fr) minmax(0,1.1fr);gap:clamp(1.7rem,4vw,3rem);align-items:start;margin-bottom:3.2rem}
+html[lang="ja"] .section-head>div{min-width:0}
+html[lang="ja"] .section-head .kicker{display:block;margin-bottom:.62rem}
+html[lang="ja"] .section-head h2{margin:0;font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;font-size:clamp(1.9rem,2.85vw,2.45rem);font-weight:650;line-height:1.34;letter-spacing:.01em;text-wrap:balance;overflow-wrap:normal;word-break:normal}
+html[lang="ja"] .section-head h2.nowrap-title{white-space:nowrap;font-size:clamp(1.85rem,2.7vw,2.35rem)}
+html[lang="ja"] .section-head p{padding-top:.1rem;line-height:1.75}
+html[lang="ja"] .pillar-card h3{font-size:clamp(1.65rem,2.6vw,2.25rem);line-height:1.38;text-wrap:balance}
+html[lang="ja"] .research-card h3{font-size:clamp(1.45rem,2.35vw,1.95rem);line-height:1.42}
+html[lang="ja"] .network-block h3{font-size:clamp(1.4rem,2.1vw,1.8rem);line-height:1.42}
+html[lang="ja"] .funding-card h3{line-height:1.55}
+html[lang="ja"] .highlight-copy h3{font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.38}
+html[lang="ja"] .metric.affiliation strong{font-size:1.03rem;line-height:1.42}
+html[lang="ja"] .contact h2{font-family:"Noto Sans CJK JP","Yu Gothic","Meiryo",sans-serif;font-size:clamp(2rem,4vw,3.35rem);font-weight:650;line-height:1.38;letter-spacing:.01em}
+@media(max-width:960px){html[lang="ja"] .section-head{grid-template-columns:minmax(330px,.84fr) minmax(0,1.16fr)}}
+@media(max-width:760px){html[lang="ja"] .section-head{grid-template-columns:1fr;gap:.95rem;margin-bottom:2.6rem}html[lang="ja"] .section-head h2{font-size:clamp(1.7rem,7.2vw,2.25rem);line-height:1.38}html[lang="ja"] .section-head h2.nowrap-title{font-size:clamp(1.65rem,7vw,2.1rem);white-space:nowrap}html[lang="ja"] .contact h2{font-size:clamp(2rem,9vw,2.9rem)}}
+@media(max-width:420px){html[lang="ja"] .section-head h2.nowrap-title{font-size:clamp(1.5rem,6.7vw,1.9rem)}}
+
+
+html[lang="ja"] .title-line{display:block}
 </style>
 </head>
 <body>
@@ -667,7 +692,7 @@
 <p class="eyebrow">分子レベルの精密設計 · 機能性材料 · 持続可能な未来</p>
 <h1>NanoBio <span>Materials</span></h1>
 <div aria-label="研究応用" class="hero-mission">
-<span>が拓く</span><span class="mission-word health">健康</span><span class="mission-word energy">エネルギー</span><span class="mission-word environment">環境</span>
+<span class="mission-word health">健康</span><span class="mission-word energy">エネルギー</span><span class="mission-word environment">環境</span>
 </div>
 <p class="hero-name">Arivazhagan Rajendran <span>講師 · 京都大学エネルギー理工学研究所 附属カーボンネガティブ・エネルギー研究センター</span></p>
 <p class="hero-lede">核酸化学とDNAナノテクノロジーを、有機・無機・ハイブリッドナノ材料と融合し、生命医科学、クリーンエネルギー、CO₂還元のための機能システムを創出します。</p>
@@ -696,7 +721,7 @@
 <section aria-labelledby="mission-title" class="section pillars">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">研究ミッション</span><h2 id="mission-title">一つの材料基盤から、三つの世界的課題<span class="tail-guard">へ。</span></h2></div>
+<div><span class="kicker">研究ミッション</span><h2 id="mission-title"><span class="title-line">一つの材料基盤から、</span><span class="title-line">三つの世界的課題へ。</span></h2></div>
 <p>NanoBio Materialsでは、生体分子が持つプログラム可能性と先端材料の光学・電子・触媒機能を融合し、基礎化学を実用的な価値へつなげます。</p>
 </div>
 <div class="pillar-grid">
@@ -724,7 +749,7 @@
 <section class="section" id="research">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">研究基盤</span><h2>分子情報から材料機能<span class="tail-guard">へ。</span></h2></div>
+<div><span class="kicker">研究基盤</span><h2>分子情報から材料機能へ。</h2></div>
 <p>核酸化学とDNAナノテクノロジーで培った基盤を、有機・無機・ハイブリッドナノ材料へ展開し、健康、エネルギー、環境分野の応用につなげています。</p>
 </div>
 <div aria-label="研究プログラムの展開" class="research-path">
@@ -777,7 +802,7 @@
 <section class="section funding-section" id="funding">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">研究支援</span><h2>主要研<span class="tail-guard">究費</span></h2></div>
+<div><span class="kicker">研究支援</span><h2 class="nowrap-title">主要研究費</h2></div>
 <p>DNAナノテクノロジー、核酸化学、機能性ナノ材料に対する競争的・学内研究支援です。</p>
 </div>
 <div class="funding-grid">
@@ -819,7 +844,7 @@
 <section class="section publications" id="publications">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">主要研究業績</span><h2>研究<span class="tail-guard">業績</span></h2></div>
+<div><span class="kicker">主要研究業績</span><h2 class="nowrap-title">研究業績</h2></div>
 <p>核酸化学、DNAナノテクノロジー、NanoBioインターフェース、およびエネルギー・環境のための機能性材料に関する最近の代表的研究成果です。</p>
 </div>
 <div aria-label="研究業績を絞り込む" class="filter-row">
@@ -887,7 +912,7 @@
 <section class="section news" id="news">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">更新情報</span><h2>最近のニュ<span class="tail-guard">ース</span></h2></div>
+<div><span class="kicker">更新情報</span><h2 class="nowrap-title">最近のニュース</h2></div>
 <p>研究、共同研究、学術活動の最近の主な動きを掲載しています。下のリンクから全時系列記録をご覧いただけます。</p>
 </div>
 <div aria-label="京都大学の研究ハイライト" class="institutional-news">
@@ -919,7 +944,7 @@
 <section class="section profile-section" id="academic-path">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">学歴・職歴</span><h2>学歴・<span class="tail-guard">職歴</span></h2></div>
+<div><span class="kicker">学歴・職歴</span><h2 class="nowrap-title">学歴・職歴</h2></div>
 <p>学位および職歴を一つの時系列記録としてまとめています。</p>
 </div>
 <div class="profile-grid">
@@ -950,7 +975,7 @@
 <section class="section" id="teaching">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">教育</span><h2>エネルギーと社会のための化<span class="tail-guard">学。</span></h2></div>
+<div><span class="kicker">教育</span><h2><span class="title-line">エネルギーと社会の</span><span class="title-line">ための化学。</span></h2></div>
 <p>基礎物理化学を、持続可能なエネルギーと炭素管理の現代的課題に結び付ける授業を行っています。</p>
 </div>
 <div class="teaching-grid">
@@ -979,7 +1004,7 @@
 <div class="section-inner contact-inner">
 <div>
 <span class="eyebrow">連絡・研究機会</span>
-<h2>次の <span>NanoBio材料を、ともに。</span></h2>
+<h2 class="nowrap-title">次の <span>NanoBio材料を、ともに。</span></h2>
 <p class="contact-lede">核酸化学、DNAナノテクノロジー、有機・無機ナノ材料、エネルギー変換、CO₂還元に関する研究相談・共同研究のお問い合わせを歓迎します。</p>
 <div class="candidate-note"><strong>研究参加を希望される方：</strong> 博士課程・博士研究員を希望される方からの問い合わせを歓迎します。特に外部奨学金への応募を予定している方は、該当する募集要項を確認し、具体的な研究アイデアを添えてご連絡ください。</div>
 </div>
