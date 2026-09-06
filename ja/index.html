@@ -585,6 +585,56 @@
     }
   
 .language-switcher{position:fixed;z-index:250;right:1rem;bottom:1rem;display:flex;gap:.25rem;padding:.3rem;background:rgba(8,23,34,.92);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.language-switcher a{padding:.42rem .65rem;border-radius:999px;color:rgba(255,255,255,.72);font:700 .78rem/1.2 Inter,system-ui,sans-serif;text-decoration:none}.language-switcher a.active{background:#18c6c8;color:#081722}@media(max-width:560px){.language-switcher{right:.6rem;bottom:.6rem}.language-switcher a{padding:.4rem .52rem;font-size:.72rem}}
+
+
+    /* Japanese typography: keep CJK headings legible, balanced and collision-free. */
+    html[lang="ja"] .tail-guard { white-space: nowrap; }
+    html[lang="ja"] h3 { font-family: "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif; letter-spacing: 0; line-height: 1.55; text-wrap: balance; }
+    html[lang="ja"] {
+      line-break: strict;
+      word-break: normal;
+    }
+    html[lang="ja"] body {
+      font-family: "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    html[lang="ja"] :is(h1,h2,.metric strong,.direction-strip strong,.contact h2,.highlight-copy h3) {
+      font-family: "Noto Serif CJK JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+      letter-spacing: 0;
+      line-height: 1.24;
+      text-wrap: balance;
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+    html[lang="ja"] .hero h1 {
+      font-family: var(--serif);
+      line-height: 1.12;
+      letter-spacing: .01em;
+    }
+    html[lang="ja"] .section-head h2,
+    html[lang="ja"] .contact h2 {
+      line-height: 1.22;
+      letter-spacing: .005em;
+    }
+    html[lang="ja"] .highlight-copy h3 { line-height: 1.27; }
+    html[lang="ja"] :is(.kicker,.pillar-label,.funding-period,.institutional-story span,.contact-row span,.metric span) {
+      letter-spacing: .07em;
+      text-transform: none;
+    }
+    html[lang="ja"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.course-list li,.funding-card h3,.activity-card h3) {
+      line-height: 1.55;
+    }
+    @media (max-width: 760px) {
+      html[lang="ja"] .section-head h2 { font-size: clamp(2rem, 9vw, 3rem); }
+      html[lang="ja"] .contact h2 { font-size: clamp(2.15rem, 10vw, 3.35rem); }
+      html[lang="ja"] .highlight-copy h3 { font-size: clamp(1.7rem, 7.5vw, 2.45rem); }
+    }
+    @media (max-width: 560px) {
+      html[lang="ja"] .hero h1 { font-size: clamp(2.55rem, 13vw, 4rem); }
+      html[lang="ja"] .section-head h2 { font-size: clamp(1.85rem, 8.7vw, 2.7rem); }
+      html[lang="ja"] .direction-strip { align-items: flex-start; }
+      html[lang="ja"] .direction-strip span { text-align: left; }
+    }
+
 </style>
 </head>
 <body>
@@ -646,7 +696,7 @@
 <section aria-labelledby="mission-title" class="section pillars">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">研究ミッション</span><h2 id="mission-title">一つの材料基盤から、三つの世界的課題へ。</h2></div>
+<div><span class="kicker">研究ミッション</span><h2 id="mission-title">一つの材料基盤から、三つの世界的課題<span class="tail-guard">へ。</span></h2></div>
 <p>NanoBio Materialsでは、生体分子が持つプログラム可能性と先端材料の光学・電子・触媒機能を融合し、基礎化学を実用的な価値へつなげます。</p>
 </div>
 <div class="pillar-grid">
@@ -674,7 +724,7 @@
 <section class="section" id="research">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">研究基盤</span><h2>分子情報から材料機能へ。</h2></div>
+<div><span class="kicker">研究基盤</span><h2>分子情報から材料機能<span class="tail-guard">へ。</span></h2></div>
 <p>核酸化学とDNAナノテクノロジーで培った基盤を、有機・無機・ハイブリッドナノ材料へ展開し、健康、エネルギー、環境分野の応用につなげています。</p>
 </div>
 <div aria-label="研究プログラムの展開" class="research-path">
@@ -727,7 +777,7 @@
 <section class="section funding-section" id="funding">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">研究支援</span><h2>主要研究費</h2></div>
+<div><span class="kicker">研究支援</span><h2>主要研<span class="tail-guard">究費</span></h2></div>
 <p>DNAナノテクノロジー、核酸化学、機能性ナノ材料に対する競争的・学内研究支援です。</p>
 </div>
 <div class="funding-grid">
@@ -769,7 +819,7 @@
 <section class="section publications" id="publications">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">主要研究業績</span><h2>研究業績</h2></div>
+<div><span class="kicker">主要研究業績</span><h2>研究<span class="tail-guard">業績</span></h2></div>
 <p>核酸化学、DNAナノテクノロジー、NanoBioインターフェース、およびエネルギー・環境のための機能性材料に関する最近の代表的研究成果です。</p>
 </div>
 <div aria-label="研究業績を絞り込む" class="filter-row">
@@ -837,7 +887,7 @@
 <section class="section news" id="news">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">更新情報</span><h2>最近のニュース</h2></div>
+<div><span class="kicker">更新情報</span><h2>最近のニュ<span class="tail-guard">ース</span></h2></div>
 <p>研究、共同研究、学術活動の最近の主な動きを掲載しています。下のリンクから全時系列記録をご覧いただけます。</p>
 </div>
 <div aria-label="京都大学の研究ハイライト" class="institutional-news">
@@ -869,7 +919,7 @@
 <section class="section profile-section" id="academic-path">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">学歴・職歴</span><h2>学歴・職歴</h2></div>
+<div><span class="kicker">学歴・職歴</span><h2>学歴・<span class="tail-guard">職歴</span></h2></div>
 <p>学位および職歴を一つの時系列記録としてまとめています。</p>
 </div>
 <div class="profile-grid">
@@ -900,7 +950,7 @@
 <section class="section" id="teaching">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">教育</span><h2>エネルギーと社会のための化学。</h2></div>
+<div><span class="kicker">教育</span><h2>エネルギーと社会のための化<span class="tail-guard">学。</span></h2></div>
 <p>基礎物理化学を、持続可能なエネルギーと炭素管理の現代的課題に結び付ける授業を行っています。</p>
 </div>
 <div class="teaching-grid">

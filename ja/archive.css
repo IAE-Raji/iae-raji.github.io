@@ -65,3 +65,20 @@ footer{padding:1.5rem 0;color:#91a2ac;background:var(--ink);font-size:.8rem}
 @media(max-width:460px){.cover-gallery{grid-template-columns:1fr}}
 
 .language-switcher{position:fixed;z-index:250;right:1rem;bottom:1rem;display:flex;gap:.25rem;padding:.3rem;background:rgba(8,23,34,.92);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.language-switcher a{padding:.42rem .65rem;border-radius:999px;color:rgba(255,255,255,.72);font:700 .78rem/1.2 Inter,system-ui,sans-serif;text-decoration:none}.language-switcher a.active{background:#18c6c8;color:#081722}@media(max-width:560px){.language-switcher{right:.6rem;bottom:.6rem}.language-switcher a{padding:.4rem .52rem;font-size:.72rem}}
+
+
+
+/* Japanese page typography */
+html[lang="ja"]{line-break:strict;word-break:normal}
+html[lang="ja"] body{font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif}
+html[lang="ja"] :is(.intro h1,.toolbar h2,.year,.summary strong,.feature-cover figcaption strong,h1,h2){font-family:"Noto Serif CJK JP","Yu Mincho","Hiragino Mincho ProN",serif;letter-spacing:0;line-height:1.28;text-wrap:balance;word-break:normal;overflow-wrap:normal}
+html[lang="ja"] .intro h1{font-size:clamp(2.6rem,6.1vw,5.1rem);line-height:1.18}
+html[lang="ja"] .toolbar h2{line-height:1.25}
+html[lang="ja"] .entry h3{line-height:1.6}
+html[lang="ja"] .kicker{letter-spacing:.07em;text-transform:none}
+@media(max-width:720px){html[lang="ja"] .intro h1{font-size:clamp(2.2rem,11vw,3.6rem);line-height:1.2}html[lang="ja"] .toolbar h2{font-size:clamp(1.8rem,8vw,2.6rem)}}
+
+
+html[lang="ja"] h3{font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;letter-spacing:0;text-wrap:balance;word-break:normal;overflow-wrap:normal}
+
+html[lang="ja"] .tail-guard{white-space:nowrap}
