@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="NanoBio Materials 対象 health, energy and environment—research by Dr. Arivazhagan Rajendran at Kyoto University spanning nucleic-acid chemistry, DNA nanotechnology, functional nanomaterials and CO₂ reduction.">
-  <meta name="theme-color" content="#081722">
-  <title>NanoBio Materials | Arivazhagan Rajendran</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="京都大学のArivazhagan RajendranによるNanoBio Materials研究。核酸化学、DNAナノテクノロジー、機能性ナノ材料、CO₂還元を健康・エネルギー・環境へ展開。" name="description"/>
+<meta content="#081722" name="theme-color"/>
+<title>NanoBio Materials | Arivazhagan Rajendran</title>
+<style>
     :root {
       --ink: #081722;
       --ink-soft: #122734;
@@ -129,7 +130,7 @@
         radial-gradient(circle at 78% 20%, rgba(24,198,200,.22), transparent 31%),
         linear-gradient(122deg, var(--ink) 0%, #0b1f2d 62%, #0f3240 100%);
     }
-    .hero::be対象e {
+    .hero::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -167,7 +168,7 @@
       font-size: .78rem;
       font-weight: 850;
       letter-spacing: .18em;
-      text-trans対象m: uppercase;
+      text-transform: uppercase;
     }
     .hero h1 {
       max-width: 830px;
@@ -186,7 +187,7 @@
       font-size: .9rem;
       font-weight: 800;
       letter-spacing: .08em;
-      text-trans対象m: uppercase;
+      text-transform: uppercase;
     }
     .mission-word { padding: .36rem .66rem; border: 1px solid currentColor; border-radius: 999px; }
     .mission-word.health { color: var(--health); }
@@ -214,9 +215,9 @@
       text-decoration: none;
       font-size: .92rem;
       font-weight: 800;
-      transition: trans対象m .2s ease, background .2s ease, border-color .2s ease;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
     }
-    .button:hover { trans対象m: translateY(-2px); border-color: rgba(255,255,255,.55); }
+    .button:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.55); }
     .button.primary { color: var(--ink); background: var(--cyan); border-color: var(--cyan); }
     .button .arrow { margin-left: .6rem; font-size: 1.08rem; }
 
@@ -229,7 +230,7 @@
       border: 1px solid rgba(255,255,255,.2);
       border-radius: 1.2rem;
       box-shadow: 30px 32px 0 var(--cyan);
-      trans対象m: rotate(1.5deg);
+      transform: rotate(1.5deg);
     }
     .portrait-frame img {
       width: 100%;
@@ -247,7 +248,7 @@
       color: var(--ink);
       background: var(--amber);
       box-shadow: 0 20px 60px rgba(0,0,0,.2);
-      trans対象m: rotate(-2deg);
+      transform: rotate(-2deg);
     }
     .portrait-note strong { display: block; font: 700 1.05rem/1.2 var(--serif); }
     .portrait-note span { display: block; margin-top: .35rem; font-size: .77rem; line-height: 1.4; }
@@ -266,10 +267,10 @@
     .metric { min-height: 122px; padding: 1.35rem 1.5rem; border-right: 1px solid var(--line); }
     .metric:last-child { border-right: 0; }
     .metric strong { display: block; color: var(--ink); font: 400 2.35rem/1 var(--serif); letter-spacing: -.04em; }
-    .metric span { display: block; margin-top: .45rem; color: var(--muted); font-size: .8rem; font-weight: 750; letter-spacing: .05em; text-trans対象m: uppercase; }
+    .metric span { display: block; margin-top: .45rem; color: var(--muted); font-size: .8rem; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
     .metric.affiliation { display: flex; flex-direction: column; justify-content: center; }
     .metric.affiliation strong { font-size: 1.2rem; line-height: 1.25; }
-    .metric.affiliation span { text-trans対象m: none; letter-spacing: 0; line-height: 1.45; }
+    .metric.affiliation span { text-transform: none; letter-spacing: 0; line-height: 1.45; }
 
     .section { padding: clamp(5.4rem, 10vw, 8.5rem) 0; }
     .section-inner { width: min(var(--max), calc(100% - 2rem)); margin: auto; }
@@ -280,7 +281,7 @@
       align-items: end;
       margin-bottom: 3.4rem;
     }
-    .kicker { color: var(--red); font-size: .78rem; font-weight: 850; letter-spacing: .16em; text-trans対象m: uppercase; }
+    .kicker { color: var(--red); font-size: .78rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
     .section-head h2 { margin: .6rem 0 0; color: var(--ink); font: 400 clamp(2.4rem, 5vw, 4.3rem)/1 var(--serif); letter-spacing: -.045em; }
     .section-head p { max-width: 690px; margin: 0; color: var(--muted); font-size: 1.06rem; }
     #academic-path .section-head { grid-template-columns: minmax(0, 1.12fr) minmax(280px, .88fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: end; }
@@ -310,7 +311,7 @@
     .pillar-card.health { --pillar-color: var(--health); }
     .pillar-card.energy { --pillar-color: var(--energy); }
     .pillar-card.environment { --pillar-color: var(--environment); }
-    .pillar-label { color: var(--pillar-color); font-size: .75rem; font-weight: 850; letter-spacing: .16em; text-trans対象m: uppercase; }
+    .pillar-label { color: var(--pillar-color); font-size: .75rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
     .pillar-card h3 { margin: 1rem 0 .75rem; font: 400 clamp(2rem, 3.5vw, 3rem)/1 var(--serif); }
     .pillar-card p { position: relative; z-index: 1; margin: 0; color: rgba(255,255,255,.68); }
     .pillar-card ul { position: relative; z-index: 1; margin: 1.4rem 0 0; padding: 0; list-style: none; }
@@ -325,7 +326,7 @@
     }
     .path-step { position: relative; padding: 1rem 1.15rem; color: var(--ink); font-size: .82rem; font-weight: 800; }
     .path-step:not(:last-child) { border-right: 1px solid var(--line); }
-    .path-step:not(:last-child)::after { content: "→"; position: absolute; z-index: 1; right: -.65rem; top: 50%; width: 1.3rem; trans対象m: translateY(-50%); color: var(--red); background: var(--white); text-align: center; }
+    .path-step:not(:last-child)::after { content: "→"; position: absolute; z-index: 1; right: -.65rem; top: 50%; width: 1.3rem; transform: translateY(-50%); color: var(--red); background: var(--white); text-align: center; }
 
     .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
     .research-card {
@@ -334,9 +335,9 @@
       background: rgba(255,255,255,.48);
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      transition: background .25s ease, trans対象m .25s ease;
+      transition: background .25s ease, transform .25s ease;
     }
-    .research-card:hover { position: relative; z-index: 1; background: var(--white); trans対象m: translateY(-3px); }
+    .research-card:hover { position: relative; z-index: 1; background: var(--white); transform: translateY(-3px); }
     .card-number { color: var(--cyan); font: 700 .85rem/1 var(--serif); }
     .research-card h3 { margin: 2rem 0 .8rem; color: var(--ink); font: 400 clamp(1.55rem, 3vw, 2.15rem)/1.1 var(--serif); }
     .research-card p { margin: 0; color: var(--muted); }
@@ -397,16 +398,16 @@
       border: 1px solid rgba(255,255,255,.22);
       border-radius: 50%;
       text-decoration: none;
-      transition: color .2s ease, border-color .2s ease, trans対象m .2s ease;
+      transition: color .2s ease, border-color .2s ease, transform .2s ease;
     }
-    .pub-link:hover { color: var(--cyan); border-color: var(--cyan); trans対象m: translate(2px, -2px); }
+    .pub-link:hover { color: var(--cyan); border-color: var(--cyan); transform: translate(2px, -2px); }
     .archive-link { margin-top: 2rem; display: inline-flex; color: var(--amber); font-weight: 800; text-underline-offset: .25rem; }
 
     .funding-section { background: #eaf1f0; }
     .funding-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
     .funding-card { display: flex; min-height: 250px; padding: clamp(1.5rem, 3vw, 2.2rem); flex-direction: column; background: var(--white); border-top: 4px solid var(--cyan); }
     .funding-card.featured { color: var(--white); background: var(--ink-soft); border-color: var(--amber); }
-    .funding-period { color: var(--red); font-size: .74rem; font-weight: 850; letter-spacing: .08em; text-trans対象m: uppercase; }
+    .funding-period { color: var(--red); font-size: .74rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
     .funding-card.featured .funding-period { color: var(--amber); }
     .funding-card h3 { margin: 1.2rem 0 .7rem; color: var(--ink); font: 400 clamp(1.45rem, 2.7vw, 2rem)/1.08 var(--serif); }
     .funding-card.featured h3 { color: var(--white); }
@@ -424,7 +425,7 @@
     .academic-card h3 { margin: 0 0 1.8rem; color: var(--amber); font: 400 clamp(1.9rem, 4vw, 2.7rem)/1 var(--serif); }
     .career { margin: 0; padding: 0; list-style: none; }
     .career li { position: relative; padding: 0 0 1.45rem 1.7rem; color: rgba(255,255,255,.74); border-left: 1px solid rgba(255,255,255,.2); }
-    .career li::be対象e { content: ""; position: absolute; left: -5px; top: .42rem; width: 9px; height: 9px; background: var(--cyan); border: 2px solid var(--ink-soft); border-radius: 50%; }
+    .career li::before { content: ""; position: absolute; left: -5px; top: .42rem; width: 9px; height: 9px; background: var(--cyan); border: 2px solid var(--ink-soft); border-radius: 50%; }
     .career li:last-child { padding-bottom: 0; }
     .career strong { display: block; margin-bottom: .2rem; color: var(--white); font-size: .96rem; }
     .career a { color: var(--white); font-weight: 700; text-decoration-color: var(--cyan); text-underline-offset: .2rem; }
@@ -440,7 +441,7 @@
 
     .highlight-grid { display: grid; grid-template-columns: minmax(280px, .8fr) 1.2fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
     .cover-card { position: relative; width: min(100%, 520px); margin: auto; padding: 0 18% 14% 0; }
-    .cover-card::be対象e {
+    .cover-card::before {
       content: "";
       position: absolute;
       inset: 2rem 4% 3% 2rem;
@@ -461,7 +462,7 @@
       width: 54%;
       height: auto;
       border: 7px solid var(--paper);
-      trans対象m: rotate(2deg);
+      transform: rotate(2deg);
     }
     .highlight-copy h3 { margin: 0 0 1rem; color: var(--ink); font: 400 clamp(2rem, 4vw, 3.25rem)/1.05 var(--serif); letter-spacing: -.04em; }
     .highlight-copy > p { color: var(--muted); }
@@ -481,7 +482,7 @@
     .institutional-news { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
     .institutional-story { display: flex; min-height: 235px; padding: clamp(1.5rem, 3vw, 2.2rem); flex-direction: column; color: var(--white); background: linear-gradient(140deg,#103646,var(--ink)); text-decoration: none; }
     .institutional-story.newspaper { background: linear-gradient(140deg,#853b2f,#4c211b); }
-    .institutional-story span { color: var(--cyan); font-size: .75rem; font-weight: 850; letter-spacing: .09em; text-trans対象m: uppercase; }
+    .institutional-story span { color: var(--cyan); font-size: .75rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
     .institutional-story.newspaper span { color: var(--amber); }
     .institutional-story strong { margin: 1.2rem 0; font: 400 clamp(1.45rem, 3vw, 2.15rem)/1.12 var(--serif); }
     .institutional-story em { margin-top: auto; color: rgba(255,255,255,.78); font-size: .82rem; font-style: normal; font-weight: 800; }
@@ -505,7 +506,7 @@
     .candidate-note { margin-top: 2rem; padding: 1.2rem 1.3rem; border-left: 3px solid var(--amber); background: rgba(255,255,255,.06); color: rgba(255,255,255,.78); }
     .contact-details { align-self: end; border-top: 1px solid rgba(255,255,255,.18); }
     .contact-row { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,.18); }
-    .contact-row span { display: block; color: var(--cyan); font-size: .73rem; font-weight: 850; letter-spacing: .13em; text-trans対象m: uppercase; }
+    .contact-row span { display: block; color: var(--cyan); font-size: .73rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
     .contact-row a, .contact-row p { display: block; margin: .25rem 0 0; color: var(--white); text-decoration: none; }
     .contact-row a:hover { color: var(--amber); }
     .profile-links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
@@ -568,7 +569,7 @@
       .funding-grid, .institutional-news { grid-template-columns: 1fr; }
       .research-path { grid-template-columns: 1fr; }
       .path-step:not(:last-child) { border-right: 0; border-bottom: 1px solid var(--line); }
-      .path-step:not(:last-child)::after { content: "↓"; right: 1rem; top: auto; bottom: -.65rem; trans対象m: none; }
+      .path-step:not(:last-child)::after { content: "↓"; right: 1rem; top: auto; bottom: -.65rem; transform: none; }
       .direction-strip { align-items: flex-start; flex-direction: column; }
       .direction-strip span { text-align: left; }
       .publication-item { grid-template-columns: 62px 1fr; }
@@ -580,395 +581,381 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::be対象e, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
     }
   
 .language-switcher{position:fixed;z-index:250;right:1rem;bottom:1rem;display:flex;gap:.25rem;padding:.3rem;background:rgba(8,23,34,.92);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.language-switcher a{padding:.42rem .65rem;border-radius:999px;color:rgba(255,255,255,.72);font:700 .78rem/1.2 Inter,system-ui,sans-serif;text-decoration:none}.language-switcher a.active{background:#18c6c8;color:#081722}@media(max-width:560px){.language-switcher{right:.6rem;bottom:.6rem}.language-switcher a{padding:.4rem .52rem;font-size:.72rem}}
 </style>
 </head>
 <body>
-  <nav class="language-switcher" aria-label="Language"><a href="../ta/index.html" lang="ta">தமிழ்</a><a href="../en/index.html" lang="en">English</a><a class="active" href="../ja/index.html" lang="ja">日本語</a></nav>
-  <a class="skip-link" href="#main">本文へ移動</a>
-
-  <header class="site-header">
-    <nav class="nav-wrap" aria-label="Main navigation">
-      <a class="brand" href="index.html#top" aria-label="Arivazhagan Rajendran, home">
-        <span class="brand-mark">AR</span>
-        <span>Arivazhagan Rajendran</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
-      <div class="nav-links" id="nav-links">
-        <a href="research.html">研究</a>
-        <a href="funding.html">研究費</a>
-        <a href="publications.html">研究業績</a>
-        <a href="presentations.html">学会発表</a>
-        <a href="highlights.html">ハイライト</a>
-        <a href="news.html">ニュース</a>
-        <a href="teaching.html">教育</a>
-        <a href="academic.html">学歴・職歴</a>
-        <a class="nav-contact" href="#contact">連絡先</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-inner">
-        <div>
-          <p class="eyebrow">分子精密性・機能性材料・持続可能な未来</p>
-          <h1>NanoBio <span>Materials</span></h1>
-          <div class="hero-mission" aria-label="研究 applications">
-            <span>対象</span><span class="mission-word health">健康</span><span class="mission-word energy">エネルギー</span><span class="mission-word environment">環境</span>
-          </div>
-          <p class="hero-name">Arivazhagan Rajendran <span>准教授 · Integrated 研究 Center 対象 Carbon Negative Science, Institute of Advanced エネルギー, Kyoto University</span></p>
-          <p class="hero-lede">核酸化学とDNAナノテクノロジーを、有機・無機・ハイブリッドナノ材料と融合し、生命医科学、クリーンエネルギー、CO₂還元のための機能システムを創出します。</p>
-          <div class="hero-actions">
-            <a class="button primary" href="research.html">研究を見る <span class="arrow">→</span></a>
-            <a class="button" href="publications.html">主要研究業績</a>
-          </div>
-        </div>
-        <div class="portrait-stage" aria-label="Portrait of Dr. Arivazhagan Rajendran">
-          <div class="portrait-frame">
-            <img src="profile.webp" alt="Dr. Arivazhagan Rajendran" width="454" height="430">
-          </div>
-          <div class="portrait-note">
-            <strong>Integrated 研究 Center 対象 Carbon Negative Science</strong>
-            <span>Institute of Advanced エネルギー, Kyoto University · Uji, Japan</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="metrics" aria-label="研究 profile snapshot">
-      <div class="metric"><strong>49</strong><span>研究業績</span></div>
-      <div class="metric"><strong>3,386</strong><span>Google Scholar citations · 889 since 2021</span></div>
-      <div class="metric"><strong>26 / 33</strong><span>h-index / i10-index<br>Since 2021: 15 / 21</span></div>
-      <div class="metric affiliation"><strong>Integrated 研究 Center 対象 Carbon Negative Science</strong><span>Institute of Advanced エネルギー, Kyoto University</span></div>
-    </section>
-
-    <section class="section pillars" aria-labelledby="mission-title">
-      <div class="section-inner">
-        <div class="section-head">
-          <div><span class="kicker">研究ミッション</span><h2 id="mission-title">一つの材料基盤から、三つの世界的課題へ。</h2></div>
-          <p>ナノバイオ材料は、生体分子のプログラム可能性と先端材料の光学・電子・触媒機能を融合し、基礎化学を社会的価値へつなげます。</p>
-        </div>
-        <div class="pillar-grid">
-          <article class="pillar-card health">
-            <span class="pillar-label">01 · 健康</span>
-            <h3>ナノスケールの精密性</h3>
-            <p>Programmable nucleic-acid structures and biofunctional nanomaterials 対象 understanding, sensing and influencing biological systems.</p>
-            <ul><li>DNA origami and nano-bio interfaces</li><li>Biomolecular stability and recognition</li><li>Biofunctional nanoparticles</li></ul>
-          </article>
-          <article class="pillar-card energy">
-            <span class="pillar-label">02 · エネルギー</span>
-            <h3>変換のための材料</h3>
-            <p>Organic, inorganic and hybrid nanomaterials engineered to harvest, store and trans対象m energy more efficiently.</p>
-            <ul><li>Photocatalysis and electrocatalysis</li><li>Low-dimensional catalytic materials</li><li>Solar-driven chemical conversion</li></ul>
-          </article>
-          <article class="pillar-card environment">
-            <span class="pillar-label">03 · 環境</span>
-            <h3>低炭素社会に向けた化学</h3>
-            <p>Functional materials and sustainable processes that turn environmental challenges into opportunities 対象 resource recovery.</p>
-            <ul><li>CO₂ reduction and utilization</li><li>Carbon-negative science</li><li>Green synthesis and catalysis</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="research">
-      <div class="section-inner">
-        <div class="section-head">
-          <div><span class="kicker">研究基盤</span><h2>分子情報から材料機能へ。</h2></div>
-          <p>The research programme grows from a long-standing foundation in nucleic-acid chemistry and DNA nanotechnology into a broader plat対象m of organic, inorganic and hybrid nanomaterials 対象 health, energy and environmental applications.</p>
-        </div>
-        <div class="research-path" aria-label="Evolution of the research programme">
-          <div class="path-step">核酸化学</div>
-          <div class="path-step">DNA nanotechnology</div>
-          <div class="path-step">NanoBio interfaces</div>
-          <div class="path-step">Functional nanomaterials</div>
-        </div>
-        <div class="research-grid">
-          <article class="research-card">
-            <span class="card-number">01</span>
-            <h3>核酸化学</h3>
-            <p>Recognition, folding and function of non-canonical DNA structures, DNA–protein complexes and small-molecule interactions.</p>
-            <div class="research-tags"><span>G-quadruplex</span><span>i-Motif</span><span>Molecular recognition</span></div>
-          </article>
-          <article class="research-card">
-            <span class="card-number">02</span>
-            <h3>DNAナノテクノロジー・DNAオリガミ</h3>
-            <p>Programmable assembly, ligation and stabilization of 2D and 3D DNA origami, including addressable scaffolds 対象 nano-bio applications.</p>
-            <div class="research-tags"><span>Self-assembly</span><span>Ligation</span><span>High-speed AFM</span></div>
-          </article>
-          <article class="research-card">
-            <span class="card-number">03</span>
-            <h3>有機ナノ材料</h3>
-            <p>Molecularly designed soft and carbon-based nanomaterials 対象 light harvesting, molecular recognition and bio-related function.</p>
-            <div class="research-tags"><span>Organic nanoassemblies</span><span>Photochemistry</span><span>Biointerfaces</span></div>
-          </article>
-          <article class="research-card">
-            <span class="card-number">04</span>
-            <h3>無機・ハイブリッドナノ材料</h3>
-            <p>Nanoparticles, heterostructures and low-dimensional catalysts designed 対象 energy conversion, CO₂ reduction and carbon-negative science.</p>
-            <div class="research-tags"><span>Nanohybrids</span><span>Electrocatalysis</span><span>CO₂ reduction</span></div>
-          </article>
-        </div>
-        <div class="direction-strip"><strong>現在の研究方向</strong><span>Organic and inorganic nanomaterials · light-assisted CO₂ reduction · low-dimensional catalytic systems</span></div>
-        <div class="network-block">
-          <h3>国際共同研究ネットワーク</h3>
-          <ul class="network-grid">
-            <li><a href="https://www.ewha.ac.kr/ewhaen/index.do" target="_blank" rel="noopener">Ewha Womans University</a> · single-molecule analysis of enzyme mechanisms and inhibitor action · since 2014</li>
-            <li><a href="https://medschool.vanderbilt.edu/" target="_blank" rel="noopener">Vanderbilt University School of Medicine</a> · molecular mechanisms of topoisomerases · 2017–2024</li>
-            <li><a href="https://vtu.ac.in/" target="_blank" rel="noopener">Visvesvaraya Technological University</a> · stable DNA nanomaterials · since 2017</li>
-            <li><a href="https://nitc.ac.in/" target="_blank" rel="noopener">National Institute of Technology Calicut</a> · DNA nanotechnology 対象 single-molecule analysis · since 2018</li>
-            <li><a href="https://www.amrita.edu/" target="_blank" rel="noopener">Amrita Vishwa Vidyapeetham</a> · metal-oxide nanomaterials 対象 biological applications · since 2023</li>
-            <li><a href="https://www.kmu.edu.tw/index.php/en-gb/" target="_blank" rel="noopener">Kaohsiung Medical University</a> · nanomaterials 対象 energy and environmental applications · since 2025</li>
-          </ul>
-        </div>
-        <a class="section-more" href="research.html">View the complete research profile →</a>
-      </div>
-    </section>
-
-    <section class="section funding-section" id="funding">
-      <div class="section-inner">
-        <div class="section-head">
-          <div><span class="kicker">研究支援</span><h2>主要研究費</h2></div>
-          <p>Competitive and institutional support 対象 DNA nanotechnology, nucleic-acid chemistry and functional nanomaterials.</p>
-        </div>
-        <div class="funding-grid">
-          <article class="funding-card featured">
-            <span class="funding-period">2021–2024 · Principal Investigator</span>
-            <h3>Grant-in-Aid 対象 Scientific 研究 (C)</h3>
-            <p>Retroviral integration into topologically interlocked DNAs to probe DNA structure and screen viral inhibitors.</p>
-            <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K05274/" target="_blank" rel="noopener">KAKENHI 21K05274 ↗</a>
-          </article>
-          <article class="funding-card">
-            <span class="funding-period">2016–2018 · Principal Investigator</span>
-            <h3>Grant-in-Aid 対象 Young Scientists (B)</h3>
-            <p>DNA-origami plat対象m 対象 screening anticancer drugs that target topoisomerases.</p>
-            <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-16K17934/" target="_blank" rel="noopener">KAKENHI 16K17934 ↗</a>
-          </article>
-          <article class="funding-card">
-            <span class="funding-period">2015–2018 · Co-Investigator</span>
-            <h3>Grant-in-Aid 対象 Scientific 研究 (A)</h3>
-            <p>Chemical tools 対象 precise detection of modification and damage in the human genome.</p>
-            <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-15H02189/" target="_blank" rel="noopener">KAKENHI 15H02189 ↗</a>
-          </article>
-          <article class="funding-card">
-            <span class="funding-period">2012–2017 · Co-Investigator</span>
-            <h3>Grant-in-Aid 対象 Scientific 研究 (S)</h3>
-            <p>Control and elucidation of gene expression at the molecular level.</p>
-            <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24225005/" target="_blank" rel="noopener">KAKENHI 24225005 ↗</a>
-          </article>
-        </div>
-        <div class="funding-notes" aria-label="Additional research support">
-          <span><strong>2025</strong> <a href="https://www.iae.kyoto-u.ac.jp/en" target="_blank" rel="noopener">IAE Joint 研究: advanced catalysts 対象 photoelectrochemical CO₂ conversion</a></span>
-          <span><strong>2025</strong> <a href="https://www.iae.kyoto-u.ac.jp/en" target="_blank" rel="noopener">IAE international industry–government–academia collaborative research support</a></span>
-          <span><strong>2024 award · 2025–27 project</strong> <a href="https://hirose-isf.or.jp/research-grants/" target="_blank" rel="noopener">Hirose Foundation research grant</a></span>
-          <span><strong>2021–22</strong> <a href="funding.html">Two IAE Joint 研究 projects on stable DNA origami and chemical stabilization</a></span>
-          <span><strong>2020</strong> <a href="https://fund.kyoto-u.ac.jp/" target="_blank" rel="noopener">Kyoto University Foundation research grant</a></span>
-        </div>
-        <a class="section-more" href="funding.html">View the complete funding list →</a>
-      </div>
-    </section>
-
-    <section class="section publications" id="publications">
-      <div class="section-inner">
-        <div class="section-head">
-          <div><span class="kicker">主要研究業績</span><h2>研究業績</h2></div>
-          <p>Recent and representative contributions spanning nucleic-acid chemistry, DNA nanotechnology, NanoBio interfaces and functional materials 対象 energy and the environment.</p>
-        </div>
-        <div class="filter-row" aria-label="Filter publications">
-          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All selected</button>
-          <button class="filter-button" type="button" data-filter="dna" aria-pressed="false">DNA &amp; nano-bio</button>
-          <button class="filter-button" type="button" data-filter="energy" aria-pressed="false">Materials &amp; energy</button>
-        </div>
-        <div class="publication-list">
-          <article class="publication-item" data-topic="energy">
-            <div class="pub-year">2026</div>
-            <div><h3 class="pub-title">High-energy Ni²⁺/Bi³⁺ layered double hydroxide/MXene heterostructure electrode using a supercritical fluid approach</h3><p class="pub-meta">ACS Applied Nano Materials · Vol. 9, 11031–11044</p></div>
-            <a class="pub-link" href="https://doi.org/10.1021/acsanm.6c01451" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
-          </article>
-          <article class="publication-item" data-topic="energy">
-            <div class="pub-year">2026</div>
-            <div><h3 class="pub-title">Green-fabricated zinc sulfide nanoparticles with dual antidiabetic and anticancer efficacy</h3><p class="pub-meta">Applied Materials Today · Vol. 49, 103152</p></div>
-            <a class="pub-link" href="https://doi.org/10.1016/j.apmt.2026.103152" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
-          </article>
-          <article class="publication-item" data-topic="dna">
-            <div class="pub-year">2024</div>
-            <div><h3 class="pub-title">Near quantitative ligation results in resistance of DNA origami against nuclease and cell lysate</h3><p class="pub-meta">Small Methods · Vol. 8, 2300999</p></div>
-            <a class="pub-link" href="https://doi.org/10.1002/smtd.202300999" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
-          </article>
-          <article class="publication-item" data-topic="dna">
-            <div class="pub-year">2022</div>
-            <div><h3 class="pub-title">Topologically-interlocked minicircles as probes of DNA topology and DNA–protein interactions</h3><p class="pub-meta">Chemistry – A European Journal</p></div>
-            <a class="pub-link" href="https://doi.org/10.1002/chem.202200108" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
-          </article>
-          <article class="publication-item" data-topic="dna">
-            <div class="pub-year">2021</div>
-            <div><h3 class="pub-title">Stabilization and structural changes of 2D DNA origami by enzymatic ligation</h3><p class="pub-meta">Nucleic Acids 研究 · Vol. 49, 7884–7900</p></div>
-            <a class="pub-link" href="https://doi.org/10.1093/nar/gkab611" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
-          </article>
-          <article class="publication-item" data-topic="dna">
-            <div class="pub-year">2011</div>
-            <div><h3 class="pub-title">Programmed two-dimensional self-assembly of multiple DNA origami jigsaw pieces</h3><p class="pub-meta">ACS Nano · Vol. 5, 665–671 · Journal front cover</p></div>
-            <a class="pub-link" href="https://doi.org/10.1021/nn1031627" target="_blank" rel="noopener" aria-label="Open publication">↗</a>
-          </article>
-        </div>
-        <a class="archive-link" href="publications.html">View the complete list of 49 publications →</a>
-      </div>
-    </section>
-
-    <section class="section" id="highlights">
-      <div class="section-inner">
-        <div class="highlight-grid">
-          <figure class="cover-card" aria-label="Selected journal highlights">
-            <img src="chembiochem-highlight-cropped.png" alt="ChemBioChem highlight 対象 the review Nucleic-Acid-Templated Enzyme Cascades" width="635" height="838" loading="lazy">
-            <img class="cover-secondary" src="chem-eur-highlight.png" alt="Chemistry – A European Journal 2022 cover featuring topologically interlocked DNA" width="705" height="936" loading="lazy">
-          </figure>
-          <div class="highlight-copy">
-            <span class="kicker">ハイライト</span>
-            <h3>研究 recognized across journals, media and scientific communities.</h3>
-            <p>Work on DNA origami, nucleic-acid structure and nano-bio systems has appeared on journal covers and in international science reporting.</p>
-            <ul class="highlight-list">
-              <li><time>2023–24</time><span>研究 highlighted by <a href="https://www.kyoto-u.ac.jp/ja/research-news/2023-11-02" target="_blank" rel="noopener">Kyoto University</a>, <a href="https://sj.jst.go.jp/news/202401/n0123-01k.html" target="_blank" rel="noopener">JST</a>, <a href="https://www.technologyreview.jp/n/2023/11/07/321500/" target="_blank" rel="noopener">MIT Technology Review</a> and <a href="https://www.nikkei.com/article/DGXZQOUC16AD30W4A210C2000000/" target="_blank" rel="noopener">Nikkei</a>.</span></li>
-              <li><time>2022</time><span><a href="https://doi.org/10.1002/chem.202200838" target="_blank" rel="noopener">Chemistry – A European Journal front cover</a> and <a href="https://doi.org/10.1002/chem.202200839" target="_blank" rel="noopener">researcher profile</a>.</span></li>
-              <li><time>2017</time><span>ChemBioChem profile highlight and <a href="https://doi.org/10.1002/cbic.201600703" target="_blank" rel="noopener">Readers’ Choice review</a> on nucleic-acid-templated enzyme cascades.</span></li>
-              <li><time>2011</time><span><a href="https://doi.org/10.1021/nn1031627" target="_blank" rel="noopener">ACS Nano front cover article</a> and ISNAC Outstanding Poster Presentation Award.</span></li>
-            </ul>
-            <a class="section-more" href="highlights.html">View all covers, highlights and awards →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section news" id="news">
-      <div class="section-inner">
-        <div class="section-head">
-          <div><span class="kicker">最新情報</span><h2>最新ニュース</h2></div>
-          <p>Recent research, collaboration and academic milestones. The complete chronological archive is available below.</p>
-        </div>
-        <div class="institutional-news" aria-label="Kyoto University research highlights">
-          <a class="institutional-story" href="https://www.kyoto-u.ac.jp/ja/research-news/2023-11-02" target="_blank" rel="noopener">
-            <span>Kyoto University · 2 Nov 2023</span>
-            <strong>University research news: a new stabilization method expands the possibilities of DNA origami.</strong>
-            <em>Read the official release ↗</em>
-          </a>
-          <a class="institutional-story newspaper" href="https://www.kyoto-up.org/archives/7236" target="_blank" rel="noopener">
-            <span>Kyoto University ニュースpaper · 16 Nov 2023</span>
-            <strong>DNA origami stabilization succeeds by efficiently joining breaks in the structure.</strong>
-            <em>Read the newspaper feature ↗</em>
-          </a>
-        </div>
-        <div class="news-grid">
-          <ol class="news-list">
-            <li><time>19 May 2026</time><p>研究 article accepted in <a href="https://doi.org/10.1021/acsanm.6c01451" target="_blank" rel="noopener"><em>ACS Applied Nano Materials</em></a>.</p></li>
-            <li><time>14 Feb 2026</time><p>研究 article accepted in <a href="https://doi.org/10.1016/j.apmt.2026.103152" target="_blank" rel="noopener"><em>Applied Materials Today</em></a>.</p></li>
-            <li><time>16 Jan 2026</time><p>Hosted three visiting students from <a href="https://www.postech.ac.kr/eng/" target="_blank" rel="noopener">POSTECH</a>, South Korea, 対象 research discussion.</p></li>
-            <li><time>24 Nov 2025</time><p>研究 article accepted in <a href="https://doi.org/10.1016/j.molstruc.2025.144859" target="_blank" rel="noopener"><em>Journal of Molecular Structure</em></a>.</p></li>
-            <li><time>2025</time><p>Received two internal research grants from the <a href="funding.html">Institute of Advanced エネルギー, Kyoto University</a> 対象 CO₂-conversion nanomaterials.</p></li>
-            <li><time>01 Jul 2025</time><p>Two internship students from <a href="https://vtu.ac.in/" target="_blank" rel="noopener">Visvesvaraya Technological University</a> joined the group.</p></li>
-            <li><time>01 Dec 2024</time><p>Received a research grant from the <a href="https://hirose-isf.or.jp/research-grants/" target="_blank" rel="noopener">Hirose Foundation</a>.</p></li>
-          </ol>
-        </div>
-        <a class="section-more" href="news.html">View the complete news list →</a>
-      </div>
-    </section>
-
-    <section class="section profile-section" id="academic-path">
-      <div class="section-inner">
-        <div class="section-head">
-          <div><span class="kicker">学歴・職歴</span><h2>学歴・研究歴・職歴</h2></div>
-          <p>A single chronological record of academic qualifications and professional appointments.</p>
-        </div>
-        <div class="profile-grid">
-          <article class="academic-card">
-            <h3>学歴・職歴の全記録</h3>
-            <ol class="career">
-              <li><strong>February 2015–present</strong>准教授, <a href="https://icans.iae.kyoto-u.ac.jp/en/" target="_blank" rel="noopener">Integrated 研究 Center 対象 Carbon Negative Science</a>, <a href="https://www.iae.kyoto-u.ac.jp/en" target="_blank" rel="noopener">Institute of Advanced エネルギー</a>, <a href="https://www.kyoto-u.ac.jp/en" target="_blank" rel="noopener">Kyoto University</a></li>
-              <li><strong>September 2013–January 2015</strong>Assistant Professor, <a href="https://www1.tara.tsukuba.ac.jp/en/" target="_blank" rel="noopener">TARA</a>, <a href="https://www.tsukuba.ac.jp/en/" target="_blank" rel="noopener">University of Tsukuba</a></li>
-              <li><strong>January 2010–August 2013</strong>CREST and JSPS Postdoctoral 研究er in DNA nanotechnology, WPI-iCeMS and Department of Chemistry, <a href="https://www.kyoto-u.ac.jp/en" target="_blank" rel="noopener">Kyoto University</a></li>
-              <li><strong>October 2008–December 2009</strong>Postdoctoral 研究er in nucleic-acid chemistry, <a href="https://www.konan-u.ac.jp/english/center/fiber/" target="_blank" rel="noopener">FIBER</a>, <a href="https://www.konan-u.ac.jp/english/" target="_blank" rel="noopener">Konan University</a></li>
-              <li><strong>October 2005–September 2008</strong>Ph.D. in Chemistry (Analytical Chemistry), <a href="https://www.chem.tohoku.ac.jp/english/" target="_blank" rel="noopener">Tohoku University</a>, Japan</li>
-              <li><strong>January–September 2005</strong>研究 student, <a href="https://clri.org/" target="_blank" rel="noopener">CSIR–Central Leather 研究 Institute</a>, India</li>
-              <li><strong>September–December 2004</strong>研究 student in computational chemistry, <a href="https://www.cec.mpg.de/en/institute/history" target="_blank" rel="noopener">Max Planck Institute 対象 Bioinorganic Chemistry</a>, Germany</li>
-              <li><strong>October 2003–August 2004</strong>研究 student, <a href="https://www.chem.tohoku.ac.jp/english/" target="_blank" rel="noopener">Tohoku University</a>, Japan</li>
-              <li><strong>July 2001–June 2003</strong>M.Sc. in Inorganic Chemistry, <a href="https://unom.ac.in/" target="_blank" rel="noopener">University of Madras</a>, India</li>
-              <li><strong>July 1998–June 2001</strong>B.Sc. in Chemistry, <a href="https://www.gacmenkrishnagiri.org/" target="_blank" rel="noopener">Government Arts College, Krishnagiri</a>, affiliated with <a href="https://www.periyaruniversity.ac.in/" target="_blank" rel="noopener">Periyar University</a>, India</li>
-            </ol>
-          </article>
-        </div>
-        <div class="activity-grid">
-          <article class="activity-card"><h3>研究指導</h3><p>Supervision and guidance of doctoral, master’s, undergraduate and international internship researchers. Verified recent projects include DNA nanomaterials, nanoparticle catalysis and CO₂ conversion.</p><a href="service.html">Complete mentoring record →</a></article>
-          <article class="activity-card"><h3>学術貢献</h3><p>Institute committee work, journal peer review and membership of professional chemistry and nucleic-acid societies.</p><a href="service.html">Complete service record →</a></article>
-          <article class="activity-card"><h3>社会・科学アウトリーチ</h3><p>Science classes, laboratory visits, conference organization, invited educational programmes and open teaching resources.</p><a href="service.html">Complete outreach record →</a></article>
-        </div>
-        <a class="section-more" href="academic.html">View the complete academic path →</a>
-      </div>
-    </section>
-
-    <section class="section" id="teaching">
-      <div class="section-inner">
-        <div class="section-head">
-          <div><span class="kicker">教育</span><h2>エネルギーと社会のための化学</h2></div>
-          <p>Courses connect fundamental physical chemistry with contemporary questions in sustainable energy and carbon management.</p>
-        </div>
-        <div class="teaching-grid">
-          <article class="teaching-panel accent">
-            <span class="kicker" style="color:#fff4df">大学院</span>
-            <h3><a href="https://www.energy.kyoto-u.ac.jp/en/" target="_blank" rel="noopener">大学院 School of エネルギー Science</a></h3>
-            <p>Verified teaching record, 2022–present · English</p>
-            <ul class="course-list"><li>From Carbon Neutral to Carbon Negative <small>(2022–present)</small></li><li>Fundamental エネルギー Science <small>(2024–present)</small></li><li>International Seminar on エネルギー Science (Group Study) <small>(2025–present)</small></li></ul>
-          </article>
-          <article class="teaching-panel">
-            <span class="kicker">学部</span>
-            <h3><a href="https://www.kyoto-u.ac.jp/en/about/profile/faculty/organizations/liberal-arts-1" target="_blank" rel="noopener">Institute 対象 Liberal Arts and Sciences</a></h3>
-            <p>Annual teaching record, 2015–present · English</p>
-            <ul class="course-list">
-              <li>Essentials of Basic Physical Chemistry</li>
-              <li>Basic Physical Chemistry: Thermodynamics</li>
-              <li>Basic Physical Chemistry: Quantum Theory</li>
-              <li>Chemistry of Sustainable エネルギー</li>
-            </ul>
-          </article>
-        </div>
-        <a class="section-more" href="teaching.html">View the complete teaching record →</a>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="section-inner contact-inner">
-        <div>
-          <span class="eyebrow">連絡先・共同研究</span>
-          <h2>次世代の <span>ナノバイオ材料を共に創りましょう。</span></h2>
-          <p class="contact-lede">研究 discussions and collaboration enquiries in nucleic-acid chemistry, DNA nanotechnology, organic and inorganic nanomaterials, energy conversion and CO₂ reduction are welcome.</p>
-          <div class="candidate-note"><strong>Prospective researchers:</strong> Ph.D. and postdoctoral enquiries are welcome, particularly from candidates applying 対象 external scholarships. Please review the relevant funding guidelines and include a focused research idea when contacting.</div>
-        </div>
-        <div class="contact-details">
-          <div class="contact-row"><span>メール</span><a href="mailto:raji@iae.kyoto-u.ac.jp">raji@iae.kyoto-u.ac.jp</a></div>
-          <div class="contact-row"><span>電話</span><a href="tel:+81774383556">+81 774 38 3556</a></div>
-          <div class="contact-row"><span>所属</span><p>Integrated 研究 Center 対象 Carbon Negative Science, Institute of Advanced エネルギー, Kyoto University</p></div>
-          <div class="contact-row"><span>住所</span><p>M-576E, Main Building, Gokasho, Uji, Kyoto 611-0011, Japan</p></div>
-          <div class="profile-links">
-            <a href="https://scholar.google.com/citations?hl=en&amp;user=vxClbUAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-            <a href="https://orcid.org/0000-0002-9319-6107" target="_blank" rel="noopener">ORCID</a>
-            <a href="https://researchmap.jp/raji?lang=en" target="_blank" rel="noopener">researchmap</a>
-            <a href="https://www.scopus.com/authid/detail.uri?authorId=24588211000" target="_blank" rel="noopener">Scopus</a>
-            <a href="https://www.youtube.com/channel/UCT0iRR_tV-L2G5TfsHmifww" target="_blank" rel="noopener">YouTube</a>
-            <a href="https://kdb.iimc.kyoto-u.ac.jp/profile/en.13d6dd8e6f9e6665.html" target="_blank" rel="noopener">Kyoto University profile</a>
-            <a href="https://www.iae.kyoto-u.ac.jp/en" target="_blank" rel="noopener">Institute of Advanced エネルギー</a>
-            <a href="https://icans.iae.kyoto-u.ac.jp/en/" target="_blank" rel="noopener">ICaNS</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner"><span>© 2026 Arivazhagan Rajendran</span><span>研究map checked 5 September 2026 · Google Scholar metrics last verified 4 September 2026.</span></div>
-  </footer>
-
-  <script>
+<nav aria-label="言語" class="language-switcher"><a href="../ta/index.html" lang="ta">தமிழ்</a><a href="../en/index.html" lang="en">English</a><a class="active" href="../ja/index.html" lang="ja">日本語</a></nav>
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+<nav aria-label="メインナビゲーション" class="nav-wrap">
+<a aria-label="Arivazhagan Rajendran、ホーム" class="brand" href="index.html#top">
+<span class="brand-mark">AR</span>
+<span>Arivazhagan Rajendran</span>
+</a>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="ナビゲーションを開く" class="menu-toggle" type="button">☰</button>
+<div class="nav-links" id="nav-links">
+<a href="research.html">研究</a>
+<a href="funding.html">研究費</a>
+<a href="publications.html">研究業績</a>
+<a href="presentations.html">学会発表</a>
+<a href="highlights.html">ハイライト</a>
+<a href="news.html">ニュース</a>
+<a href="teaching.html">教育</a>
+<a href="academic.html">学歴・職歴</a>
+<a class="nav-contact" href="#contact">連絡先</a>
+</div>
+</nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+<div class="hero-inner">
+<div>
+<p class="eyebrow">分子レベルの精密設計 · 機能性材料 · 持続可能な未来</p>
+<h1>NanoBio <span>Materials</span></h1>
+<div aria-label="研究応用" class="hero-mission">
+<span>が拓く</span><span class="mission-word health">健康</span><span class="mission-word energy">エネルギー</span><span class="mission-word environment">環境</span>
+</div>
+<p class="hero-name">Arivazhagan Rajendran <span>講師 · 京都大学エネルギー理工学研究所 附属カーボンネガティブ・エネルギー研究センター</span></p>
+<p class="hero-lede">核酸化学とDNAナノテクノロジーを、有機・無機・ハイブリッドナノ材料と融合し、生命医科学、クリーンエネルギー、CO₂還元のための機能システムを創出します。</p>
+<div class="hero-actions">
+<a class="button primary" href="research.html">研究を見る <span class="arrow">→</span></a>
+<a class="button" href="publications.html">主要論文</a>
+</div>
+</div>
+<div aria-label="Arivazhagan Rajendranの肖像" class="portrait-stage">
+<div class="portrait-frame">
+<img alt="Dr. Arivazhagan Rajendran" height="430" src="profile.webp" width="454"/>
+</div>
+<div class="portrait-note">
+<strong>附属カーボンネガティブ・エネルギー研究センター</strong>
+<span>京都大学エネルギー理工学研究所 · 京都府宇治市</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="研究プロフィール概要" class="metrics">
+<div class="metric"><strong>49</strong><span>研究業績</span></div>
+<div class="metric"><strong>3,386</strong><span>Google Scholar 被引用数 · 2021年以降 889</span></div>
+<div class="metric"><strong>26 / 33</strong><span>h-index / i10-index<br/>2021年以降：15 / 21</span></div>
+<div class="metric affiliation"><strong>附属カーボンネガティブ・エネルギー研究センター</strong><span>京都大学エネルギー理工学研究所</span></div>
+</section>
+<section aria-labelledby="mission-title" class="section pillars">
+<div class="section-inner">
+<div class="section-head">
+<div><span class="kicker">研究ミッション</span><h2 id="mission-title">一つの材料基盤から、三つの世界的課題へ。</h2></div>
+<p>NanoBio Materialsでは、生体分子が持つプログラム可能性と先端材料の光学・電子・触媒機能を融合し、基礎化学を実用的な価値へつなげます。</p>
+</div>
+<div class="pillar-grid">
+<article class="pillar-card health">
+<span class="pillar-label">01 · 健康</span>
+<h3>ナノスケールの精密制御</h3>
+<p>生体システムの理解・検出・制御に向け、プログラム可能な核酸構造と生体機能性ナノ材料を研究しています。</p>
+<ul><li>DNAオリガミとNanoBioインターフェース</li><li>生体分子の安定性と認識</li><li>生体機能性ナノ粒子</li></ul>
+</article>
+<article class="pillar-card energy">
+<span class="pillar-label">02 · エネルギー</span>
+<h3>変換のための材料</h3>
+<p>エネルギーの捕集・貯蔵・変換を高効率化する有機・無機・ハイブリッドナノ材料を設計します。</p>
+<ul><li>光触媒・電極触媒</li><li>低次元触媒材料</li><li>太陽光駆動型化学変換</li></ul>
+</article>
+<article class="pillar-card environment">
+<span class="pillar-label">03 · 環境</span>
+<h3>低炭素社会に向けた化学</h3>
+<p>環境課題を資源回収の機会へ変える機能性材料と持続可能なプロセスを研究します。</p>
+<ul><li>CO₂還元・利用</li><li>カーボンネガティブ科学</li><li>グリーン合成・触媒</li></ul>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="research">
+<div class="section-inner">
+<div class="section-head">
+<div><span class="kicker">研究基盤</span><h2>分子情報から材料機能へ。</h2></div>
+<p>核酸化学とDNAナノテクノロジーで培った基盤を、有機・無機・ハイブリッドナノ材料へ展開し、健康、エネルギー、環境分野の応用につなげています。</p>
+</div>
+<div aria-label="研究プログラムの展開" class="research-path">
+<div class="path-step">核酸化学</div>
+<div class="path-step">DNAナノテクノロジー</div>
+<div class="path-step">NanoBioインターフェース</div>
+<div class="path-step">機能性ナノ材料</div>
+</div>
+<div class="research-grid">
+<article class="research-card">
+<span class="card-number">01</span>
+<h3>核酸化学</h3>
+<p>非標準DNA構造、DNA–タンパク質複合体、低分子相互作用における認識・フォールディング・機能を研究します。</p>
+<div class="research-tags"><span>G-四重鎖</span><span>i-モチーフ</span><span>分子認識</span></div>
+</article>
+<article class="research-card">
+<span class="card-number">02</span>
+<h3>DNAナノテクノロジー・オリガミ</h3>
+<p>2D・3D DNAオリガミのプログラム可能な集合、ライゲーション、安定化を行い、NanoBio応用のための位置指定可能な足場を構築します。</p>
+<div class="research-tags"><span>自己集合</span><span>ライゲーション</span><span>高速AFM</span></div>
+</article>
+<article class="research-card">
+<span class="card-number">03</span>
+<h3>有機ナノ材料</h3>
+<p>光捕集、分子認識、生体関連機能のため、分子設計に基づくソフト材料・炭素系ナノ材料を研究します。</p>
+<div class="research-tags"><span>有機ナノ集合体</span><span>光化学</span><span>バイオインターフェース</span></div>
+</article>
+<article class="research-card">
+<span class="card-number">04</span>
+<h3>無機・ハイブリッドナノ材料</h3>
+<p>エネルギー変換、CO₂還元、カーボンネガティブ科学に向けたナノ粒子、ヘテロ構造、低次元触媒を設計します。</p>
+<div class="research-tags"><span>ナノハイブリッド</span><span>電極触媒</span><span>CO₂還元</span></div>
+</article>
+</div>
+<div class="direction-strip"><strong>現在の研究方向</strong><span>有機・無機ナノ材料 · 光支援CO₂還元 · 低次元触媒システム</span></div>
+<div class="network-block">
+<h3>国際共同研究ネットワーク</h3>
+<ul class="network-grid">
+<li><a href="https://www.ewha.ac.kr/ewhaen/index.do" rel="noopener" target="_blank">梨花女子大学</a> · 酵素反応機構と阻害剤作用の一分子解析 · 2014年～</li>
+<li><a href="https://medschool.vanderbilt.edu/" rel="noopener" target="_blank">ヴァンダービルト大学医学部</a> · トポイソメラーゼの分子機構 · 2017–2024年</li>
+<li><a href="https://vtu.ac.in/" rel="noopener" target="_blank">ヴィシュヴェシュヴァラヤ工科大学</a> · 安定なDNAナノ材料 · 2017年～</li>
+<li><a href="https://nitc.ac.in/" rel="noopener" target="_blank">国立工科大学カリカット校</a> · 一分子解析のためのDNAナノテクノロジー · 2018年～</li>
+<li><a href="https://www.amrita.edu/" rel="noopener" target="_blank">アムリタ・ヴィシュワ・ヴィディヤピータム大学</a> · 生体応用のための金属酸化物ナノ材料 · 2023年～</li>
+<li><a href="https://www.kmu.edu.tw/index.php/en-gb/" rel="noopener" target="_blank">高雄医学大学</a> · エネルギー・環境応用のためのナノ材料 · 2025年～</li>
+</ul>
+</div>
+<a class="section-more" href="research.html">研究プロフィールをすべて見る →</a>
+</div>
+</section>
+<section class="section funding-section" id="funding">
+<div class="section-inner">
+<div class="section-head">
+<div><span class="kicker">研究支援</span><h2>主要研究費</h2></div>
+<p>DNAナノテクノロジー、核酸化学、機能性ナノ材料に対する競争的・学内研究支援です。</p>
+</div>
+<div class="funding-grid">
+<article class="funding-card featured">
+<span class="funding-period">2021–2024年 · 研究代表者</span>
+<h3>科学研究費助成事業 基盤研究(C)</h3>
+<p>トポロジー的に連結したDNAへのレトロウイルス組込みを利用したDNA構造解析とウイルス阻害剤スクリーニング。</p>
+<a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K05274/" rel="noopener" target="_blank">KAKENHI 21K05274 ↗</a>
+</article>
+<article class="funding-card">
+<span class="funding-period">2016–2018年 · 研究代表者</span>
+<h3>科学研究費助成事業 若手研究(B)</h3>
+<p>トポイソメラーゼを標的とする抗がん剤スクリーニングのためのDNAオリガミプラットフォーム。</p>
+<a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-16K17934/" rel="noopener" target="_blank">KAKENHI 16K17934 ↗</a>
+</article>
+<article class="funding-card">
+<span class="funding-period">2015–2018年 · 研究分担者</span>
+<h3>科学研究費助成事業 基盤研究(A)</h3>
+<p>ヒトゲノムの修飾・損傷を精密検出するための化学ツール。</p>
+<a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-15H02189/" rel="noopener" target="_blank">KAKENHI 15H02189 ↗</a>
+</article>
+<article class="funding-card">
+<span class="funding-period">2012–2017年 · 研究分担者</span>
+<h3>科学研究費助成事業 基盤研究(S)</h3>
+<p>分子レベルでの遺伝子発現制御とその解明。</p>
+<a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24225005/" rel="noopener" target="_blank">KAKENHI 24225005 ↗</a>
+</article>
+</div>
+<div aria-label="その他の研究支援" class="funding-notes">
+<span><strong>2025</strong> <a href="https://www.iae.kyoto-u.ac.jp/en" rel="noopener" target="_blank">IAE共同研究：光電気化学的CO₂変換のための先進触媒</a></span>
+<span><strong>2025</strong> <a href="https://www.iae.kyoto-u.ac.jp/en" rel="noopener" target="_blank">IAE国際産官学連携研究支援</a></span>
+<span><strong>2024年採択 · 2025–27年度研究</strong> <a href="https://hirose-isf.or.jp/research-grants/" rel="noopener" target="_blank">公益財団法人ヒロセ財団 研究助成</a></span>
+<span><strong>2021–22</strong> <a href="funding.html">安定なDNAオリガミと化学的安定化に関するIAE共同研究2件</a></span>
+<span><strong>2020</strong> <a href="https://fund.kyoto-u.ac.jp/" rel="noopener" target="_blank">京都大学教育研究振興財団 研究助成</a></span>
+</div>
+<a class="section-more" href="funding.html">研究費一覧をすべて見る →</a>
+</div>
+</section>
+<section class="section publications" id="publications">
+<div class="section-inner">
+<div class="section-head">
+<div><span class="kicker">主要研究業績</span><h2>研究業績</h2></div>
+<p>核酸化学、DNAナノテクノロジー、NanoBioインターフェース、およびエネルギー・環境のための機能性材料に関する最近の代表的研究成果です。</p>
+</div>
+<div aria-label="研究業績を絞り込む" class="filter-row">
+<button aria-pressed="true" class="filter-button" data-filter="all" type="button">すべて</button>
+<button aria-pressed="false" class="filter-button" data-filter="dna" type="button">DNA・NanoBio</button>
+<button aria-pressed="false" class="filter-button" data-filter="energy" type="button">材料・エネルギー</button>
+</div>
+<div class="publication-list">
+<article class="publication-item" data-topic="energy">
+<div class="pub-year">2026</div>
+<div><h3 class="pub-title">High-energy Ni²⁺/Bi³⁺ layered double hydroxide/MXene heterostructure electrode using a supercritical fluid approach</h3><p class="pub-meta">ACS Applied Nano Materials · Vol. 9, 11031–11044</p></div>
+<a aria-label="研究業績を開く" class="pub-link" href="https://doi.org/10.1021/acsanm.6c01451" rel="noopener" target="_blank">↗</a>
+</article>
+<article class="publication-item" data-topic="energy">
+<div class="pub-year">2026</div>
+<div><h3 class="pub-title">Green-fabricated zinc sulfide nanoparticles with dual antidiabetic and anticancer efficacy</h3><p class="pub-meta">Applied Materials Today · Vol. 49, 103152</p></div>
+<a aria-label="研究業績を開く" class="pub-link" href="https://doi.org/10.1016/j.apmt.2026.103152" rel="noopener" target="_blank">↗</a>
+</article>
+<article class="publication-item" data-topic="dna">
+<div class="pub-year">2024</div>
+<div><h3 class="pub-title">Near quantitative ligation results in resistance of DNA origami against nuclease and cell lysate</h3><p class="pub-meta">Small Methods · Vol. 8, 2300999</p></div>
+<a aria-label="研究業績を開く" class="pub-link" href="https://doi.org/10.1002/smtd.202300999" rel="noopener" target="_blank">↗</a>
+</article>
+<article class="publication-item" data-topic="dna">
+<div class="pub-year">2022</div>
+<div><h3 class="pub-title">Topologically-interlocked minicircles as probes of DNA topology and DNA–protein interactions</h3><p class="pub-meta">Chemistry – A European Journal</p></div>
+<a aria-label="研究業績を開く" class="pub-link" href="https://doi.org/10.1002/chem.202200108" rel="noopener" target="_blank">↗</a>
+</article>
+<article class="publication-item" data-topic="dna">
+<div class="pub-year">2021</div>
+<div><h3 class="pub-title">Stabilization and structural changes of 2D DNA origami by enzymatic ligation</h3><p class="pub-meta">Nucleic Acids Research · Vol. 49, 7884–7900</p></div>
+<a aria-label="研究業績を開く" class="pub-link" href="https://doi.org/10.1093/nar/gkab611" rel="noopener" target="_blank">↗</a>
+</article>
+<article class="publication-item" data-topic="dna">
+<div class="pub-year">2011</div>
+<div><h3 class="pub-title">Programmed two-dimensional self-assembly of multiple DNA origami jigsaw pieces</h3><p class="pub-meta">ACS Nano · Vol. 5, 665–671 · 学術誌表紙</p></div>
+<a aria-label="研究業績を開く" class="pub-link" href="https://doi.org/10.1021/nn1031627" rel="noopener" target="_blank">↗</a>
+</article>
+</div>
+<a class="archive-link" href="publications.html">49件の研究業績をすべて見る →</a>
+</div>
+</section>
+<section class="section" id="highlights">
+<div class="section-inner">
+<div class="highlight-grid">
+<figure aria-label="主要な学術誌ハイライト" class="cover-card">
+<img alt="レビューNucleic-Acid-Templated Enzyme CascadesのChemBioChemハイライト" height="838" loading="lazy" src="chembiochem-highlight-cropped.png" width="635"/>
+<img alt="トポロジー的に連結したDNAを示すChemistry – A European Journal 2022年表紙" class="cover-secondary" height="936" loading="lazy" src="chem-eur-highlight.png" width="705"/>
+</figure>
+<div class="highlight-copy">
+<span class="kicker">ハイライト</span>
+<h3>学術誌、メディア、科学コミュニティで紹介された研究成果。</h3>
+<p>DNAオリガミ、核酸構造、NanoBioシステムに関する研究は、学術誌表紙や国内外の科学ニュースで紹介されています。</p>
+<ul class="highlight-list">
+<li><time>2023–24</time><span>研究紹介： <a href="https://www.kyoto-u.ac.jp/ja/research-news/2023-11-02" rel="noopener" target="_blank">京都大学</a>、 <a href="https://sj.jst.go.jp/news/202401/n0123-01k.html" rel="noopener" target="_blank">JST</a>、 <a href="https://www.technologyreview.jp/n/2023/11/07/321500/" rel="noopener" target="_blank">MIT Technology Review</a> および <a href="https://www.nikkei.com/article/DGXZQOUC16AD30W4A210C2000000/" rel="noopener" target="_blank">Nikkei</a>.</span></li>
+<li><time>2022</time><span><a href="https://doi.org/10.1002/chem.202200838" rel="noopener" target="_blank">Chemistry – A European Journal 表紙</a> および <a href="https://doi.org/10.1002/chem.202200839" rel="noopener" target="_blank">研究者プロフィール</a>.</span></li>
+<li><time>2017</time><span>ChemBioChem プロフィール・ハイライトおよび <a href="https://doi.org/10.1002/cbic.201600703" rel="noopener" target="_blank">Readers’ Choice レビュー</a> （核酸テンプレート型酵素カスケード）。</span></li>
+<li><time>2011</time><span><a href="https://doi.org/10.1021/nn1031627" rel="noopener" target="_blank">ACS Nano 表紙論文</a> およびISNAC Outstanding Poster Presentation Award。</span></li>
+</ul>
+<a class="section-more" href="highlights.html">表紙・ハイライト・受賞をすべて見る →</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section news" id="news">
+<div class="section-inner">
+<div class="section-head">
+<div><span class="kicker">更新情報</span><h2>最近のニュース</h2></div>
+<p>研究、共同研究、学術活動の最近の主な動きを掲載しています。下のリンクから全時系列記録をご覧いただけます。</p>
+</div>
+<div aria-label="京都大学の研究ハイライト" class="institutional-news">
+<a class="institutional-story" href="https://www.kyoto-u.ac.jp/ja/research-news/2023-11-02" rel="noopener" target="_blank">
+<span>京都大学 · 2023年11月2日</span>
+<strong>大学研究ニュース：新しい安定化法がDNAオリガミの可能性を拡げる。</strong>
+<em>公式リリースを読む ↗</em>
+</a>
+<a class="institutional-story newspaper" href="https://www.kyoto-up.org/archives/7236" rel="noopener" target="_blank">
+<span>京都大学新聞 · 2023年11月16日</span>
+<strong>DNAオリガミ構造中の切断部位を効率よく結合し、安定化に成功。</strong>
+<em>新聞記事を読む ↗</em>
+</a>
+</div>
+<div class="news-grid">
+<ol class="news-list">
+<li><time>2026年5月19日</time><p>研究論文が採択： <a href="https://doi.org/10.1021/acsanm.6c01451" rel="noopener" target="_blank"><em>ACS Applied Nano Materials</em></a>.</p></li>
+<li><time>2026年2月14日</time><p>研究論文が採択： <a href="https://doi.org/10.1016/j.apmt.2026.103152" rel="noopener" target="_blank"><em>Applied Materials Today</em></a>.</p></li>
+<li><time>2026年1月16日</time><p>次の大学から訪問学生3名を受け入れ： <a href="https://www.postech.ac.kr/eng/" rel="noopener" target="_blank">浦項工科大学（POSTECH）</a>、韓国。研究ディスカッションを実施。</p></li>
+<li><time>2025年11月24日</time><p>研究論文が採択： <a href="https://doi.org/10.1016/j.molstruc.2025.144859" rel="noopener" target="_blank"><em>Journal of Molecular Structure</em></a>.</p></li>
+<li><time>2025</time><p>次の機関から学内研究費2件を獲得： <a href="funding.html">京都大学エネルギー理工学研究所</a> （CO₂変換ナノ材料）。</p></li>
+<li><time>2025年7月1日</time><p>次の大学からインターンシップ学生2名が <a href="https://vtu.ac.in/" rel="noopener" target="_blank">ヴィシュヴェシュヴァラヤ工科大学</a> 研究グループに参加。</p></li>
+<li><time>2024年12月1日</time><p>次の財団から研究助成を獲得： <a href="https://hirose-isf.or.jp/research-grants/" rel="noopener" target="_blank">公益財団法人ヒロセ財団</a>.</p></li>
+</ol>
+</div>
+<a class="section-more" href="news.html">ニュース一覧をすべて見る →</a>
+</div>
+</section>
+<section class="section profile-section" id="academic-path">
+<div class="section-inner">
+<div class="section-head">
+<div><span class="kicker">学歴・職歴</span><h2>学歴・職歴</h2></div>
+<p>学位および職歴を一つの時系列記録としてまとめています。</p>
+</div>
+<div class="profile-grid">
+<article class="academic-card">
+<h3>学歴・職歴一覧</h3>
+<ol class="career">
+<li><strong>2015年2月–現在</strong>講師、 <a href="https://icans.iae.kyoto-u.ac.jp/en/" rel="noopener" target="_blank">附属カーボンネガティブ・エネルギー研究センター</a>、 <a href="https://www.iae.kyoto-u.ac.jp/en" rel="noopener" target="_blank">京都大学エネルギー理工学研究所</a>、 <a href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">京都大学</a></li>
+<li><strong>2013年9月–2015年1月</strong>助教、 <a href="https://www1.tara.tsukuba.ac.jp/en/" rel="noopener" target="_blank">生命領域学際研究センター（TARA）</a>、 <a href="https://www.tsukuba.ac.jp/en/" rel="noopener" target="_blank">筑波大学</a></li>
+<li><strong>2010年1月–2013年8月</strong>DNAナノテクノロジー分野 CREST・JSPS博士研究員、物質－細胞統合システム拠点（WPI-iCeMS）・化学科、 <a href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">京都大学</a></li>
+<li><strong>2008年10月–2009年12月</strong>核酸化学分野 博士研究員、 <a href="https://www.konan-u.ac.jp/english/center/fiber/" rel="noopener" target="_blank">先端生命工学研究所（FIBER）</a>、 <a href="https://www.konan-u.ac.jp/english/" rel="noopener" target="_blank">甲南大学</a></li>
+<li><strong>2005年10月–2008年9月</strong>博士（化学・分析化学）、 <a href="https://www.chem.tohoku.ac.jp/english/" rel="noopener" target="_blank">東北大学</a>、日本</li>
+<li><strong>2005年1月–9月</strong>研究生、 <a href="https://clri.org/" rel="noopener" target="_blank">CSIR中央皮革研究所</a>、インド</li>
+<li><strong>2004年9月–12月</strong>計算化学 研究生、 <a href="https://www.cec.mpg.de/en/institute/history" rel="noopener" target="_blank">マックス・プランク生物無機化学研究所</a>、ドイツ</li>
+<li><strong>2003年10月–2004年8月</strong>研究生、 <a href="https://www.chem.tohoku.ac.jp/english/" rel="noopener" target="_blank">東北大学</a>、日本</li>
+<li><strong>2001年7月–2003年6月</strong>修士（無機化学）、 <a href="https://unom.ac.in/" rel="noopener" target="_blank">マドラス大学</a>、インド</li>
+<li><strong>1998年7月–2001年6月</strong>学士（化学）、 <a href="https://www.gacmenkrishnagiri.org/" rel="noopener" target="_blank">クリシュナギリ公立芸術大学</a>、所属大学： <a href="https://www.periyaruniversity.ac.in/" rel="noopener" target="_blank">ペリヤール大学</a>、インド</li>
+</ol>
+</article>
+</div>
+<div class="activity-grid">
+<article class="activity-card"><h3>研究指導</h3><p>博士・修士・学部生および国際インターン研究者を指導しています。最近の確認済み研究課題には、DNAナノ材料、ナノ粒子触媒、CO₂変換が含まれます。</p><a href="service.html">指導実績をすべて見る →</a></article>
+<article class="activity-card"><h3>学術貢献</h3><p>研究所委員会活動、学術誌査読、化学・核酸関連学会での活動。</p><a href="service.html">学術貢献をすべて見る →</a></article>
+<article class="activity-card"><h3>社会・科学アウトリーチ</h3><p>科学教室、研究室訪問、学会運営、招待教育プログラム、公開教育資料などの活動。</p><a href="service.html">アウトリーチ実績をすべて見る →</a></article>
+</div>
+<a class="section-more" href="academic.html">学歴・職歴をすべて見る →</a>
+</div>
+</section>
+<section class="section" id="teaching">
+<div class="section-inner">
+<div class="section-head">
+<div><span class="kicker">教育</span><h2>エネルギーと社会のための化学。</h2></div>
+<p>基礎物理化学を、持続可能なエネルギーと炭素管理の現代的課題に結び付ける授業を行っています。</p>
+</div>
+<div class="teaching-grid">
+<article class="teaching-panel accent">
+<span class="kicker" style="color:#fff4df">大学院</span>
+<h3><a href="https://www.energy.kyoto-u.ac.jp/en/" rel="noopener" target="_blank">京都大学大学院エネルギー科学研究科</a></h3>
+<p>確認済み授業歴、2022年–現在 · 英語</p>
+<ul class="course-list"><li>カーボンニュートラルからカーボンネガティブへ <small>（2022年–現在）</small></li><li>基礎エネルギー科学 <small>（2024年–現在）</small></li><li>国際エネルギー科学セミナー（グループ学習） <small>（2025年–現在）</small></li></ul>
+</article>
+<article class="teaching-panel">
+<span class="kicker">学部</span>
+<h3><a href="https://www.kyoto-u.ac.jp/en/about/profile/faculty/organizations/liberal-arts-1" rel="noopener" target="_blank">京都大学国際高等教育院</a></h3>
+<p>毎年の授業歴、2015年–現在 · 英語</p>
+<ul class="course-list">
+<li>基礎物理化学の要点</li>
+<li>基礎物理化学：熱力学</li>
+<li>基礎物理化学：量子論</li>
+<li>持続可能なエネルギーの化学</li>
+</ul>
+</article>
+</div>
+<a class="section-more" href="teaching.html">教育歴をすべて見る →</a>
+</div>
+</section>
+<section class="section contact" id="contact">
+<div class="section-inner contact-inner">
+<div>
+<span class="eyebrow">連絡・研究機会</span>
+<h2>次の <span>NanoBio材料を、ともに。</span></h2>
+<p class="contact-lede">核酸化学、DNAナノテクノロジー、有機・無機ナノ材料、エネルギー変換、CO₂還元に関する研究相談・共同研究のお問い合わせを歓迎します。</p>
+<div class="candidate-note"><strong>研究参加を希望される方：</strong> 博士課程・博士研究員を希望される方からの問い合わせを歓迎します。特に外部奨学金への応募を予定している方は、該当する募集要項を確認し、具体的な研究アイデアを添えてご連絡ください。</div>
+</div>
+<div class="contact-details">
+<div class="contact-row"><span>メール</span><a href="mailto:raji@iae.kyoto-u.ac.jp">raji@iae.kyoto-u.ac.jp</a></div>
+<div class="contact-row"><span>電話</span><a href="tel:+81774383556">+81 774 38 3556</a></div>
+<div class="contact-row"><span>所属</span><p>京都大学エネルギー理工学研究所 附属カーボンネガティブ・エネルギー研究センター</p></div>
+<div class="contact-row"><span>住所</span><p>〒611-0011 京都府宇治市五ケ庄 京都大学エネルギー理工学研究所 本館 M-576E</p></div>
+<div class="profile-links">
+<a href="https://scholar.google.com/citations?hl=en&amp;user=vxClbUAAAAAJ" rel="noopener" target="_blank">Google Scholar</a>
+<a href="https://orcid.org/0000-0002-9319-6107" rel="noopener" target="_blank">ORCID</a>
+<a href="https://researchmap.jp/raji?lang=en" rel="noopener" target="_blank">researchmap</a>
+<a href="https://www.scopus.com/authid/detail.uri?authorId=24588211000" rel="noopener" target="_blank">Scopus</a>
+<a href="https://www.youtube.com/channel/UCT0iRR_tV-L2G5TfsHmifww" rel="noopener" target="_blank">YouTube</a>
+<a href="https://kdb.iimc.kyoto-u.ac.jp/profile/en.13d6dd8e6f9e6665.html" rel="noopener" target="_blank">京都大学プロフィール</a>
+<a href="https://www.iae.kyoto-u.ac.jp/en" rel="noopener" target="_blank">京都大学エネルギー理工学研究所</a>
+<a href="https://icans.iae.kyoto-u.ac.jp/en/" rel="noopener" target="_blank">ICaNS</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-inner"><span>© 2026 Arivazhagan Rajendran</span><span>researchmap確認日：2026年9月5日 · Google Scholar指標最終確認日：2026年9月4日。</span></div>
+</footer>
+<script>
     const menuButton = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('#nav-links');
     menuButton.addEventListener('click', () => {
@@ -977,7 +964,7 @@
       menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
       menuButton.textContent = isOpen ? '×' : '☰';
     });
-    navLinks.querySelectorAll('a').対象Each(link => link.addEventListener('click', () => {
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       menuButton.setAttribute('aria-expanded', 'false');
       menuButton.setAttribute('aria-label', 'Open navigation');
@@ -986,10 +973,10 @@
 
     const filters = document.querySelectorAll('.filter-button');
     const publications = document.querySelectorAll('.publication-item');
-    filters.対象Each(button => button.addEventListener('click', () => {
+    filters.forEach(button => button.addEventListener('click', () => {
       const selected = button.dataset.filter;
-      filters.対象Each(item => item.setAttribute('aria-pressed', String(item === button)));
-      publications.対象Each(item => {
+      filters.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      publications.forEach(item => {
         item.hidden = selected !== 'all' && item.dataset.topic !== selected;
       });
     }));
