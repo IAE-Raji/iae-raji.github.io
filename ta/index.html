@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="கியோட்டோ பல்கலைக்கழகத்தில் Dr. Arivazhagan Rajendran மேற்கொள்ளும் NanoBio Materials ஆராய்ச்சி: நியூக்ளிக் அமில வேதியியல், DNA நானோ தொழில்நுட்பம், செயல்பாட்டு நானோப் பொருட்கள் மற்றும் CO₂ குறைப்பு." name="description"/>
+<meta content="கியோட்டோ பல்கலைக்கழகத்தில் Arivazhagan Rajendran மேற்கொள்ளும் நானோ உயிரியல் பொருட்கள் ஆராய்ச்சி: நியூக்ளிக் அமில வேதியியல், DNA நானோ தொழில்நுட்பம், செயல்பாட்டு நானோப் பொருட்கள் மற்றும் CO₂ குறைப்பு." name="description"/>
 <meta content="#081722" name="theme-color"/>
-<title>NanoBio Materials | Arivazhagan Rajendran</title>
+<title>நானோ உயிரியல் பொருட்கள் | Arivazhagan Rajendran</title>
 <style>
     :root {
       --ink: #081722;
@@ -194,7 +194,7 @@
     .mission-word.energy { color: var(--energy); }
     .mission-word.environment { color: var(--environment); }
     .hero-name { margin: 1.7rem 0 0; color: var(--white); font-size: 1rem; font-weight: 800; }
-    .hero-name span { display: block; margin-top: .15rem; color: rgba(255,255,255,.55); font-size: .82rem; font-weight: 600; }
+    .hero-name span { display: block; margin-top: .15rem; color: rgba(255,255,255,.55); font-size: .82rem; font-weight: 600; }.hero-name .native-name{display:inline;margin-left:.35rem;color:rgba(255,255,255,.82);font-size:.92em;font-weight:700}
     .hero-lede {
       max-width: 690px;
       margin: 1rem 0 0;
@@ -587,83 +587,42 @@
 .language-switcher{position:fixed;z-index:250;right:1rem;bottom:1rem;display:flex;gap:.25rem;padding:.3rem;background:rgba(8,23,34,.92);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.language-switcher a{padding:.42rem .65rem;border-radius:999px;color:rgba(255,255,255,.72);font:700 .78rem/1.2 Inter,system-ui,sans-serif;text-decoration:none}.language-switcher a.active{background:#18c6c8;color:#081722}@media(max-width:560px){.language-switcher{right:.6rem;bottom:.6rem}.language-switcher a{padding:.4rem .52rem;font-size:.72rem}}
 
 
-    /* Tamil typography: preserve complex-script shaping and prevent overlap. */
-    html[lang="ta"] h3 { font-family: "Noto Sans Tamil", "Nirmala UI", "Latha", sans-serif; letter-spacing: 0; line-height: 1.72; text-wrap: balance; }
-    html[lang="ta"] body {
-      font-family: "Noto Sans Tamil", "Nirmala UI", "Latha", sans-serif;
-    }
-    html[lang="ta"] :is(h1,h2,.metric strong,.direction-strip strong,.contact h2,.highlight-copy h3) {
-      font-family: "Noto Serif Tamil", "Nirmala UI", "Latha", serif;
-      letter-spacing: 0;
-      line-height: 1.36;
-      text-wrap: balance;
-      overflow-wrap: normal;
-      word-break: normal;
-    }
-    html[lang="ta"] .hero h1 {
-      font-family: var(--serif);
-      line-height: 1.2;
-      letter-spacing: 0;
-    }
-    html[lang="ta"] .section-head h2,
-    html[lang="ta"] .contact h2 { line-height: 1.34; }
-    html[lang="ta"] .highlight-copy h3 { line-height: 1.38; }
-    html[lang="ta"] :is(.kicker,.pillar-label,.funding-period,.institutional-story span,.contact-row span,.metric span) {
-      letter-spacing: .025em;
-      text-transform: none;
-    }
-    html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.course-list li,.funding-card h3,.activity-card h3) {
-      line-height: 1.7;
-    }
-    @media (max-width: 760px) {
-      html[lang="ta"] .section-head h2 { font-size: clamp(1.8rem, 8vw, 2.7rem); }
-      html[lang="ta"] .contact h2 { font-size: clamp(1.95rem, 8.8vw, 3rem); }
-      html[lang="ta"] .highlight-copy h3 { font-size: clamp(1.55rem, 6.8vw, 2.25rem); }
-    }
-    @media (max-width: 560px) {
-      html[lang="ta"] .hero h1 { font-size: clamp(2.4rem, 12vw, 3.8rem); }
-      html[lang="ta"] .section-head h2 { font-size: clamp(1.7rem, 7.8vw, 2.45rem); }
-      html[lang="ta"] .direction-strip { align-items: flex-start; }
-      html[lang="ta"] .direction-strip span { text-align: left; }
-    }
+    
 
-
-/* v7 Tamil visual refinement: slightly smaller display type, more breathing room, safer complex-script shaping. */
-html[lang="ta"] body{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;line-height:1.72}
-html[lang="ta"] :is(.eyebrow,.kicker,.pillar-label,.funding-period,.institutional-story span,.contact-row span,.metric span){letter-spacing:0;text-transform:none;line-height:1.55}
-html[lang="ta"] .hero-mission{letter-spacing:0;gap:.5rem}
-html[lang="ta"] .hero-lede{line-height:1.72}
-html[lang="ta"] .section-head{grid-template-columns:minmax(430px,.95fr) minmax(0,1.05fr);gap:clamp(1.8rem,4vw,3rem);align-items:start;margin-bottom:3.4rem}
+/* Unified Tamil typography — v10 */
+html[lang="ta"]{--ta-heading-weight:700;--ta-body-weight:400}
+html[lang="ta"] body{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-weight:var(--ta-body-weight);line-height:1.74}
+html[lang="ta"] :is(h1,h2,h3,h4,.brand,.nav-links a,.button,.kicker,.eyebrow,.pillar-label,.funding-period){font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-synthesis:none}
+html[lang="ta"] :is(.eyebrow,.kicker,.pillar-label,.funding-period,.institutional-story span,.contact-row span,.metric span){font-size:.78rem;font-weight:700;letter-spacing:0;text-transform:none;line-height:1.52}
+html[lang="ta"] .hero h1{font-size:clamp(2.35rem,5vw,4.15rem);font-weight:700;line-height:1.32;letter-spacing:0;text-wrap:balance}
+html[lang="ta"] .hero-name{font-weight:700;line-height:1.58}
+html[lang="ta"] .hero-name .native-name{display:block;margin:.3rem 0 0;color:rgba(255,255,255,.84);font-size:.92em;font-weight:700;line-height:1.62}
+html[lang="ta"] .hero-name>span:last-child{margin-top:.4rem;font-weight:600;line-height:1.72}
+html[lang="ta"] .hero-lede{line-height:1.76}
+html[lang="ta"] .section-head{grid-template-columns:minmax(430px,.94fr) minmax(0,1.06fr);gap:clamp(1.8rem,4vw,3rem);align-items:start;margin-bottom:3.2rem}
+html[lang="ta"] #academic-path .section-head{grid-template-columns:minmax(430px,.94fr) minmax(0,1.06fr);align-items:start}
 html[lang="ta"] .section-head>div{min-width:0}
-html[lang="ta"] .section-head .kicker{display:block;margin-bottom:.7rem}
-html[lang="ta"] .section-head h2{margin:0;font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.9rem,2.55vw,2.15rem);font-weight:650;line-height:1.55;letter-spacing:0;text-wrap:balance;overflow-wrap:normal;word-break:normal}
-html[lang="ta"] .section-head p{padding-top:.15rem;line-height:1.75}
-html[lang="ta"] .section-head h2.nowrap-title{white-space:nowrap;font-size:clamp(1.75rem,2.45vw,2.05rem)}
-html[lang="ta"] .section-head h2.compact-two-line{font-size:clamp(1.78rem,2.35vw,1.9rem);line-height:1.55}
-html[lang="ta"] .pillar-card{padding:clamp(1.65rem,2.7vw,2.15rem)}
-html[lang="ta"] .pillar-card h3{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.3rem,1.75vw,1.5rem);font-weight:650;line-height:1.58;letter-spacing:0;text-wrap:balance;min-height:4.7em;margin:.9rem 0 .8rem}
-html[lang="ta"] .pillar-card p{line-height:1.72}
-html[lang="ta"] .research-card h3{font-size:clamp(1.35rem,2.25vw,1.85rem);line-height:1.55;margin:1.6rem 0 .8rem}
-html[lang="ta"] .research-card p{line-height:1.72}
-html[lang="ta"] .network-block h3{font-size:clamp(1.35rem,2.15vw,1.75rem);line-height:1.55}
-html[lang="ta"] .funding-card h3{font-size:1.02rem;line-height:1.72}
-html[lang="ta"] .highlight-copy h3{font-size:clamp(1.65rem,2.9vw,2.35rem);line-height:1.5}
-html[lang="ta"] .institutional-story strong{line-height:1.7}
-html[lang="ta"] .teaching-panel h3{line-height:1.62}
-html[lang="ta"] .metric.affiliation strong{font-size:1.04rem;line-height:1.55}
-html[lang="ta"] .portrait-note strong{line-height:1.5}
-html[lang="ta"] .contact h2{max-width:720px;font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.95rem,3.7vw,3.15rem);font-weight:650;line-height:1.5;letter-spacing:0;text-wrap:balance}
-html[lang="ta"] .contact h2 .contact-line{display:block;color:inherit}
-html[lang="ta"] .contact h2 .contact-line:last-child{color:var(--cyan)}
-html[lang="ta"] .contact-lede{line-height:1.75}
-@media(max-width:960px){html[lang="ta"] .section-head{grid-template-columns:minmax(340px,.88fr) minmax(0,1.12fr)}}
-@media(max-width:760px){html[lang="ta"] .section-head{grid-template-columns:1fr;gap:1rem;margin-bottom:2.7rem}html[lang="ta"] .section-head h2{font-size:clamp(1.5rem,6.2vw,1.8rem);line-height:1.6}html[lang="ta"] .section-head h2.nowrap-title{font-size:clamp(1.34rem,5.7vw,1.65rem);white-space:nowrap}html[lang="ta"] .section-head h2.compact-two-line{font-size:clamp(1.45rem,5.9vw,1.72rem)}html[lang="ta"] .pillar-card h3{min-height:0;font-size:clamp(1.32rem,5.5vw,1.62rem)}html[lang="ta"] .contact h2{font-size:clamp(1.85rem,8vw,2.65rem)}}
-@media(max-width:420px){html[lang="ta"] .section-head h2.nowrap-title{font-size:clamp(1.32rem,5.8vw,1.62rem)}html[lang="ta"] .metric.affiliation strong{font-size:.9rem}}
-
-
+html[lang="ta"] .section-head .kicker{display:block;margin-bottom:.68rem}
+html[lang="ta"] .section-head h2{margin:0;font-size:clamp(1.9rem,2.55vw,2.2rem);font-weight:700;line-height:1.5;letter-spacing:0;text-wrap:balance;overflow-wrap:normal;word-break:normal}
+html[lang="ta"] .section-head h2.nowrap-title{white-space:nowrap;font-size:clamp(1.9rem,2.55vw,2.2rem);font-weight:700}
+html[lang="ta"] .section-head h2.compact-two-line{font-size:clamp(1.86rem,2.48vw,2.12rem);font-weight:700;line-height:1.52}
+html[lang="ta"] #mission-title{font-size:clamp(1.86rem,2.48vw,2.12rem)}
+html[lang="ta"] .section-head p{padding-top:.12rem;line-height:1.76}
 html[lang="ta"] .title-line{display:block}
-html[lang="ta"] #mission-title{font-size:clamp(1.75rem,2.25vw,1.9rem)}
-@media(max-width:760px){html[lang="ta"] #mission-title{font-size:clamp(1.42rem,5.8vw,1.65rem)}}
+html[lang="ta"] .pillar-card h3{font-size:clamp(1.32rem,1.65vw,1.5rem);font-weight:700;line-height:1.58;letter-spacing:0;text-wrap:balance;min-height:4.75em;margin:.9rem 0 .8rem}
+html[lang="ta"] :is(.research-card h3,.network-block h3){font-size:clamp(1.28rem,1.65vw,1.46rem);font-weight:700;line-height:1.58;letter-spacing:0;text-wrap:balance}
+html[lang="ta"] :is(.activity-card h3,.teaching-panel h3,.funding-card h3,.academic-card h3){font-size:1.02rem;font-weight:700;line-height:1.68;letter-spacing:0}
+html[lang="ta"] :is(.pillar-card p,.research-card p,.contact-lede,.entry p){line-height:1.74}
+html[lang="ta"] .highlight-copy h3{font-size:clamp(1.62rem,2.65vw,2.25rem);font-weight:700;line-height:1.5;letter-spacing:0;text-wrap:balance}
+html[lang="ta"] .institutional-story strong{font-weight:700;line-height:1.68}
+html[lang="ta"] .metric.affiliation strong{font-size:1rem;font-weight:700;line-height:1.55}
+html[lang="ta"] .portrait-note strong{font-weight:700;line-height:1.5}
+html[lang="ta"] .contact h2{max-width:760px;font-size:clamp(1.9rem,3.35vw,2.9rem);font-weight:700;line-height:1.5;letter-spacing:0;text-wrap:balance}
+html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.course-list li,.section-more,.archive-link){font-weight:700}
+@media(max-width:960px){html[lang="ta"] .section-head,html[lang="ta"] #academic-path .section-head{grid-template-columns:minmax(350px,.9fr) minmax(0,1.1fr)}}
+@media(max-width:760px){html[lang="ta"] .section-head,html[lang="ta"] #academic-path .section-head{grid-template-columns:1fr;gap:1rem;margin-bottom:2.6rem}html[lang="ta"] .section-head h2{font-size:clamp(1.52rem,6.05vw,1.84rem);line-height:1.58}html[lang="ta"] .section-head h2.nowrap-title{font-size:clamp(1.48rem,5.85vw,1.78rem);white-space:nowrap}html[lang="ta"] .section-head h2.compact-two-line,html[lang="ta"] #mission-title{font-size:clamp(1.48rem,5.85vw,1.76rem)}html[lang="ta"] .pillar-card h3{min-height:0;font-size:clamp(1.28rem,5.25vw,1.54rem)}html[lang="ta"] .contact h2{font-size:clamp(1.78rem,7.5vw,2.45rem)}}
+@media(max-width:420px){html[lang="ta"] .hero h1{font-size:clamp(1.95rem,10.4vw,2.75rem)}html[lang="ta"] .section-head h2.nowrap-title{font-size:clamp(1.34rem,5.35vw,1.56rem)}html[lang="ta"] .metric.affiliation strong{font-size:.9rem}}
+
 </style>
 </head>
 <body>
@@ -694,20 +653,20 @@ html[lang="ta"] #mission-title{font-size:clamp(1.75rem,2.25vw,1.9rem)}
 <div class="hero-inner">
 <div>
 <p class="eyebrow">மூலக்கூறு துல்லியம் · செயல்பாட்டு பொருட்கள் · நிலைத்த எதிர்காலம்</p>
-<h1>NanoBio <span>Materials</span></h1>
+<h1>நானோ உயிரியல் <span>பொருட்கள்</span></h1>
 <div aria-label="ஆராய்ச்சி பயன்பாடுகள்" class="hero-mission">
 <span class="mission-word health">ஆரோக்கியம்</span><span class="mission-word energy">ஆற்றல்</span><span class="mission-word environment">சுற்றுச்சூழல்</span>
 </div>
-<p class="hero-name">Arivazhagan Rajendran <span>இளநிலை இணைப் பேராசிரியர் · கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம், கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம்</span></p>
+<p class="hero-name">Dr. Arivazhagan Rajendran, Ph.D. <span class="native-name">(முனைவர் அறிவழகன் இராசேந்திரன்)</span><span>இளநிலை இணைப் பேராசிரியர் · கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம், கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம்</span></p>
 <p class="hero-lede">நியூக்ளிக் அமில வேதியியல் மற்றும் DNA நானோ தொழில்நுட்பத்தை கரிம, அகர மற்றும் கலப்பு நானோப் பொருட்களுடன் இணைத்து, உயிர்மருத்துவம், தூய ஆற்றல் மற்றும் CO₂ குறைப்பிற்கான செயல்பாட்டு அமைப்புகளை உருவாக்குகிறோம்.</p>
 <div class="hero-actions">
 <a class="button primary" href="research.html">ஆராய்ச்சியைப் பாருங்கள் <span class="arrow">→</span></a>
 <a class="button" href="publications.html">தேர்ந்தெடுக்கப்பட்ட வெளியீடுகள்</a>
 </div>
 </div>
-<div aria-label="Dr. Arivazhagan Rajendran உருவப்படம்" class="portrait-stage">
+<div aria-label="Arivazhagan Rajendran உருவப்படம்" class="portrait-stage">
 <div class="portrait-frame">
-<img alt="Dr. Arivazhagan Rajendran" height="430" src="profile.webp" width="454"/>
+<img alt="Arivazhagan Rajendran" height="430" src="profile.webp" width="454"/>
 </div>
 <div class="portrait-note">
 <strong>கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம்</strong>
@@ -726,7 +685,7 @@ html[lang="ta"] #mission-title{font-size:clamp(1.75rem,2.25vw,1.9rem)}
 <div class="section-inner">
 <div class="section-head">
 <div><span class="kicker">ஆராய்ச்சி நோக்கம்</span><h2 id="mission-title"><span class="title-line">ஒரே பொருள் தளம்.</span><span class="title-line">மூன்று உலகளாவிய தேவைகள்.</span></h2></div>
-<p>NanoBio Materials உயிரியல் அமைப்புகளின் மூலக்கூறு நிரலாக்கத்தன்மையை மேம்பட்ட பொருட்களின் ஒளியியல், மின்னியல் மற்றும் வினையூக்க செயல்பாடுகளுடன் இணைத்து, அடிப்படை வேதியியலை நடைமுறைப் பயன்பாட்டுடன் தொடர்புபடுத்துகிறது.</p>
+<p>நானோ உயிரியல் பொருட்கள் உயிரியல் அமைப்புகளின் மூலக்கூறு நிரலாக்கத்தன்மையை மேம்பட்ட பொருட்களின் ஒளியியல், மின்னியல் மற்றும் வினையூக்க செயல்பாடுகளுடன் இணைத்து, அடிப்படை வேதியியலை நடைமுறைப் பயன்பாட்டுடன் தொடர்புபடுத்துகிறது.</p>
 </div>
 <div class="pillar-grid">
 <article class="pillar-card health">

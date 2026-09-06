@@ -66,32 +66,23 @@ footer{padding:1.5rem 0;color:#91a2ac;background:var(--ink);font-size:.8rem}
 
 .language-switcher{position:fixed;z-index:250;right:1rem;bottom:1rem;display:flex;gap:.25rem;padding:.3rem;background:rgba(8,23,34,.92);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.language-switcher a{padding:.42rem .65rem;border-radius:999px;color:rgba(255,255,255,.72);font:700 .78rem/1.2 Inter,system-ui,sans-serif;text-decoration:none}.language-switcher a.active{background:#18c6c8;color:#081722}@media(max-width:560px){.language-switcher{right:.6rem;bottom:.6rem}.language-switcher a{padding:.4rem .52rem;font-size:.72rem}}
 
-
-
-/* Tamil page typography */
-html[lang="ta"] body{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif}
-html[lang="ta"] :is(.intro h1,.toolbar h2,.year,.summary strong,.feature-cover figcaption strong,h1,h2){font-family:"Noto Serif Tamil","Nirmala UI","Latha",serif;letter-spacing:0;line-height:1.4;text-wrap:balance;word-break:normal;overflow-wrap:normal}
-html[lang="ta"] .intro h1{font-size:clamp(2.35rem,5.6vw,4.7rem);line-height:1.32}
-html[lang="ta"] .toolbar h2{line-height:1.38}
-html[lang="ta"] .entry h3{line-height:1.72}
-html[lang="ta"] .kicker{letter-spacing:.025em;text-transform:none}
-@media(max-width:720px){html[lang="ta"] .intro h1{font-size:clamp(2rem,9.5vw,3.2rem);line-height:1.36}html[lang="ta"] .toolbar h2{font-size:clamp(1.7rem,7.5vw,2.4rem)}}
-
-
-html[lang="ta"] h3{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;letter-spacing:0;text-wrap:balance;word-break:normal;overflow-wrap:normal}
-
-
-/* v7 Tamil archive typography refinement */
-html[lang="ta"] body{line-height:1.72}
-html[lang="ta"] .intro{padding:clamp(4.2rem,8vw,6.7rem) 0}
-html[lang="ta"] .intro h1{max-width:980px;font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:650;line-height:1.5;letter-spacing:0;text-wrap:balance}
-html[lang="ta"] .intro h1.nowrap-title{white-space:nowrap;font-size:clamp(1.9rem,3.7vw,3rem)}
-html[lang="ta"] .intro p{line-height:1.75}
-html[lang="ta"] .toolbar{align-items:flex-start;gap:1.2rem}
-html[lang="ta"] .toolbar h2{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.7rem,2.9vw,2.4rem);font-weight:650;line-height:1.55;letter-spacing:0;text-wrap:balance}
-html[lang="ta"] .year{font-size:clamp(1.55rem,2.6vw,2rem);line-height:1.5;letter-spacing:0}
-html[lang="ta"] .entry h3{font-size:.98rem;line-height:1.74;text-wrap:pretty}
+/* Unified Tamil archive typography — v10 */
+html[lang="ta"] body{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;line-height:1.74}
+html[lang="ta"] :is(h1,h2,h3,strong,.brand,.navlinks a,.pill){font-synthesis:none}
+html[lang="ta"] .kicker{font-weight:700;letter-spacing:0;text-transform:none;line-height:1.5}
+html[lang="ta"] .intro{padding:clamp(4.1rem,8vw,6.5rem) 0}
+html[lang="ta"] .intro h1{max-width:980px;font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(2rem,3.8vw,3.15rem);font-weight:700;line-height:1.48;letter-spacing:0;text-wrap:balance;overflow-wrap:normal;word-break:normal}
+html[lang="ta"] .intro h1.nowrap-title{white-space:nowrap;font-size:clamp(2rem,3.8vw,3.15rem);font-weight:700}
+html[lang="ta"] .intro p{line-height:1.74}
+html[lang="ta"] .toolbar{align-items:flex-start;gap:1.15rem}
+html[lang="ta"] .toolbar h2{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.66rem,2.65vw,2.2rem);font-weight:700;line-height:1.52;letter-spacing:0;text-wrap:balance;word-break:normal}
+html[lang="ta"] .toolbar h2.nowrap-title{white-space:nowrap;font-size:clamp(1.66rem,2.65vw,2.2rem);font-weight:700}
+html[lang="ta"] .year{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.5rem,2.3vw,1.85rem);font-weight:700;line-height:1.52;letter-spacing:0}
+html[lang="ta"] .year.nowrap-title{white-space:nowrap}
+html[lang="ta"] .entry h3{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:1rem;font-weight:700;line-height:1.68;letter-spacing:0;text-wrap:pretty;word-break:normal}
 html[lang="ta"] .entry p{line-height:1.7}
-html[lang="ta"] .summary strong{line-height:1.45}
-html[lang="ta"] .feature-cover figcaption strong{line-height:1.55}
-@media(max-width:720px){html[lang="ta"] .intro h1{font-size:clamp(1.75rem,7.8vw,2.45rem);line-height:1.52}html[lang="ta"] .intro h1.nowrap-title{font-size:clamp(1.55rem,6.9vw,2.05rem)}html[lang="ta"] .toolbar h2{font-size:clamp(1.48rem,6.3vw,1.9rem);line-height:1.55}html[lang="ta"] .year{font-size:clamp(1.4rem,6vw,1.75rem)}}
+html[lang="ta"] .summary strong{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-weight:700;line-height:1.42}
+html[lang="ta"] .summary span{font-weight:700;letter-spacing:0;text-transform:none}
+html[lang="ta"] .feature-cover figcaption strong{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-weight:700;line-height:1.5}
+html[lang="ta"] :is(.entry>a,.entry-actions a,.inline-links a,.pill,.navlinks a){font-weight:700}
+@media(max-width:720px){html[lang="ta"] .intro h1{font-size:clamp(1.72rem,7.4vw,2.38rem);line-height:1.48}html[lang="ta"] .intro h1.nowrap-title{font-size:clamp(1.58rem,6.5vw,2rem)}html[lang="ta"] .toolbar h2{font-size:clamp(1.46rem,6vw,1.85rem)}html[lang="ta"] .toolbar h2.nowrap-title{font-size:clamp(1.42rem,5.8vw,1.78rem)}html[lang="ta"] .year{font-size:clamp(1.34rem,5.6vw,1.68rem)}}

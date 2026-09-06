@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="京都大学のArivazhagan RajendranによるNanoBio Materials研究。核酸化学、DNAナノテクノロジー、機能性ナノ材料、CO₂還元を健康・エネルギー・環境へ展開。" name="description"/>
+<meta content="京都大学のArivazhagan Rajendranによるナノバイオ材料研究。核酸化学、DNAナノテクノロジー、機能性ナノ材料、CO₂還元を健康・エネルギー・環境へ展開。" name="description"/>
 <meta content="#081722" name="theme-color"/>
-<title>NanoBio Materials | Arivazhagan Rajendran</title>
+<title>ナノバイオ材料 | Arivazhagan Rajendran</title>
 <style>
     :root {
       --ink: #081722;
@@ -194,7 +194,7 @@
     .mission-word.energy { color: var(--energy); }
     .mission-word.environment { color: var(--environment); }
     .hero-name { margin: 1.7rem 0 0; color: var(--white); font-size: 1rem; font-weight: 800; }
-    .hero-name span { display: block; margin-top: .15rem; color: rgba(255,255,255,.55); font-size: .82rem; font-weight: 600; }
+    .hero-name span { display: block; margin-top: .15rem; color: rgba(255,255,255,.55); font-size: .82rem; font-weight: 600; }.hero-name .native-name{display:inline;margin-left:.35rem;color:rgba(255,255,255,.82);font-size:.9em;font-weight:700}.hero-name .degree{display:inline;margin-left:.45rem;color:rgba(255,181,71,.95);font-size:.86em;font-weight:800}
     .hero-lede {
       max-width: 690px;
       margin: 1rem 0 0;
@@ -587,79 +587,38 @@
 .language-switcher{position:fixed;z-index:250;right:1rem;bottom:1rem;display:flex;gap:.25rem;padding:.3rem;background:rgba(8,23,34,.92);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.language-switcher a{padding:.42rem .65rem;border-radius:999px;color:rgba(255,255,255,.72);font:700 .78rem/1.2 Inter,system-ui,sans-serif;text-decoration:none}.language-switcher a.active{background:#18c6c8;color:#081722}@media(max-width:560px){.language-switcher{right:.6rem;bottom:.6rem}.language-switcher a{padding:.4rem .52rem;font-size:.72rem}}
 
 
-    /* Japanese typography: keep CJK headings legible, balanced and collision-free. */
-    html[lang="ja"] .tail-guard { white-space: nowrap; }
-    html[lang="ja"] h3 { font-family: "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif; letter-spacing: 0; line-height: 1.55; text-wrap: balance; }
-    html[lang="ja"] {
-      line-break: strict;
-      word-break: normal;
-    }
-    html[lang="ja"] body {
-      font-family: "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
-    }
-    html[lang="ja"] :is(h1,h2,.metric strong,.direction-strip strong,.contact h2,.highlight-copy h3) {
-      font-family: "Noto Serif CJK JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
-      letter-spacing: 0;
-      line-height: 1.24;
-      text-wrap: balance;
-      overflow-wrap: normal;
-      word-break: normal;
-    }
-    html[lang="ja"] .hero h1 {
-      font-family: var(--serif);
-      line-height: 1.12;
-      letter-spacing: .01em;
-    }
-    html[lang="ja"] .section-head h2,
-    html[lang="ja"] .contact h2 {
-      line-height: 1.22;
-      letter-spacing: .005em;
-    }
-    html[lang="ja"] .highlight-copy h3 { line-height: 1.27; }
-    html[lang="ja"] :is(.kicker,.pillar-label,.funding-period,.institutional-story span,.contact-row span,.metric span) {
-      letter-spacing: .07em;
-      text-transform: none;
-    }
-    html[lang="ja"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.course-list li,.funding-card h3,.activity-card h3) {
-      line-height: 1.55;
-    }
-    @media (max-width: 760px) {
-      html[lang="ja"] .section-head h2 { font-size: clamp(2rem, 9vw, 3rem); }
-      html[lang="ja"] .contact h2 { font-size: clamp(2.15rem, 10vw, 3.35rem); }
-      html[lang="ja"] .highlight-copy h3 { font-size: clamp(1.7rem, 7.5vw, 2.45rem); }
-    }
-    @media (max-width: 560px) {
-      html[lang="ja"] .hero h1 { font-size: clamp(2.55rem, 13vw, 4rem); }
-      html[lang="ja"] .section-head h2 { font-size: clamp(1.85rem, 8.7vw, 2.7rem); }
-      html[lang="ja"] .direction-strip { align-items: flex-start; }
-      html[lang="ja"] .direction-strip span { text-align: left; }
-    }
+    
 
-
-/* v7 Japanese visual refinement: clean CJK spacing, keep short display headings on one line. */
-html[lang="ja"]{line-break:strict;word-break:normal}
+/* Unified Japanese typography — v10 */
+html[lang="ja"]{line-break:strict;word-break:normal;--ja-heading-weight:700}
 html[lang="ja"] body{font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;line-height:1.72}
-html[lang="ja"] :is(.eyebrow,.kicker,.pillar-label,.funding-period,.institutional-story span,.contact-row span,.metric span){letter-spacing:.035em;text-transform:none;line-height:1.5}
-html[lang="ja"] .hero-mission{letter-spacing:.035em}
-html[lang="ja"] .section-head{grid-template-columns:minmax(400px,.9fr) minmax(0,1.1fr);gap:clamp(1.7rem,4vw,3rem);align-items:start;margin-bottom:3.2rem}
+html[lang="ja"] :is(h1,h2,h3,h4,.brand,.nav-links a,.button,.kicker,.eyebrow,.pillar-label,.funding-period){font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;font-synthesis:none}
+html[lang="ja"] :is(.eyebrow,.kicker,.pillar-label,.funding-period,.institutional-story span,.contact-row span,.metric span){font-size:.78rem;font-weight:700;letter-spacing:.02em;text-transform:none;line-height:1.48}
+html[lang="ja"] .hero h1{font-size:clamp(2.5rem,5vw,4.35rem);font-weight:700;line-height:1.25;letter-spacing:.01em;text-wrap:balance;word-break:keep-all}
+html[lang="ja"] .hero-name{font-weight:700;line-height:1.55}
+html[lang="ja"] .hero-name .native-name{display:block;margin:.25rem 0 0;color:rgba(255,255,255,.84);font-size:.92em;font-weight:700;line-height:1.5}
+html[lang="ja"] .hero-name .degree{display:block;margin:.22rem 0 0;color:rgba(255,181,71,.96);font-size:.88em;font-weight:700;line-height:1.45}
+html[lang="ja"] .hero-name>span:last-child{margin-top:.36rem;font-weight:600;line-height:1.65}
+html[lang="ja"] .section-head{grid-template-columns:minmax(400px,.9fr) minmax(0,1.1fr);gap:clamp(1.7rem,4vw,3rem);align-items:start;margin-bottom:3.1rem}
+html[lang="ja"] #academic-path .section-head{grid-template-columns:minmax(400px,.9fr) minmax(0,1.1fr);align-items:start}
 html[lang="ja"] .section-head>div{min-width:0}
 html[lang="ja"] .section-head .kicker{display:block;margin-bottom:.62rem}
-html[lang="ja"] .section-head h2{margin:0;font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;font-size:clamp(1.9rem,2.85vw,2.45rem);font-weight:650;line-height:1.34;letter-spacing:.01em;text-wrap:balance;overflow-wrap:normal;word-break:normal}
-html[lang="ja"] .section-head h2.nowrap-title{white-space:nowrap;font-size:clamp(1.85rem,2.7vw,2.35rem)}
-html[lang="ja"] .section-head p{padding-top:.1rem;line-height:1.75}
-html[lang="ja"] .pillar-card h3{font-size:clamp(1.65rem,2.6vw,2.25rem);line-height:1.38;text-wrap:balance}
-html[lang="ja"] .research-card h3{font-size:clamp(1.45rem,2.35vw,1.95rem);line-height:1.42}
-html[lang="ja"] .network-block h3{font-size:clamp(1.4rem,2.1vw,1.8rem);line-height:1.42}
-html[lang="ja"] .funding-card h3{line-height:1.55}
-html[lang="ja"] .highlight-copy h3{font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.38}
-html[lang="ja"] .metric.affiliation strong{font-size:1.03rem;line-height:1.42}
-html[lang="ja"] .contact h2{font-family:"Noto Sans CJK JP","Yu Gothic","Meiryo",sans-serif;font-size:clamp(2rem,4vw,3.35rem);font-weight:650;line-height:1.38;letter-spacing:.01em}
-@media(max-width:960px){html[lang="ja"] .section-head{grid-template-columns:minmax(330px,.84fr) minmax(0,1.16fr)}}
-@media(max-width:760px){html[lang="ja"] .section-head{grid-template-columns:1fr;gap:.95rem;margin-bottom:2.6rem}html[lang="ja"] .section-head h2{font-size:clamp(1.7rem,7.2vw,2.25rem);line-height:1.38}html[lang="ja"] .section-head h2.nowrap-title{font-size:clamp(1.65rem,7vw,2.1rem);white-space:nowrap}html[lang="ja"] .contact h2{font-size:clamp(2rem,9vw,2.9rem)}}
-@media(max-width:420px){html[lang="ja"] .section-head h2.nowrap-title{font-size:clamp(1.5rem,6.7vw,1.9rem)}}
-
-
+html[lang="ja"] .section-head h2{margin:0;font-size:clamp(1.95rem,2.75vw,2.35rem);font-weight:700;line-height:1.38;letter-spacing:.01em;text-wrap:balance;overflow-wrap:normal;word-break:keep-all}
+html[lang="ja"] .section-head h2.nowrap-title{white-space:nowrap;font-size:clamp(1.95rem,2.75vw,2.35rem);font-weight:700}
+html[lang="ja"] .section-head p{padding-top:.1rem;line-height:1.72}
 html[lang="ja"] .title-line{display:block}
+html[lang="ja"] .pillar-card h3{font-size:clamp(1.42rem,1.95vw,1.68rem);font-weight:700;line-height:1.46;letter-spacing:.01em;text-wrap:balance;word-break:keep-all}
+html[lang="ja"] :is(.research-card h3,.network-block h3){font-size:clamp(1.28rem,1.72vw,1.48rem);font-weight:700;line-height:1.5;letter-spacing:.01em;text-wrap:balance;word-break:keep-all}
+html[lang="ja"] :is(.activity-card h3,.teaching-panel h3,.funding-card h3,.academic-card h3){font-size:1.02rem;font-weight:700;line-height:1.58;letter-spacing:0}
+html[lang="ja"] .highlight-copy h3{font-size:clamp(1.68rem,2.65vw,2.3rem);font-weight:700;line-height:1.42;letter-spacing:.01em;text-wrap:balance;word-break:keep-all}
+html[lang="ja"] .institutional-story strong{font-weight:700;line-height:1.58}
+html[lang="ja"] .metric.affiliation strong{font-size:1rem;font-weight:700;line-height:1.45}
+html[lang="ja"] .contact h2{max-width:760px;font-size:clamp(1.95rem,3.5vw,3rem);font-weight:700;line-height:1.42;letter-spacing:.01em;text-wrap:balance;word-break:keep-all}
+html[lang="ja"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.course-list li,.section-more,.archive-link){font-weight:700;line-height:1.55}
+@media(max-width:960px){html[lang="ja"] .section-head,html[lang="ja"] #academic-path .section-head{grid-template-columns:minmax(330px,.84fr) minmax(0,1.16fr)}}
+@media(max-width:760px){html[lang="ja"] .section-head,html[lang="ja"] #academic-path .section-head{grid-template-columns:1fr;gap:.95rem;margin-bottom:2.5rem}html[lang="ja"] .section-head h2{font-size:clamp(1.68rem,6.8vw,2.15rem);line-height:1.42}html[lang="ja"] .section-head h2.nowrap-title{font-size:clamp(1.6rem,6.4vw,2rem);white-space:nowrap}html[lang="ja"] .pillar-card h3{font-size:clamp(1.32rem,5.35vw,1.6rem)}html[lang="ja"] .contact h2{font-size:clamp(1.9rem,8.1vw,2.7rem)}}
+@media(max-width:420px){html[lang="ja"] .hero h1{font-size:clamp(2.05rem,10.5vw,2.9rem)}html[lang="ja"] .section-head h2.nowrap-title{font-size:clamp(1.48rem,5.9vw,1.78rem)}}
+
 </style>
 </head>
 <body>
@@ -690,11 +649,11 @@ html[lang="ja"] .title-line{display:block}
 <div class="hero-inner">
 <div>
 <p class="eyebrow">分子レベルの精密設計 · 機能性材料 · 持続可能な未来</p>
-<h1>NanoBio <span>Materials</span></h1>
+<h1>ナノバイオ<span>材料</span></h1>
 <div aria-label="研究応用" class="hero-mission">
 <span class="mission-word health">健康</span><span class="mission-word energy">エネルギー</span><span class="mission-word environment">環境</span>
 </div>
-<p class="hero-name">Arivazhagan Rajendran <span>講師 · 京都大学エネルギー理工学研究所 附属カーボンネガティブ・エネルギー研究センター</span></p>
+<p class="hero-name">Arivazhagan Rajendran <span class="native-name">（アリワラガン ラジェンドラン）</span><span class="degree">博士（理学）</span><span>講師 · 京都大学エネルギー理工学研究所 附属カーボンネガティブ・エネルギー研究センター</span></p>
 <p class="hero-lede">核酸化学とDNAナノテクノロジーを、有機・無機・ハイブリッドナノ材料と融合し、生命医科学、クリーンエネルギー、CO₂還元のための機能システムを創出します。</p>
 <div class="hero-actions">
 <a class="button primary" href="research.html">研究を見る <span class="arrow">→</span></a>
@@ -703,7 +662,7 @@ html[lang="ja"] .title-line{display:block}
 </div>
 <div aria-label="Arivazhagan Rajendranの肖像" class="portrait-stage">
 <div class="portrait-frame">
-<img alt="Dr. Arivazhagan Rajendran" height="430" src="profile.webp" width="454"/>
+<img alt="Arivazhagan Rajendran" height="430" src="profile.webp" width="454"/>
 </div>
 <div class="portrait-note">
 <strong>附属カーボンネガティブ・エネルギー研究センター</strong>
@@ -722,7 +681,7 @@ html[lang="ja"] .title-line{display:block}
 <div class="section-inner">
 <div class="section-head">
 <div><span class="kicker">研究ミッション</span><h2 id="mission-title"><span class="title-line">一つの材料基盤から、</span><span class="title-line">三つの世界的課題へ。</span></h2></div>
-<p>NanoBio Materialsでは、生体分子が持つプログラム可能性と先端材料の光学・電子・触媒機能を融合し、基礎化学を実用的な価値へつなげます。</p>
+<p>ナノバイオ材料では、生体分子が持つプログラム可能性と先端材料の光学・電子・触媒機能を融合し、基礎化学を実用的な価値へつなげます。</p>
 </div>
 <div class="pillar-grid">
 <article class="pillar-card health">
