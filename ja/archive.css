@@ -126,3 +126,16 @@ html[lang="ta"] .k11-title{font-size:clamp(1.45rem,2.4vw,1.95rem);line-height:1.
 html[lang="ta"] .member-subhead{font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.5}
 html[lang="ja"] .k11-title{font-size:clamp(1.55rem,2.5vw,2.05rem);line-height:1.45;word-break:auto-phrase;text-wrap:balance}
 html[lang="ja"] .member-subhead{font-size:clamp(1.35rem,2.2vw,1.75rem);line-height:1.45;word-break:auto-phrase}
+
+
+/* v14 100% zoom and cross-device overflow safeguards */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video,canvas{max-width:100%;height:auto}
+.wrap,.nav,.navlinks,.entry,.entry>div,.toolbar,.intro .wrap{min-width:0}
+.intro h1,.toolbar h2,.year,.entry h3,.entry p,.note{overflow-wrap:break-word}
+@media(max-width:1100px){.nav{justify-content:flex-start}.navlinks{width:100%;justify-content:flex-start}.intro h1{font-size:clamp(2.65rem,5.2vw,4.7rem)}}
+@media(max-width:760px){.wrap,.nav{width:min(100% - 1.25rem,var(--max))}.intro h1{font-size:clamp(2.35rem,10vw,3.7rem)}.toolbar h2{font-size:clamp(1.85rem,8vw,2.8rem)}.entry{grid-template-columns:42px minmax(0,1fr)}.entry>a,.entry-actions{grid-column:2}.navlinks{gap:.48rem .68rem}.navlinks a{font-size:.82rem}}
+@media(max-width:420px){.wrap,.nav{width:min(100% - .9rem,var(--max))}.brand{font-size:.8rem}.navlinks a{font-size:.78rem}.entry{gap:.7rem}.note{padding:.85rem .9rem}}
+html[lang="ta"] .navlinks a{font-size:.82rem}
+html[lang="ta"] .intro h1{letter-spacing:0;line-height:1.22}
+html[lang="ja"] .intro h1,html[lang="ja"] .toolbar h2,html[lang="ja"] .year{word-break:auto-phrase;line-break:strict}

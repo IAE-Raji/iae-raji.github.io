@@ -34,6 +34,9 @@ body{margin:0;min-height:100vh;display:grid;place-items:center;padding:clamp(1re
 /* v11 final responsive polish */
 .site-title{white-space:nowrap}
 @media(max-width:520px){.site-title-ta{font-size:clamp(.98rem,5vw,1.25rem)}}
+
+/* v14 selector overflow safeguards */
+html,body{max-width:100%;overflow-x:hidden}.selector-grid,.content,.profile-wrap{min-width:0}.site-title{overflow-wrap:break-word}@media(max-width:760px){.site-titles{gap:.2rem}.affiliation{max-width:100%}}
 </style>
 </head>
 <body>
@@ -44,14 +47,13 @@ body{margin:0;min-height:100vh;display:grid;place-items:center;padding:clamp(1re
 </div>
 <div class="content">
 <div aria-label="NanoBio Materials in three languages" class="site-titles">
-<h1 class="site-title site-title-en" lang="en">NanoBio <span>Materials</span></h1>
 <div class="site-title site-title-ta" lang="ta">நானோ உயிரிப் பொருட்கள்</div>
+<h1 class="site-title site-title-en" lang="en">NanoBio <span>Materials</span></h1>
 <div class="site-title site-title-ja" lang="ja">ナノバイオ材料</div>
 </div>
 
-<p class="person">Dr. Arivazhagan Rajendran, Ph.D.</p>
 <p class="position">Junior Associate Professor</p>
-<p class="affiliation">Integrated Research Center for Carbon Negative Science, Institute of Advanced Energy, Kyoto University</p>
+<p class="affiliation">Integrated Research Center for Carbon Negative Science (ICaNS), Institute of Advanced Energy (IAE), Kyoto University</p>
 <div aria-label="Choose your language" class="language-prompt">
 <span class="ta" lang="ta">மொழியைத் தேர்ந்தெடுக்கவும்</span>
 <span class="en" lang="en">Choose your language</span>
