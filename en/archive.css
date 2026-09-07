@@ -65,3 +65,34 @@ footer{padding:1.5rem 0;color:#91a2ac;background:var(--ink);font-size:.8rem}
 @media(max-width:460px){.cover-gallery{grid-template-columns:1fr}}
 
 .language-switcher{position:fixed;z-index:250;right:1rem;bottom:1rem;display:flex;gap:.25rem;padding:.3rem;background:rgba(8,23,34,.92);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.language-switcher a{padding:.42rem .65rem;border-radius:999px;color:rgba(255,255,255,.72);font:700 .78rem/1.2 Inter,system-ui,sans-serif;text-decoration:none}.language-switcher a.active{background:#18c6c8;color:#081722}@media(max-width:560px){.language-switcher{right:.6rem;bottom:.6rem}.language-switcher a{padding:.4rem .52rem;font-size:.72rem}}
+
+
+/* v11 global visual-uniformity and wrapping revision */
+.nav{align-items:center;flex-wrap:wrap;padding:.55rem 0}
+.brand{font-size:.84rem;line-height:1.3;white-space:nowrap;flex:0 0 auto}
+.navlinks{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.62rem .85rem;min-width:0}
+.navlinks a{white-space:nowrap;line-height:1.35}
+.intro h1{font-size:clamp(2.8rem,5.7vw,5rem);line-height:1.02;max-width:100%}
+.toolbar h2{font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.08}
+.year{line-height:1.12}
+.institution-name{white-space:nowrap}
+@media(max-width:900px){.brand{white-space:normal}.navlinks{justify-content:flex-start}.institution-name{white-space:normal}}
+
+html[lang="en"] .intro h1{letter-spacing:-.035em}
+
+
+/* v11 final responsive polish */
+.entry>*{min-width:0}
+
+/* v12 members + navigation refinement */
+.member-subhead{font-size:clamp(1.45rem,2.5vw,2rem);margin:2.2rem 0 .7rem;line-height:1.25}
+.compact-members .entry{padding-top:1rem;padding-bottom:1rem}
+.compact-members .entry h3{margin-bottom:.25rem}
+.members-actions{margin-top:2rem}
+.k11-title{max-width:100%;text-wrap:balance}
+.navlinks a{white-space:nowrap}
+@media(max-width:980px){.navlinks{justify-content:flex-start}}
+html[lang="ta"] .k11-title{font-size:clamp(1.45rem,2.4vw,1.95rem);line-height:1.5}
+html[lang="ta"] .member-subhead{font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.5}
+html[lang="ja"] .k11-title{font-size:clamp(1.55rem,2.5vw,2.05rem);line-height:1.45;word-break:auto-phrase;text-wrap:balance}
+html[lang="ja"] .member-subhead{font-size:clamp(1.35rem,2.2vw,1.75rem);line-height:1.45;word-break:auto-phrase}

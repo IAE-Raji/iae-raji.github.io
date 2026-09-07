@@ -624,6 +624,42 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 @media(max-width:760px){html[lang="ta"] .section-head,html[lang="ta"] #academic-path .section-head{grid-template-columns:1fr;gap:1rem;margin-bottom:2.6rem}html[lang="ta"] .section-head h2{font-size:clamp(1.52rem,6.05vw,1.84rem);line-height:1.58}html[lang="ta"] .section-head h2.nowrap-title{font-size:clamp(1.48rem,5.85vw,1.78rem);white-space:nowrap}html[lang="ta"] .section-head h2.compact-two-line,html[lang="ta"] #mission-title{font-size:clamp(1.48rem,5.85vw,1.76rem)}html[lang="ta"] .pillar-card h3{min-height:0;font-size:clamp(1.28rem,5.25vw,1.54rem)}html[lang="ta"] .contact h2{font-size:clamp(1.78rem,7.5vw,2.45rem)}}
 @media(max-width:420px){html[lang="ta"] .hero h1{font-size:clamp(1.95rem,10.4vw,2.75rem)}html[lang="ta"] .section-head h2.nowrap-title{font-size:clamp(1.34rem,5.35vw,1.56rem)}html[lang="ta"] .metric.affiliation strong{font-size:.9rem}}
 
+
+
+/* v11 global visual-uniformity and institutional wrapping revision */
+.brand{font-size:.88rem;line-height:1.25;white-space:nowrap}
+.nav-links a{white-space:nowrap}
+.section-head{grid-template-columns:minmax(320px,.72fr) minmax(0,1.28fr);gap:clamp(2.5rem,5vw,4.8rem);align-items:end}
+.section-head h2{font-size:clamp(2.35rem,4.2vw,3.85rem);line-height:1.04;max-width:100%;overflow-wrap:normal}
+.publications .section-head{grid-template-columns:minmax(360px,.78fr) minmax(0,1.22fr)}
+.publications .section-head h2{font-size:clamp(2.35rem,4vw,3.65rem);white-space:nowrap}
+.org-line{display:block;white-space:nowrap;line-height:1.55}
+.institution-name{white-space:nowrap}
+.mission-prep{font-weight:800;opacity:.85}
+@media(max-width:1080px){.menu-toggle{display:grid;place-items:center}.nav-links{position:absolute;top:72px;left:1rem;right:1rem;display:none;padding:1rem;flex-direction:column;align-items:stretch;gap:.3rem;background:#0d2330;border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 50px rgba(0,0,0,.25)}.nav-links.open{display:flex}.nav-links a{padding:.65rem .5rem}.nav-links .nav-contact{text-align:center;margin-top:.4rem}}
+@media(max-width:900px){.section-head,.publications .section-head{grid-template-columns:1fr}.publications .section-head h2{white-space:normal}.institution-name{white-space:normal}}
+@media(max-width:640px){.org-line{white-space:normal;text-wrap:balance}.brand{font-size:.78rem;white-space:normal;max-width:calc(100% - 58px)}}
+
+html[lang="ta"] body{font-family:"Noto Sans Tamil","Nirmala UI","Latha",Inter,sans-serif}
+html[lang="ta"] .brand{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:.80rem;font-weight:750}
+html[lang="ta"] .nav-links a{font-size:.80rem}
+html[lang="ta"] .hero-person{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.05rem,2vw,1.85rem);line-height:1.35;font-weight:800;white-space:nowrap;letter-spacing:0}
+html[lang="ta"] .section-head h2{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.85rem,3.25vw,2.8rem);line-height:1.38;font-weight:700;letter-spacing:0;text-wrap:balance}
+html[lang="ta"] .publications .section-head h2{font-size:clamp(1.85rem,3.05vw,2.6rem);white-space:nowrap}
+html[lang="ta"] .hero-mission{font-size:.82rem;letter-spacing:0;text-transform:none;gap:.45rem}
+html[lang="ta"] .org-line{font-size:clamp(.78rem,1.25vw,.96rem)}
+@media(max-width:900px){html[lang="ta"] .publications .section-head h2{white-space:normal}}
+@media(max-width:520px){html[lang="ta"] .hero-person{font-size:clamp(.94rem,4.25vw,1.12rem)}}
+
+
+/* v11 final responsive polish */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:minmax(0,1fr)}
+  .hero-inner>*{min-width:0}
+  .section-head,.highlight-grid,.news-grid,.teaching-grid,.contact-inner,.profile-grid{grid-template-columns:minmax(0,1fr)}
+  .section-head>*,.highlight-grid>*,.news-grid>*,.teaching-grid>*,.contact-inner>*,.profile-grid>*{min-width:0}
+}
+@media(max-width:520px){html[lang="ta"] .hero-person{font-size:clamp(.82rem,4.15vw,1.08rem);max-width:100%}}
 </style>
 </head>
 <body>
@@ -631,10 +667,7 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 <a class="skip-link" href="#main">உள்ளடக்கத்திற்குச் செல்லவும்</a>
 <header class="site-header">
 <nav aria-label="முதன்மை வழிசெலுத்தல்" class="nav-wrap">
-<a aria-label="Arivazhagan Rajendran, முகப்பு" class="brand" href="index.html#top">
-<span class="brand-mark">AR</span>
-<span>Arivazhagan Rajendran</span>
-</a>
+<a aria-label="முனைவர் அறிவழகன் இராசேந்திரன், முகப்பு" class="brand" href="index.html#top">முனைவர் அறிவழகன் இராசேந்திரன்</a>
 <button aria-controls="nav-links" aria-expanded="false" aria-label="வழிசெலுத்தலைத் திறக்கவும்" class="menu-toggle" type="button">☰</button>
 <div class="nav-links" id="nav-links">
 <a href="research.html">ஆராய்ச்சி</a>
@@ -644,7 +677,7 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 <a href="highlights.html">சிறப்பம்சங்கள்</a>
 <a href="news.html">செய்திகள்</a>
 <a href="teaching.html">கற்பித்தல்</a>
-<a href="academic.html">கல்வி மற்றும் பணிப் பயணம்</a>
+<a href="members.html">உறுப்பினர்கள்</a><a href="academic.html">கல்வி மற்றும் பணிப் பயணம்</a>
 <a class="nav-contact" href="#contact">தொடர்பு</a>
 </div>
 </nav>
@@ -655,11 +688,9 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 <div>
 <p class="eyebrow">மூலக்கூறு துல்லியம் · செயல்பாட்டு பொருட்கள் · நிலைத்த எதிர்காலம்</p>
 <h1>நானோ உயிரிப் <span>பொருட்கள்</span></h1>
-<div aria-label="ஆராய்ச்சி பயன்பாடுகள்" class="hero-mission">
-<span class="mission-word health">ஆரோக்கியம்</span><span class="mission-word energy">ஆற்றல்</span><span class="mission-word environment">சுற்றுச்சூழல்</span>
-</div>
-<p class="hero-name"><strong class="hero-person">முனைவர் அறிவழகன் இராசேந்திரன்</strong><span>இளநிலை இணைப் பேராசிரியர் · கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம், கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம்</span></p>
-<p class="hero-lede">நியூக்ளிக் அமில வேதியியல் மற்றும் DNA நானோ தொழில்நுட்பத்தை கரிம, அகர மற்றும் கலப்பு நானோப் பொருட்களுடன் இணைத்து, உயிர்மருத்துவம், தூய ஆற்றல் மற்றும் CO₂ குறைப்பிற்கான செயல்பாட்டு அமைப்புகளை உருவாக்குகிறோம்.</p>
+<div aria-label="ஆராய்ச்சி பயன்பாடுகள்" class="hero-mission"><span class="mission-word health">ஆரோக்கியத்திற்காக</span><span class="mission-word energy">ஆற்றலுக்காக</span><span class="mission-word environment">சுற்றுச்சூழலுக்காக</span></div>
+<p class="hero-name"><strong class="hero-person">முனைவர் அறிவழகன் இராசேந்திரன்</strong><span>இளநிலை இணைப் பேராசிரியர் · கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம் (ICaNS), கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம் (IAE), கியோட்டோ பல்கலைக்கழகம்</span></p>
+<p class="hero-lede">நியூக்ளிக் அமில வேதியியல் மற்றும் DNA நானோ தொழில்நுட்பத்தை கரிம, கனிம மற்றும் கலப்பு நானோப் பொருட்களுடன் இணைத்து, உயிர்மருத்துவம், தூய ஆற்றல் மற்றும் CO₂ குறைப்பிற்கான செயல்பாட்டு அமைப்புகளை உருவாக்குகிறோம்.</p>
 <div class="hero-actions">
 <a class="button primary" href="research.html">ஆராய்ச்சியைப் பாருங்கள் <span class="arrow">→</span></a>
 <a class="button" href="publications.html">தேர்ந்தெடுக்கப்பட்ட வெளியீடுகள்</a>
@@ -670,8 +701,8 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 <img alt="Arivazhagan Rajendran" height="430" src="profile.webp" width="454"/>
 </div>
 <div class="portrait-note">
-<strong>கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம்</strong>
-<span>கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம் · உஜி, ஜப்பான்</span>
+<strong>கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம் (ICaNS)</strong>
+<span>கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம் (IAE) · உஜி, ஜப்பான்</span>
 </div>
 </div>
 </div>
@@ -680,7 +711,7 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 <div class="metric"><strong>49</strong><span>ஆய்வு வெளியீடுகள்</span></div>
 <div class="metric"><strong>3,386</strong><span>Google Scholar மேற்கோள்கள் · 2021 முதல் 889</span></div>
 <div class="metric"><strong>26 / 33</strong><span>h-index / i10-index<br/>2021 முதல்: 15 / 21</span></div>
-<div class="metric affiliation"><strong>கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம்</strong><span>கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம்</span></div>
+<div class="metric affiliation"><strong class="affiliation-title">கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம் (ICaNS)</strong><span>கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம் (IAE)</span></div>
 </section>
 <section aria-labelledby="mission-title" class="section pillars">
 <div class="section-inner">
@@ -698,7 +729,7 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 <article class="pillar-card energy">
 <span class="pillar-label">02 · ஆற்றல்</span>
 <h3><span class="title-line">மாற்றத்திற்கான</span><span class="title-line">பொருட்கள்</span></h3>
-<p>ஆற்றலை அதிக திறனுடன் சேகரிக்க, சேமிக்க மற்றும் மாற்ற வடிவமைக்கப்பட்ட கரிம, அகர மற்றும் கலப்பு நானோப் பொருட்கள்.</p>
+<p>ஆற்றலை அதிக திறனுடன் சேகரிக்க, சேமிக்க மற்றும் மாற்ற வடிவமைக்கப்பட்ட கரிம, கனிம மற்றும் கலப்பு நானோப்பொருட்கள்.</p>
 <ul><li>ஒளிவினையூக்கம் மற்றும் மின்வினையூக்கம்</li><li>குறைந்த பரிமாண வினையூக்கிப் பொருட்கள்</li><li>சூரியஒளி இயக்கும் வேதியியல் மாற்றம்</li></ul>
 </article>
 <article class="pillar-card environment">
@@ -714,7 +745,7 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 <div class="section-inner">
 <div class="section-head">
 <div><span class="kicker">ஆராய்ச்சி அடித்தளம்</span><h2><span class="title-line">மூலக்கூறு தகவலிலிருந்து</span><span class="title-line">பொருள் செயல்பாடு வரை.</span></h2></div>
-<p>நியூக்ளிக் அமில வேதியியல் மற்றும் DNA நானோ தொழில்நுட்பத்தில் உருவான நீண்டகால அடித்தளத்திலிருந்து, ஆரோக்கியம், ஆற்றல் மற்றும் சுற்றுச்சூழல் பயன்பாடுகளுக்கான கரிம, அகர மற்றும் கலப்பு நானோப் பொருட்கள் தளமாக ஆய்வு விரிகிறது.</p>
+<p>நியூக்ளிக் அமில வேதியியல் மற்றும் DNA நானோ தொழில்நுட்பத்தில் உருவான நீண்டகால அடித்தளத்திலிருந்து, ஆரோக்கியம், ஆற்றல் மற்றும் சுற்றுச்சூழல் பயன்பாடுகளுக்கான கரிம, கனிம மற்றும் கலப்பு நானோப்பொருட்கள் தளமாக ஆய்வு விரிகிறது.</p>
 </div>
 <div aria-label="ஆராய்ச்சி திட்டத்தின் வளர்ச்சி" class="research-path">
 <div class="path-step">நியூக்ளிக் அமில வேதியியல்</div>
@@ -743,12 +774,12 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 </article>
 <article class="research-card">
 <span class="card-number">04</span>
-<h3>அகர &amp; கலப்பு நானோப் பொருட்கள்</h3>
+<h3>கனிம &amp; கலப்பு நானோப்பொருட்கள்</h3>
 <p>ஆற்றல் மாற்றம், CO₂ குறைப்பு மற்றும் கார்பன் நெகட்டிவ் அறிவியலுக்காக வடிவமைக்கப்பட்ட நானோ துகள்கள், ஹெடரோ கட்டமைப்புகள் மற்றும் குறைந்த பரிமாண வினையூக்கிகள்.</p>
 <div class="research-tags"><span>நானோ கலப்புகள்</span><span>மின்வினையூக்கம்</span><span>CO₂ குறைப்பு</span></div>
 </article>
 </div>
-<div class="direction-strip"><strong>தற்போதைய ஆய்வுத் திசை</strong><span>கரிம மற்றும் அகர நானோப் பொருட்கள் · ஒளி உதவிய CO₂ குறைப்பு · குறைந்த பரிமாண வினையூக்க அமைப்புகள்</span></div>
+<div class="direction-strip"><strong>தற்போதைய ஆய்வுத் திசை</strong><span>கரிம மற்றும் கனிம நானோப்பொருட்கள் · ஒளி உதவிய CO₂ குறைப்பு · குறைந்த பரிமாண வினையூக்க அமைப்புகள்</span></div>
 <div class="network-block">
 <h3>சர்வதேச ஆராய்ச்சி வலையமைப்பு</h3>
 <ul class="network-grid">
@@ -915,21 +946,21 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 <article class="academic-card">
 <h3>முழுமையான கல்வி மற்றும் பணிப் பயணம்</h3>
 <ol class="career">
-<li><strong>பிப்ரவரி 2015–தற்போது</strong>இளநிலை இணைப் பேராசிரியர், <a href="https://icans.iae.kyoto-u.ac.jp/en/" rel="noopener" target="_blank">கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம்</a>, <a href="https://www.iae.kyoto-u.ac.jp/en" rel="noopener" target="_blank">கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம்</a>, <a href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">கியோட்டோ பல்கலைக்கழகம்</a></li>
-<li><strong>செப்டம்பர் 2013–ஜனவரி 2015</strong>உதவிப் பேராசிரியர், <a href="https://www1.tara.tsukuba.ac.jp/en/" rel="noopener" target="_blank">TARA உயிர் அறிவியல் மையம்</a>, <a href="https://www.tsukuba.ac.jp/en/" rel="noopener" target="_blank">சுகுபா பல்கலைக்கழகம்</a></li>
-<li><strong>ஜனவரி 2010–ஆகஸ்ட் 2013</strong>DNA நானோ தொழில்நுட்பத்தில் CREST மற்றும் JSPS முதுநிலை ஆராய்ச்சியாளர், WPI-iCeMS மற்றும் வேதியியல் துறை, <a href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">கியோட்டோ பல்கலைக்கழகம்</a></li>
-<li><strong>அக்டோபர் 2008–டிசம்பர் 2009</strong>நியூக்ளிக் அமில வேதியியலில் முதுநிலை ஆராய்ச்சியாளர், <a href="https://www.konan-u.ac.jp/english/center/fiber/" rel="noopener" target="_blank">FIBER</a>, <a href="https://www.konan-u.ac.jp/english/" rel="noopener" target="_blank">கோனான் பல்கலைக்கழகம்</a></li>
+<li><strong>பிப்ரவரி 2015–தற்போது</strong>இளநிலை இணைப் பேராசிரியர், <a class="institution-name" href="https://icans.iae.kyoto-u.ac.jp/en/" rel="noopener" target="_blank">கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம் (ICaNS)</a>, <a class="institution-name" href="https://www.iae.kyoto-u.ac.jp/en" rel="noopener" target="_blank">கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம் (IAE)</a>, <a class="institution-name" href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">கியோட்டோ பல்கலைக்கழகம்</a>, ஜப்பான்</li>
+<li><strong>செப்டம்பர் 2013–ஜனவரி 2015</strong>உதவிப் பேராசிரியர், <a class="institution-name" href="https://www1.tara.tsukuba.ac.jp/en/" rel="noopener" target="_blank">TARA உயிர் அறிவியல் மையம்</a>, <a class="institution-name" href="https://www.tsukuba.ac.jp/en/" rel="noopener" target="_blank">சுகுபா பல்கலைக்கழகம்</a>, ஜப்பான்</li>
+<li><strong>ஜனவரி 2010–ஆகஸ்ட் 2013</strong>DNA நானோ தொழில்நுட்பத்தில் CREST மற்றும் JSPS முதுநிலை ஆராய்ச்சியாளர், <a class="institution-name" href="https://www.kuchem.kyoto-u.ac.jp/" rel="noopener" target="_blank">வேதியியல் துறை</a>, <a class="institution-name" href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">கியோட்டோ பல்கலைக்கழகம்</a>, ஜப்பான்</li>
+<li><strong>அக்டோபர் 2008–டிசம்பர் 2009</strong>நியூக்ளிக் அமில வேதியியலில் முதுநிலை ஆராய்ச்சியாளர், <a class="institution-name" href="https://www.konan-u.ac.jp/english/center/fiber/" rel="noopener" target="_blank">FIBER</a>, <a class="institution-name" href="https://www.konan-u.ac.jp/english/" rel="noopener" target="_blank">கோனான் பல்கலைக்கழகம்</a>, ஜப்பான்</li>
 <li><strong>அக்டோபர் 2005–செப்டம்பர் 2008</strong>வேதியியலில் முனைவர் பட்டம் (பகுப்பாய்வு வேதியியல்), <a href="https://www.chem.tohoku.ac.jp/english/" rel="noopener" target="_blank">தோஹோகு பல்கலைக்கழகம்</a>, ஜப்பான்</li>
 <li><strong>ஜனவரி–செப்டம்பர் 2005</strong>ஆராய்ச்சி மாணவர், <a href="https://clri.org/" rel="noopener" target="_blank">CSIR–மத்திய தோல் ஆராய்ச்சி நிறுவனம்</a>, இந்தியா</li>
-<li><strong>செப்டம்பர்–டிசம்பர் 2004</strong>கணினி வேதியியலில் ஆராய்ச்சி மாணவர், <a href="https://www.cec.mpg.de/en/institute/history" rel="noopener" target="_blank">மேக்ஸ் பிளாங்க் உயிர்-அகர வேதியியல் நிறுவனம்</a>, ஜெர்மனி</li>
+<li><strong>செப்டம்பர்–டிசம்பர் 2004</strong>கணினி வேதியியலில் ஆராய்ச்சி மாணவர், <a href="https://www.cec.mpg.de/en/institute/history" rel="noopener" target="_blank">மேக்ஸ் பிளாங்க் உயிர்-கனிம வேதியியல் நிறுவனம்</a>, ஜெர்மனி</li>
 <li><strong>அக்டோபர் 2003–ஆகஸ்ட் 2004</strong>ஆராய்ச்சி மாணவர், <a href="https://www.chem.tohoku.ac.jp/english/" rel="noopener" target="_blank">தோஹோகு பல்கலைக்கழகம்</a>, ஜப்பான்</li>
-<li><strong>ஜூலை 2001–ஜூன் 2003</strong>அகர வேதியியலில் முதுநிலை அறிவியல் பட்டம், <a href="https://unom.ac.in/" rel="noopener" target="_blank">சென்னைப் பல்கலைக்கழகம்</a>, இந்தியா</li>
+<li><strong>ஜூலை 2001–ஜூன் 2003</strong>கனிம வேதியியலில் முதுநிலை அறிவியல் பட்டம், <a href="https://unom.ac.in/" rel="noopener" target="_blank">சென்னைப் பல்கலைக்கழகம்</a>, இந்தியா</li>
 <li><strong>ஜூலை 1998–ஜூன் 2001</strong>வேதியியலில் இளநிலை அறிவியல் பட்டம், <a href="https://www.gacmenkrishnagiri.org/" rel="noopener" target="_blank">அரசினர் கலைக் கல்லூரி, கிருஷ்ணகிரி</a>, இணைப்பு: <a href="https://www.periyaruniversity.ac.in/" rel="noopener" target="_blank">பெரியார் பல்கலைக்கழகம்</a>, இந்தியா</li>
 </ol>
 </article>
 </div>
 <div class="activity-grid">
-<article class="activity-card"><h3>ஆராய்ச்சி வழிகாட்டல்</h3><p>முனைவர், முதுநிலை, இளங்கலை மற்றும் சர்வதேச பயிற்சி ஆராய்ச்சியாளர்களுக்கு வழிகாட்டல். அண்மையில் சரிபார்க்கப்பட்ட திட்டங்களில் DNA நானோப் பொருட்கள், நானோ துகள் வினையூக்கம் மற்றும் CO₂ மாற்றம் அடங்கும்.</p><a href="service.html">முழுமையான வழிகாட்டல் பதிவைப் பார்க்க →</a></article>
+<article class="activity-card"><h3>ஆராய்ச்சி வழிகாட்டல்</h3><p>முதன்மை உறுப்பினர்கள் மற்றும் முன்னாள் உறுப்பினர்கள், சர்வதேச ஆராய்ச்சி வருகையாளர்கள், மேலும் எரிசக்தி அறிவியல் பட்டமேற்படிப்பு பள்ளி (K-11) இணை வழிகாட்டல் மாணவர்கள்.</p><a href="members.html">உறுப்பினர்கள் மற்றும் வழிகாட்டல் →</a></article>
 <article class="activity-card"><h3>அறிவியல் சேவை</h3><p>நிறுவனக் குழுப் பணிகள், ஆய்விதழ் மதிப்பாய்வு மற்றும் வேதியியல்/நியூக்ளிக் அமில தொழில்முறை சங்க உறுப்பினர் பணிகள்.</p><a href="service.html">முழுமையான கல்விச் சேவை பதிவைப் பார்க்க →</a></article>
 <article class="activity-card"><h3>பொது அறிவியல் பங்களிப்பு</h3><p>அறிவியல் வகுப்புகள், ஆய்வக வருகைகள், மாநாட்டு ஏற்பாடு, அழைக்கப்பட்ட கல்வித் திட்டங்கள் மற்றும் திறந்த கற்பித்தல் வளங்கள்.</p><a href="service.html">முழுமையான சமூகப் பங்களிப்பு பதிவைப் பார்க்க →</a></article>
 </div>
@@ -969,13 +1000,13 @@ html[lang="ta"] :is(.research-tags span,.profile-links a,.button,.nav-links a,.c
 <div>
 <span class="eyebrow">தொடர்பு மற்றும் வாய்ப்புகள்</span>
 <h2><span class="contact-line">அடுத்த NanoBio பொருளை</span><span class="contact-line">உருவாக்குவோம்.</span></h2>
-<p class="contact-lede">நியூக்ளிக் அமில வேதியியல், DNA நானோ தொழில்நுட்பம், கரிம மற்றும் அகர நானோப் பொருட்கள், ஆற்றல் மாற்றம் மற்றும் CO₂ குறைப்பு தொடர்பான ஆராய்ச்சி கலந்துரையாடல்கள் மற்றும் கூட்டாண்மை தொடர்புகளை வரவேற்கிறோம்.</p>
+<p class="contact-lede">நியூக்ளிக் அமில வேதியியல், DNA நானோ தொழில்நுட்பம், கரிம மற்றும் கனிம நானோப்பொருட்கள், ஆற்றல் மாற்றம் மற்றும் CO₂ குறைப்பு தொடர்பான ஆராய்ச்சி கலந்துரையாடல்கள் மற்றும் கூட்டாண்மை தொடர்புகளை வரவேற்கிறோம்.</p>
 <div class="candidate-note"><strong>ஆராய்ச்சியில் இணைய விரும்புவோர்:</strong> முனைவர் மற்றும் முதுநிலை ஆராய்ச்சி தொடர்புகளை, குறிப்பாக வெளிப்புற உதவித்தொகைக்கு விண்ணப்பிக்கும் ஆராய்ச்சியாளர்களிடமிருந்து, வரவேற்கிறோம். தொடர்பு கொள்வதற்கு முன் பொருத்தமான நிதி வழிகாட்டுதல்களைப் பார்த்து, தெளிவான ஆராய்ச்சி யோசனையைச் சேர்க்கவும்.</div>
 </div>
 <div class="contact-details">
 <div class="contact-row"><span>மின்னஞ்சல்</span><a href="mailto:raji@iae.kyoto-u.ac.jp">raji@iae.kyoto-u.ac.jp</a></div>
 <div class="contact-row"><span>தொலைபேசி</span><a href="tel:+81774383556">+81 774 38 3556</a></div>
-<div class="contact-row"><span>இணைப்பு</span><p>கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம், கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம்</p></div>
+<div class="contact-row"><span>இணைப்பு</span><p><span class="org-line">கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம் (ICaNS)</span><span class="org-line">கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம் (IAE)</span><span class="org-line">கியோட்டோ பல்கலைக்கழகம்</span></p></div>
 <div class="contact-row"><span>முகவரி</span><p>M-576E, முதன்மைக் கட்டிடம், கோகஷோ, உஜி, கியோட்டோ 611-0011, ஜப்பான்</p></div>
 <div class="profile-links">
 <a href="https://scholar.google.com/citations?hl=en&amp;user=vxClbUAAAAAJ" rel="noopener" target="_blank">Google Scholar</a>

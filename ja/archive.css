@@ -87,3 +87,42 @@ html[lang="ja"] .summary span{font-weight:700;letter-spacing:0;text-transform:no
 html[lang="ja"] .feature-cover figcaption strong{font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;font-weight:700;line-height:1.5}
 html[lang="ja"] :is(.entry>a,.entry-actions a,.inline-links a,.pill,.navlinks a){font-weight:700}
 @media(max-width:720px){html[lang="ja"] .intro h1{font-size:clamp(1.72rem,7.4vw,2.38rem);line-height:1.36}html[lang="ja"] .intro h1.nowrap-title{font-size:clamp(1.58rem,6.5vw,2rem)}html[lang="ja"] .toolbar h2{font-size:clamp(1.46rem,6vw,1.85rem)}html[lang="ja"] .toolbar h2.nowrap-title{font-size:clamp(1.42rem,5.8vw,1.78rem)}html[lang="ja"] .year{font-size:clamp(1.34rem,5.6vw,1.68rem)}}
+
+
+/* v11 global visual-uniformity and wrapping revision */
+.nav{align-items:center;flex-wrap:wrap;padding:.55rem 0}
+.brand{font-size:.84rem;line-height:1.3;white-space:nowrap;flex:0 0 auto}
+.navlinks{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.62rem .85rem;min-width:0}
+.navlinks a{white-space:nowrap;line-height:1.35}
+.intro h1{font-size:clamp(2.8rem,5.7vw,5rem);line-height:1.02;max-width:100%}
+.toolbar h2{font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.08}
+.year{line-height:1.12}
+.institution-name{white-space:nowrap}
+@media(max-width:900px){.brand{white-space:normal}.navlinks{justify-content:flex-start}.institution-name{white-space:normal}}
+
+html[lang="ja"] body{font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;line-break:strict;word-break:normal}
+html[lang="ja"] :is(p,li,h1,h2,h3,.entry,.note,.summary,.feature-cover figcaption){line-break:strict;word-break:auto-phrase;text-wrap:pretty}
+html[lang="ja"] .brand{font-family:"Noto Sans CJK JP","Yu Gothic","Meiryo",sans-serif;font-size:.80rem;font-weight:750}
+html[lang="ja"] .navlinks{gap:.55rem .72rem}
+html[lang="ja"] .navlinks a{font-size:.81rem;font-weight:700}
+html[lang="ja"] .intro h1{font-size:clamp(1.95rem,3.55vw,3rem);line-height:1.36;font-weight:700;letter-spacing:.01em;word-break:auto-phrase;text-wrap:balance}
+html[lang="ja"] .toolbar h2{font-size:clamp(1.62rem,2.65vw,2.15rem);line-height:1.42;word-break:auto-phrase}
+html[lang="ja"] .year{font-size:clamp(1.45rem,2.25vw,1.82rem);line-height:1.42;word-break:auto-phrase}
+@media(max-width:720px){html[lang="ja"] .navlinks a{font-size:.79rem}html[lang="ja"] .brand{font-size:.76rem}}
+
+
+/* v11 final responsive polish */
+.entry>*{min-width:0}
+
+/* v12 members + navigation refinement */
+.member-subhead{font-size:clamp(1.45rem,2.5vw,2rem);margin:2.2rem 0 .7rem;line-height:1.25}
+.compact-members .entry{padding-top:1rem;padding-bottom:1rem}
+.compact-members .entry h3{margin-bottom:.25rem}
+.members-actions{margin-top:2rem}
+.k11-title{max-width:100%;text-wrap:balance}
+.navlinks a{white-space:nowrap}
+@media(max-width:980px){.navlinks{justify-content:flex-start}}
+html[lang="ta"] .k11-title{font-size:clamp(1.45rem,2.4vw,1.95rem);line-height:1.5}
+html[lang="ta"] .member-subhead{font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.5}
+html[lang="ja"] .k11-title{font-size:clamp(1.55rem,2.5vw,2.05rem);line-height:1.45;word-break:auto-phrase;text-wrap:balance}
+html[lang="ja"] .member-subhead{font-size:clamp(1.35rem,2.2vw,1.75rem);line-height:1.45;word-break:auto-phrase}

@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#081722">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#081722" name="theme-color"/>
 <title>NanoBio Materials | Choose language</title>
 <style>
 *{box-sizing:border-box}
@@ -18,32 +19,51 @@ body{margin:0;min-height:100vh;display:grid;place-items:center;padding:clamp(1re
 .choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}.choices a{display:flex;align-items:center;justify-content:center;min-height:52px;padding:.8rem .65rem;border:1px solid rgba(255,255,255,.22);border-radius:999px;color:#fff;text-decoration:none;font-weight:850;transition:transform .2s ease,border-color .2s ease,background .2s ease}.choices a:first-child{background:var(--cyan);color:var(--ink);border-color:var(--cyan)}.choices a:hover{transform:translateY(-2px);border-color:#fff}.choices a[lang=ta]{font-family:"Noto Sans Tamil","Nirmala UI",sans-serif}.choices a[lang=ja]{font-family:"Noto Sans CJK JP","Yu Gothic","Meiryo",sans-serif}
 @media(max-width:700px){.panel{padding:1.5rem}.selector-grid{grid-template-columns:1fr;text-align:center}.profile-wrap{margin-bottom:.4rem}.photo-frame{width:132px;border-radius:22px;box-shadow:10px 12px 0 rgba(24,198,200,.92)}.content{text-align:center}.affiliation{margin-left:auto;margin-right:auto}.title-translations{justify-content:center}h1{font-size:clamp(2.55rem,12vw,4rem)}}
 @media(max-width:520px){body{padding:.75rem}.panel{border-radius:22px;padding:1.25rem}.choices{grid-template-columns:1fr}.choices a{min-height:48px}.language-prompt{margin-top:1.35rem}.person{font-size:.98rem}.affiliation{font-size:.79rem}}
+
+
+/* v11 selector typography: equal visual weight across languages */
+.site-titles{display:grid;gap:.28rem;margin:0 0 .75rem}
+.site-title{margin:0;color:#fff;font-size:clamp(1.34rem,2.15vw,1.62rem);font-weight:800;line-height:1.35;letter-spacing:0}
+.site-title-en{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:clamp(1.38rem,2.2vw,1.66rem)}
+.site-title-en span{color:var(--amber)}
+.site-title-ta{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;font-size:clamp(1.30rem,2.05vw,1.55rem)}
+.site-title-ja{font-family:"Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;font-size:clamp(1.34rem,2.1vw,1.58rem)}
+@media(max-width:700px){.site-titles{justify-items:center}.site-title{max-width:100%;text-align:center}}
+
+
+/* v11 final responsive polish */
+.site-title{white-space:nowrap}
+@media(max-width:520px){.site-title-ta{font-size:clamp(.98rem,5vw,1.25rem)}}
 </style>
 </head>
 <body>
 <main class="panel">
-  <div class="selector-grid">
-    <div class="profile-wrap">
-      <div class="photo-frame"><img src="en/profile.webp" alt="Arivazhagan Rajendran"></div>
-    </div>
-    <div class="content">
-      <h1>NanoBio <span>Materials</span></h1>
-      <div class="title-translations" aria-label="Translated site title"><span class="ta" lang="ta">நானோ உயிரிப் பொருட்கள்</span><span aria-hidden="true">·</span><span class="ja" lang="ja">ナノバイオ材料</span></div>
-      <p class="person">Dr. Arivazhagan Rajendran, Ph.D.</p>
-      <p class="position">Junior Associate Professor</p>
-      <p class="affiliation">Integrated Research Center for Carbon Negative Science, Institute of Advanced Energy, Kyoto University</p>
-      <div class="language-prompt" aria-label="Choose your language">
-        <span class="ta" lang="ta">மொழியைத் தேர்ந்தெடுக்கவும்</span>
-        <span class="en" lang="en">Choose your language</span>
-        <span class="ja" lang="ja">言語を選択してください</span>
-      </div>
-      <div class="choices">
-        <a href="ta/index.html" lang="ta">தமிழ்</a>
-        <a href="en/index.html" lang="en">English</a>
-        <a href="ja/index.html" lang="ja">日本語</a>
-      </div>
-    </div>
-  </div>
+<div class="selector-grid">
+<div class="profile-wrap">
+<div class="photo-frame"><img alt="Arivazhagan Rajendran" src="en/profile.webp"/></div>
+</div>
+<div class="content">
+<div aria-label="NanoBio Materials in three languages" class="site-titles">
+<h1 class="site-title site-title-en" lang="en">NanoBio <span>Materials</span></h1>
+<div class="site-title site-title-ta" lang="ta">நானோ உயிரிப் பொருட்கள்</div>
+<div class="site-title site-title-ja" lang="ja">ナノバイオ材料</div>
+</div>
+
+<p class="person">Dr. Arivazhagan Rajendran, Ph.D.</p>
+<p class="position">Junior Associate Professor</p>
+<p class="affiliation">Integrated Research Center for Carbon Negative Science, Institute of Advanced Energy, Kyoto University</p>
+<div aria-label="Choose your language" class="language-prompt">
+<span class="ta" lang="ta">மொழியைத் தேர்ந்தெடுக்கவும்</span>
+<span class="en" lang="en">Choose your language</span>
+<span class="ja" lang="ja">言語を選択してください</span>
+</div>
+<div class="choices">
+<a href="ta/index.html" lang="ta">தமிழ்</a>
+<a href="en/index.html" lang="en">English</a>
+<a href="ja/index.html" lang="ja">日本語</a>
+</div>
+</div>
+</div>
 </main>
 </body>
 </html>

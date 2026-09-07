@@ -586,6 +586,32 @@
     }
   
 .language-switcher{position:fixed;z-index:250;right:1rem;bottom:1rem;display:flex;gap:.25rem;padding:.3rem;background:rgba(8,23,34,.92);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.language-switcher a{padding:.42rem .65rem;border-radius:999px;color:rgba(255,255,255,.72);font:700 .78rem/1.2 Inter,system-ui,sans-serif;text-decoration:none}.language-switcher a.active{background:#18c6c8;color:#081722}@media(max-width:560px){.language-switcher{right:.6rem;bottom:.6rem}.language-switcher a{padding:.4rem .52rem;font-size:.72rem}}
+
+
+/* v11 global visual-uniformity and institutional wrapping revision */
+.brand{font-size:.88rem;line-height:1.25;white-space:nowrap}
+.nav-links a{white-space:nowrap}
+.section-head{grid-template-columns:minmax(320px,.72fr) minmax(0,1.28fr);gap:clamp(2.5rem,5vw,4.8rem);align-items:end}
+.section-head h2{font-size:clamp(2.35rem,4.2vw,3.85rem);line-height:1.04;max-width:100%;overflow-wrap:normal}
+.publications .section-head{grid-template-columns:minmax(360px,.78fr) minmax(0,1.22fr)}
+.publications .section-head h2{font-size:clamp(2.35rem,4vw,3.65rem);white-space:nowrap}
+.org-line{display:block;white-space:nowrap;line-height:1.55}
+.institution-name{white-space:nowrap}
+.mission-prep{font-weight:800;opacity:.85}
+@media(max-width:1080px){.menu-toggle{display:grid;place-items:center}.nav-links{position:absolute;top:72px;left:1rem;right:1rem;display:none;padding:1rem;flex-direction:column;align-items:stretch;gap:.3rem;background:#0d2330;border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 50px rgba(0,0,0,.25)}.nav-links.open{display:flex}.nav-links a{padding:.65rem .5rem}.nav-links .nav-contact{text-align:center;margin-top:.4rem}}
+@media(max-width:900px){.section-head,.publications .section-head{grid-template-columns:1fr}.publications .section-head h2{white-space:normal}.institution-name{white-space:normal}}
+@media(max-width:640px){.org-line{white-space:normal;text-wrap:balance}.brand{font-size:.78rem;white-space:normal;max-width:calc(100% - 58px)}}
+
+html[lang="en"] .hero-person{font-size:clamp(1.55rem,2vw,2.15rem)}
+
+
+/* v11 final responsive polish */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:minmax(0,1fr)}
+  .hero-inner>*{min-width:0}
+  .section-head,.highlight-grid,.news-grid,.teaching-grid,.contact-inner,.profile-grid{grid-template-columns:minmax(0,1fr)}
+  .section-head>*,.highlight-grid>*,.news-grid>*,.teaching-grid>*,.contact-inner>*,.profile-grid>*{min-width:0}
+}
 </style>
 </head>
 <body>
@@ -593,10 +619,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
 <nav aria-label="Main navigation" class="nav-wrap">
-<a aria-label="Arivazhagan Rajendran, home" class="brand" href="index.html#top">
-<span class="brand-mark">AR</span>
-<span>Arivazhagan Rajendran</span>
-</a>
+<a aria-label="Dr. Arivazhagan Rajendran, home" class="brand" href="index.html#top">Dr. Arivazhagan Rajendran</a>
 <button aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button">☰</button>
 <div class="nav-links" id="nav-links">
 <a href="research.html">Research</a>
@@ -606,7 +629,7 @@
 <a href="highlights.html">Highlights</a>
 <a href="news.html">News</a>
 <a href="teaching.html">Teaching</a>
-<a href="academic.html">Academic Path</a>
+<a href="members.html">Members</a><a href="academic.html">Academic Path</a>
 <a class="nav-contact" href="#contact">Contact</a>
 </div>
 </nav>
@@ -617,10 +640,8 @@
 <div>
 <p class="eyebrow">Molecular precision · Functional materials · Sustainable futures</p>
 <h1>NanoBio <span>Materials</span></h1>
-<div aria-label="Research applications" class="hero-mission">
-<span>for</span><span class="mission-word health">Health</span><span class="mission-word energy">Energy</span><span class="mission-word environment">Environment</span>
-</div>
-<p class="hero-name"><strong class="hero-person">Dr. Arivazhagan Rajendran, Ph.D.</strong><span>Junior Associate Professor · Integrated Research Center for Carbon Negative Science, Institute of Advanced Energy, Kyoto University</span></p>
+<div aria-label="Research applications" class="hero-mission"><span class="mission-prep">for</span><span class="mission-word health">Health</span><span class="mission-word energy">Energy</span><span class="mission-word environment">Environment</span></div>
+<p class="hero-name"><strong class="hero-person">Dr. Arivazhagan Rajendran, Ph.D.</strong><span>Junior Associate Professor · Integrated Research Center for Carbon Negative Science (ICaNS), Institute of Advanced Energy (IAE), Kyoto University</span></p>
 <p class="hero-lede">Bridging nucleic-acid chemistry and DNA nanotechnology with organic, inorganic and hybrid nanomaterials to create functional systems for biomedical science, clean energy and CO₂ reduction.</p>
 <div class="hero-actions">
 <a class="button primary" href="research.html">Explore research <span class="arrow">→</span></a>
@@ -632,8 +653,8 @@
 <img alt="Dr. Arivazhagan Rajendran" height="430" src="profile.webp" width="454"/>
 </div>
 <div class="portrait-note">
-<strong>Integrated Research Center for Carbon Negative Science</strong>
-<span>Institute of Advanced Energy, Kyoto University · Uji, Japan</span>
+<strong>Integrated Research Center for Carbon Negative Science (ICaNS)</strong>
+<span>Institute of Advanced Energy (IAE), Kyoto University · Uji, Japan</span>
 </div>
 </div>
 </div>
@@ -642,7 +663,7 @@
 <div class="metric"><strong>49</strong><span>Publications</span></div>
 <div class="metric"><strong>3,386</strong><span>Google Scholar citations · 889 since 2021</span></div>
 <div class="metric"><strong>26 / 33</strong><span>h-index / i10-index<br/>Since 2021: 15 / 21</span></div>
-<div class="metric affiliation"><strong>Integrated Research Center for Carbon Negative Science</strong><span>Institute of Advanced Energy, Kyoto University</span></div>
+<div class="metric affiliation"><strong class="affiliation-title">Integrated Research Center for Carbon Negative Science (ICaNS)</strong><span>Institute of Advanced Energy (IAE), Kyoto University</span></div>
 </section>
 <section aria-labelledby="mission-title" class="section pillars">
 <div class="section-inner">
@@ -877,10 +898,10 @@
 <article class="academic-card">
 <h3>Complete academic path</h3>
 <ol class="career">
-<li><strong>February 2015–present</strong>Junior Associate Professor, <a href="https://icans.iae.kyoto-u.ac.jp/en/" rel="noopener" target="_blank">Integrated Research Center for Carbon Negative Science</a>, <a href="https://www.iae.kyoto-u.ac.jp/en" rel="noopener" target="_blank">Institute of Advanced Energy</a>, <a href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">Kyoto University</a></li>
-<li><strong>September 2013–January 2015</strong>Assistant Professor, <a href="https://www1.tara.tsukuba.ac.jp/en/" rel="noopener" target="_blank">TARA</a>, <a href="https://www.tsukuba.ac.jp/en/" rel="noopener" target="_blank">University of Tsukuba</a></li>
-<li><strong>January 2010–August 2013</strong>CREST and JSPS Postdoctoral Researcher in DNA nanotechnology, WPI-iCeMS and Department of Chemistry, <a href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">Kyoto University</a></li>
-<li><strong>October 2008–December 2009</strong>Postdoctoral Researcher in nucleic-acid chemistry, <a href="https://www.konan-u.ac.jp/english/center/fiber/" rel="noopener" target="_blank">FIBER</a>, <a href="https://www.konan-u.ac.jp/english/" rel="noopener" target="_blank">Konan University</a></li>
+<li><strong>February 2015–present</strong>Junior Associate Professor, <a class="institution-name" href="https://icans.iae.kyoto-u.ac.jp/en/" rel="noopener" target="_blank">Integrated Research Center for Carbon Negative Science (ICaNS)</a>, <a class="institution-name" href="https://www.iae.kyoto-u.ac.jp/en" rel="noopener" target="_blank">Institute of Advanced Energy (IAE)</a>, <a class="institution-name" href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">Kyoto University</a>, Japan</li>
+<li><strong>September 2013–January 2015</strong>Assistant Professor, <a class="institution-name" href="https://www1.tara.tsukuba.ac.jp/en/" rel="noopener" target="_blank">Life Science Center of TARA</a>, <a class="institution-name" href="https://www.tsukuba.ac.jp/en/" rel="noopener" target="_blank">University of Tsukuba</a>, Japan</li>
+<li><strong>January 2010–August 2013</strong>CREST and JSPS Postdoctoral Researcher in DNA nanotechnology, <a class="institution-name" href="https://www.kuchem.kyoto-u.ac.jp/" rel="noopener" target="_blank">Department of Chemistry</a>, <a class="institution-name" href="https://www.kyoto-u.ac.jp/en" rel="noopener" target="_blank">Kyoto University</a>, Japan</li>
+<li><strong>October 2008–December 2009</strong>Postdoctoral Researcher in nucleic-acid chemistry, <a class="institution-name" href="https://www.konan-u.ac.jp/english/center/fiber/" rel="noopener" target="_blank">FIBER</a>, <a class="institution-name" href="https://www.konan-u.ac.jp/english/" rel="noopener" target="_blank">Konan University</a>, Japan</li>
 <li><strong>October 2005–September 2008</strong>Ph.D. in Chemistry (Analytical Chemistry), <a href="https://www.chem.tohoku.ac.jp/english/" rel="noopener" target="_blank">Tohoku University</a>, Japan</li>
 <li><strong>January–September 2005</strong>Research student, <a href="https://clri.org/" rel="noopener" target="_blank">CSIR–Central Leather Research Institute</a>, India</li>
 <li><strong>September–December 2004</strong>Research student in computational chemistry, <a href="https://www.cec.mpg.de/en/institute/history" rel="noopener" target="_blank">Max Planck Institute for Bioinorganic Chemistry</a>, Germany</li>
@@ -891,7 +912,7 @@
 </article>
 </div>
 <div class="activity-grid">
-<article class="activity-card"><h3>Research mentoring</h3><p>Supervision and guidance of doctoral, master’s, undergraduate and international internship researchers. Verified recent projects include DNA nanomaterials, nanoparticle catalysis and CO₂ conversion.</p><a href="service.html">Complete mentoring record →</a></article>
+<article class="activity-card"><h3>Research mentoring</h3><p>Core members and alumni, international research visitors, and co-guided students in the Graduate School of Energy Science (K-11).</p><a href="members.html">Members &amp; mentoring →</a></article>
 <article class="activity-card"><h3>Scientific service</h3><p>Institute committee work, journal peer review and membership of professional chemistry and nucleic-acid societies.</p><a href="service.html">Complete service record →</a></article>
 <article class="activity-card"><h3>Public outreach</h3><p>Science classes, laboratory visits, conference organization, invited educational programmes and open teaching resources.</p><a href="service.html">Complete outreach record →</a></article>
 </div>
@@ -937,7 +958,7 @@
 <div class="contact-details">
 <div class="contact-row"><span>Email</span><a href="mailto:raji@iae.kyoto-u.ac.jp">raji@iae.kyoto-u.ac.jp</a></div>
 <div class="contact-row"><span>Telephone</span><a href="tel:+81774383556">+81 774 38 3556</a></div>
-<div class="contact-row"><span>Affiliation</span><p>Integrated Research Center for Carbon Negative Science, Institute of Advanced Energy, Kyoto University</p></div>
+<div class="contact-row"><span>Affiliation</span><p><span class="org-line">Integrated Research Center for Carbon Negative Science (ICaNS)</span><span class="org-line">Institute of Advanced Energy (IAE)</span><span class="org-line">Kyoto University</span></p></div>
 <div class="contact-row"><span>Address</span><p>M-576E, Main Building, Gokasho, Uji, Kyoto 611-0011, Japan</p></div>
 <div class="profile-links">
 <a href="https://scholar.google.com/citations?hl=en&amp;user=vxClbUAAAAAJ" rel="noopener" target="_blank">Google Scholar</a>
