@@ -151,3 +151,18 @@ html[lang="ja"] .intro h1,html[lang="ja"] .toolbar h2,html[lang="ja"] .year{word
 .program-box a:hover{text-decoration:underline;text-underline-offset:.18rem}
 .entry .date{min-width:0;overflow-wrap:anywhere}
 @media(min-width:721px){.entry{grid-template-columns:minmax(76px,auto) minmax(0,1fr) auto}}
+
+
+/* v17 teaching category boxes */
+.program-box.graduate{
+  background:rgba(24,198,200,.11)!important;
+  border:1px solid rgba(24,198,200,.28)!important;
+  border-left:5px solid var(--cyan)!important;
+}
+.program-box.undergraduate{
+  background:rgba(255,181,71,.14)!important;
+  border:1px solid rgba(255,181,71,.34)!important;
+  border-left:5px solid var(--amber)!important;
+}
+.program-box.graduate strong{background:rgba(24,198,200,.18)!important}
+.program-box.undergraduate strong{background:rgba(255,181,71,.23)!important}

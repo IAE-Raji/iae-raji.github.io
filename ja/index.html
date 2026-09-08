@@ -672,6 +672,41 @@ html[lang="ja"] .highlight-copy h3{word-break:auto-phrase;line-break:strict;over
 .portrait-note span{font-size:.78rem;line-height:1.45}
 @media(max-width:700px){.contact-row>a,.contact-row>p{font-size:.9rem}}
 
+
+/* v17 contact typography: cyan is reserved for contact labels/headings */
+.contact-row>span{
+  color:var(--cyan)!important;
+  font-size:.78rem!important;
+  line-height:1.3!important;
+  font-weight:850!important;
+  letter-spacing:.12em!important;
+  text-transform:uppercase!important;
+}
+.contact-row>a,.contact-row>p{
+  color:rgba(255,255,255,.90)!important;
+  font-size:.96rem!important;
+  line-height:1.55!important;
+  font-weight:600!important;
+}
+.contact-row p span,.contact-row .org-line{
+  color:inherit!important;
+  font-size:inherit!important;
+  line-height:inherit!important;
+  font-weight:inherit!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+}
+.contact-row>a:hover,.contact-row>a:focus-visible{
+  color:var(--white)!important;
+  text-decoration:underline;
+  text-underline-offset:.2rem;
+}
+.profile-links a{color:rgba(255,255,255,.90)!important}
+.profile-links a:hover,.profile-links a:focus-visible{color:var(--white)!important;border-color:var(--cyan)!important}
+@media(max-width:700px){
+  .contact-row>a,.contact-row>p{font-size:.92rem!important}
+}
+
 </style>
 </head>
 <body>
@@ -960,7 +995,7 @@ html[lang="ja"] .highlight-copy h3{word-break:auto-phrase;line-break:strict;over
 <ol class="career">
 <li><strong>2015年2月–現在</strong>講師、<a class="institution-name" href="https://icans.iae.kyoto-u.ac.jp/" rel="noopener" target="_blank">附属カーボンネガティブ・エネルギー研究センター（ICaNS）</a>、<a class="institution-name" href="https://www.iae.kyoto-u.ac.jp/" rel="noopener" target="_blank">京都大学エネルギー理工学研究所（IAE）</a>、<a class="institution-name" href="https://www.kyoto-u.ac.jp/ja" rel="noopener" target="_blank">京都大学</a>、日本</li>
 <li><strong>2013年9月–2015年1月</strong>助教、<a class="institution-name" href="https://www1.tara.tsukuba.ac.jp/" rel="noopener" target="_blank">生命領域学際研究センター（TARA）</a>、<a class="institution-name" href="https://www.tsukuba.ac.jp/" rel="noopener" target="_blank">筑波大学</a>、日本</li>
-<li><strong>2010年1月–2013年8月</strong>CREST・JSPS博士研究員、<a class="institution-name" href="https://www.kuchem.kyoto-u.ac.jp/" rel="noopener" target="_blank">京都大学大学院理学研究科 化学専攻</a>、日本</li>
+<li><strong>2010年1月–2013年8月</strong>CREST研究員・日本学術振興会（JSPS）特別研究員、<a class="institution-name" href="https://www.kuchem.kyoto-u.ac.jp/" rel="noopener" target="_blank">京都大学大学院理学研究科 化学専攻</a>、日本</li>
 <li><strong>2008年10月–2009年12月</strong>博士研究員、<a class="institution-name" href="https://www.konan-u.ac.jp/graduate/first/" rel="noopener" target="_blank">先端生命工学研究所（FIBER）</a>、<a class="institution-name" href="https://www.konan-u.ac.jp/" rel="noopener" target="_blank">甲南大学</a>、日本</li>
 <li><strong>2005年10月–2008年9月</strong>博士（化学・分析化学）、 <a href="https://www.chem.tohoku.ac.jp/" rel="noopener" target="_blank">東北大学</a>、日本</li>
 <li><strong>2005年1月–9月</strong>研究生、 <a href="https://clri.org/" rel="noopener" target="_blank">CSIR中央皮革研究所</a>、インド</li>
