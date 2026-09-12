@@ -164,3 +164,5 @@ html[lang="ja"] .intro h1,html[lang="ja"] .toolbar h2,html[lang="ja"] .year{word
 }
 .program-box.graduate strong{background:rgba(24,198,200,.18)!important}
 .program-box.undergraduate strong{background:rgba(255,181,71,.23)!important}
+
+sub{font-size:.72em;line-height:0;vertical-align:-0.28em}
