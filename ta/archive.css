@@ -166,3 +166,6 @@ html[lang="ja"] .intro h1,html[lang="ja"] .toolbar h2,html[lang="ja"] .year{word
 .program-box.undergraduate strong{background:rgba(255,181,71,.23)!important}
 
 sub{font-size:.72em;line-height:0;vertical-align:-0.28em}
+
+/* Let long Tamil headings wrap on tablet widths. */
+@media (min-width:721px) and (max-width:1100px){html[lang="ta"] .intro h1.nowrap-title,html[lang="ta"] .toolbar h2.nowrap-title,html[lang="ta"] .year.nowrap-title{white-space:normal;overflow-wrap:anywhere}}
