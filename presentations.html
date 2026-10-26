@@ -6,7 +6,7 @@
   <meta name="description" content="Conference presentations, invited lectures and scientific meetings of Prof. Arivazhagan Rajendran, Ph.D..">
   <title>Conference Presentations | Prof. Arivazhagan Rajendran, Ph.D.</title>
   <link rel="stylesheet" href="/archive.css">
-</head>
+<link href="name-layout.css?v=20261027" rel="stylesheet"/><script defer src="name-layout.js?v=20261027"></script></head>
 <body>
   <header class="topbar"><nav class="nav"><a class="brand" href="/">NanoBio <span>Materials</span></a><div class="navlinks"><a href="/research">Research</a><a href="/funding">Funding</a><a href="/publications">Publications</a><a href="/presentations">Presentations</a><a href="/highlights">Highlights</a><a href="/news">News</a><a href="/teaching">Teaching</a><a href="/academic">Academic Path</a><a href="/#contact">Contact</a></div></nav></header>
 
@@ -84,7 +84,7 @@
     <p class="empty" id="empty">No presentations match your search.</p>
   </div></main>
 
-  <footer><div class="wrap">© 2026 Prof. Arivazhagan Rajendran, Ph.D. · NanoBio Materials</div></footer>
+  <footer><div class="wrap">© 2026 <span class="nowrap-name">Prof. Arivazhagan Rajendran, Ph.D.</span> · NanoBio Materials</div></footer>
   <script>const search=document.querySelector('#search'),items=[...document.querySelectorAll('.entry')],years=[...document.querySelectorAll('.year')],empty=document.querySelector('#empty');search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let shown=0;items.forEach(item=>{const ok=!q||item.textContent.toLowerCase().includes(q);item.hidden=!ok;if(ok)shown++});years.forEach(y=>{let n=y.nextElementSibling;if(n?.classList.contains('list'))n.hidden=[...n.children].every(x=>x.hidden);y.hidden=n?.hidden??false});empty.style.display=shown?'none':'block'});</script>
 </body>
 </html>

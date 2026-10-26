@@ -1,0 +1,50 @@
+/* Shared name typography: keep the complete name, including its degree, together. */
+html[lang] .brand {
+  min-width: 0;
+  max-width: 100%;
+  font-size: .875rem;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: nowrap;
+}
+.nav-wrap > .brand { flex: 0 1 auto; }
+.nav-wrap > .menu-toggle { flex: 0 0 44px; }
+html[lang] .hero-name .hero-person {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  color: var(--white, #fff);
+  font-size: clamp(1.375rem, 2.2vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: nowrap;
+}
+/* Affiliation span rules must never reduce or recolour a nested name. */
+html[lang] .hero-name .hero-person .nowrap-name,
+html[lang] .brand .nowrap-name {
+  display: inline;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+html[lang] .nowrap-name, .person, .profile-person {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: nowrap;
+}
+html[lang] .nowrap-name { display: inline-block; max-width: 100%; }
+html[lang] .profile-person { font-size: 1.25rem; font-weight: 800; line-height: 1.5; }
+@media (max-width: 1080px) {
+  .nav-wrap { gap: .75rem; }
+  html[lang] .nav-wrap > .brand { max-width: calc(100% - 56px); }
+}
