@@ -169,3 +169,7 @@ sub{font-size:.72em;line-height:0;vertical-align:-0.28em}
 
 /* Let long Tamil headings wrap on tablet widths. */
 @media (min-width:721px) and (max-width:1100px){html[lang="ta"] .intro h1.nowrap-title,html[lang="ta"] .toolbar h2.nowrap-title,html[lang="ta"] .year.nowrap-title{white-space:normal;overflow-wrap:anywhere}}
+
+/* Keep the full Tamil academic name together at every viewport width. */
+html[lang="ta"] .nowrap-name{display:inline-block;white-space:nowrap;word-break:normal;max-width:none}
+html[lang="ta"] .brand{white-space:nowrap;max-width:100%;min-width:0}

@@ -713,14 +713,22 @@ html[lang="ta"] .org-line{font-size:clamp(.78rem,1.25vw,.96rem)}
     .path-affiliation-line { display: inline-block; white-space: nowrap; }
     @media (max-width: 700px) { .path-affiliation-line { white-space: normal; } }
 html[lang="ta"] .hero-person{white-space:normal;text-wrap:balance}
+
+html[lang="ta"] .nowrap-name{display:inline-block;white-space:nowrap;word-break:normal;max-width:none}
+html[lang="ta"] .brand{white-space:nowrap;min-width:0}
+html[lang="ta"] .menu-toggle{display:grid;place-items:center}
+html[lang="ta"] .nav-links{position:absolute;top:72px;left:1rem;right:1rem;display:none;padding:1rem;flex-direction:column;align-items:stretch;gap:.3rem;background:#0d2330;border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+html[lang="ta"] .nav-links.open{display:flex}
+html[lang="ta"] .nav-links a{padding:.65rem .5rem}
+html[lang="ta"] .nav-links .nav-contact{text-align:center;margin-top:.4rem}
 </style>
-</head>
+<script defer src="name-fit.js"></script></head>
 <body>
 <nav aria-label="மொழி" class="language-switcher"><a class="active" href="../ta/index.html" lang="ta">தமிழ்</a><a href="../en/index.html" lang="en">English</a><a href="../ja/index.html" lang="ja">日本語</a></nav>
 <a class="skip-link" href="#main">உள்ளடக்கத்திற்குச் செல்லவும்</a>
 <header class="site-header">
 <nav aria-label="முதன்மை வழிசெலுத்தல்" class="nav-wrap">
-<a aria-label="பேரா. அறிவழகன் இராசேந்திரன், Ph.D., முகப்பு" class="brand" href="index.html#top">பேரா. அறிவழகன் இராசேந்திரன், Ph.D.</a>
+<a aria-label="பேரா. அறிவழகன் இராசேந்திரன், Ph.D., முகப்பு" class="brand" href="index.html#top"><span class="nowrap-name">பேரா. அறிவழகன் இராசேந்திரன், Ph.D.</span></a>
 <button aria-controls="nav-links" aria-expanded="false" aria-label="வழிசெலுத்தலைத் திறக்கவும்" class="menu-toggle" type="button">☰</button>
 <div class="nav-links" id="nav-links">
 <a href="research.html">ஆராய்ச்சி</a>
@@ -742,7 +750,7 @@ html[lang="ta"] .hero-person{white-space:normal;text-wrap:balance}
 <p class="eyebrow">மூலக்கூறு துல்லியம் · செயல்பாட்டு பொருட்கள் · நிலைத்த எதிர்காலம்</p>
 <h1>நானோ உயிரிப் <span>பொருட்கள்</span></h1>
 <div aria-label="ஆராய்ச்சி பயன்பாடுகள்" class="hero-mission"><span class="mission-word health">ஆரோக்கியத்திற்காக</span><span class="mission-word energy">ஆற்றலுக்காக</span><span class="mission-word environment">சுற்றுச்சூழலுக்காக</span></div>
-<p class="hero-name"><strong class="hero-person">பேரா. அறிவழகன் இராசேந்திரன், Ph.D.</strong><span>இளநிலை இணைப் பேராசிரியர் · கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம் (ICaNS), கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம் (IAE), கியோட்டோ பல்கலைக்கழகம்</span></p>
+<p class="hero-name"><strong class="hero-person"><span class="nowrap-name">பேரா. அறிவழகன் இராசேந்திரன், Ph.D.</span></strong><span>இளநிலை இணைப் பேராசிரியர் · கார்பன் நெகட்டிவ் அறிவியலுக்கான ஒருங்கிணைந்த ஆராய்ச்சி மையம் (ICaNS), கியோட்டோ பல்கலைக்கழக மேம்பட்ட ஆற்றல் நிறுவனம் (IAE), கியோட்டோ பல்கலைக்கழகம்</span></p>
 <p class="hero-lede">நியூக்ளிக் அமில வேதியியல் மற்றும் DNA நானோ தொழில்நுட்பத்தை கரிம, கனிம மற்றும் கலப்பு நானோப் பொருட்களுடன் இணைத்து, உயிர்மருத்துவம், தூய ஆற்றல் மற்றும் CO<sub>2</sub> குறைப்பிற்கான செயல்பாட்டு அமைப்புகளை உருவாக்குகிறோம்.</p>
 <div class="hero-actions">
 <a class="button primary" href="research.html">ஆராய்ச்சியைப் பாருங்கள் <span class="arrow">→</span></a>
@@ -949,7 +957,7 @@ html[lang="ta"] .hero-person{white-space:normal;text-wrap:balance}
 <section class="section news" id="news">
 <div class="section-inner">
 <div class="section-head">
-<div><span class="kicker">புதுப்பிப்புகள்</span><h2 class="nowrap-title">அண்மைய செய்திகள்</h2></div>
+<div><span class="kicker">புதுப்பிப்புகள்</span><h2>செய்திகளும் வரவிருக்கும் நிகழ்வுகளும்</h2></div>
 <p>அண்மைய ஆராய்ச்சி, கூட்டாண்மை மற்றும் கல்விச் சாதனைகள். முழுமையான காலவரிசைப் பதிவு கீழே உள்ளது.</p>
 </div>
 <div aria-label="கியோட்டோ பல்கலைக்கழக ஆராய்ச்சி சிறப்பம்சங்கள்" class="institutional-news">
@@ -965,7 +973,7 @@ html[lang="ta"] .hero-person{white-space:normal;text-wrap:balance}
 </a>
 </div>
 <div class="news-grid">
-<ol class="news-list"><li><time>19 மே 2026</time><p>ஆய்வுக் கட்டுரை ஏற்றுக்கொள்ளப்பட்டது: <a href="https://doi.org/10.1021/acsanm.6c01451" rel="noopener" target="_blank"><em>ACS Applied Nano Materials</em></a>.</p></li><li><time>14 பிப்ரவரி 2026</time><p>ஆய்வுக் கட்டுரை ஏற்றுக்கொள்ளப்பட்டது: <a href="https://doi.org/10.1016/j.apmt.2026.103152" rel="noopener" target="_blank"><em>Applied Materials Today</em></a>.</p></li><li><time>29 ஜனவரி 2026</time><p>கியோட்டோ பல்கலைக்கழக உஜி வளாகத்தில் கியோட்டோ கோகா ஜூனியர் உயர்நிலைப் பள்ளி ஆய்வக வருகையில் பங்கேற்றார்.</p></li><li><time>16 ஜனவரி 2026</time><p>POSTECH-இலிருந்து மூன்று வருகை மாணவர்களை ஆராய்ச்சி கலந்துரையாடலுக்காக வரவேற்றார்.</p></li><li><time>24 நவம்பர் 2025</time><p>ஆய்வுக் கட்டுரை ஏற்றுக்கொள்ளப்பட்டது: <a href="https://doi.org/10.1016/j.molstruc.2025.144859" rel="noopener" target="_blank"><em>Journal of Molecular Structure</em></a>.</p></li><li><time>4–14 நவம்பர் 2025</time><p>Prof. Dinesh Rangappa மற்றும் Prof. Navya Rani Marilingaiah ஆகியோரை கூட்டு ஆராய்ச்சி கலந்துரையாடல்களுக்காக வரவேற்று நிறுவன உரைகளை நடத்தினார்.</p></li><li><time>அக்டோபர் 2025–மார்ச் 2026</time><p>Dr. Owokoniran Oluwatoyin Hannah உதவி தொழில்நுட்ப/ஆராய்ச்சி பணியாளராக பணியாற்றினார்.</p></li></ol>
+<ol class="news-list"><li><time>9 நவம்பர் 2026</time><p>“Engineering Active Sites for CO<sub>2</sub> Reduction” என்ற தலைப்பில் <a href="news.html">IAE–AMRC கூட்டு ஆய்வரங்கில்</a> உரை.</p></li><li><time>28 அக்டோபர்–3 நவம்பர் 2026</time><p>தொழில்–கல்வித்துறை கூட்டு ஆராய்ச்சி கலந்துரையாடல்களுக்காக <a href="https://www.kmu.edu.tw/index.php/en-gb/" rel="noopener" target="_blank">காவ்சியுங் மருத்துவப் பல்கலைக்கழகத்திற்கு</a> வருகை; 30 அக்டோபரில் சிறப்பு உரை.</p></li><li><time>19 மே 2026</time><p>ஆய்வுக் கட்டுரை ஏற்றுக்கொள்ளப்பட்டது: <a href="https://doi.org/10.1021/acsanm.6c01451" rel="noopener" target="_blank"><em>ACS Applied Nano Materials</em></a>.</p></li><li><time>14 பிப்ரவரி 2026</time><p>ஆய்வுக் கட்டுரை ஏற்றுக்கொள்ளப்பட்டது: <a href="https://doi.org/10.1016/j.apmt.2026.103152" rel="noopener" target="_blank"><em>Applied Materials Today</em></a>.</p></li><li><time>29 ஜனவரி 2026</time><p>கியோட்டோ பல்கலைக்கழக உஜி வளாகத்தில் கியோட்டோ கோகா ஜூனியர் உயர்நிலைப் பள்ளி ஆய்வக வருகையில் பங்கேற்றார்.</p></li><li><time>16 ஜனவரி 2026</time><p>POSTECH-இலிருந்து மூன்று வருகை மாணவர்களை ஆராய்ச்சி கலந்துரையாடலுக்காக வரவேற்றார்.</p></li><li><time>24 நவம்பர் 2025</time><p>ஆய்வுக் கட்டுரை ஏற்றுக்கொள்ளப்பட்டது: <a href="https://doi.org/10.1016/j.molstruc.2025.144859" rel="noopener" target="_blank"><em>Journal of Molecular Structure</em></a>.</p></li><li><time>4–14 நவம்பர் 2025</time><p>Prof. Dinesh Rangappa மற்றும் Prof. Navya Rani Marilingaiah ஆகியோரை கூட்டு ஆராய்ச்சி கலந்துரையாடல்களுக்காக வரவேற்று நிறுவன உரைகளை நடத்தினார்.</p></li><li><time>அக்டோபர் 2025–மார்ச் 2026</time><p>Dr. Owokoniran Oluwatoyin Hannah உதவி தொழில்நுட்ப/ஆராய்ச்சி பணியாளராக பணியாற்றினார்.</p></li></ol>
 </div>
 <a class="section-more" href="news.html">முழுமையான செய்திப் பட்டியலைப் பார்க்க →</a>
 </div>
@@ -1057,7 +1065,7 @@ html[lang="ta"] .hero-person{white-space:normal;text-wrap:balance}
 </section>
 </main>
 <footer>
-<div class="footer-inner"><span>© 2026 பேரா. அறிவழகன் இராசேந்திரன், Ph.D.</span><span>researchmap சரிபார்ப்பு: 5 செப்டம்பர் 2026 · Google Scholar மேற்கோள் எண்ணிக்கை புதுப்பிப்பு: 26 அக்டோபர் 2026; h-index மற்றும் i10-index புதுப்பிப்பு: 26 அக்டோபர் 2026.</span></div>
+<div class="footer-inner"><span>© 2026 <span class="nowrap-name">பேரா. அறிவழகன் இராசேந்திரன், Ph.D.</span></span><span>researchmap சரிபார்ப்பு: 5 செப்டம்பர் 2026 · Google Scholar மேற்கோள் எண்ணிக்கை புதுப்பிப்பு: 26 அக்டோபர் 2026; h-index மற்றும் i10-index புதுப்பிப்பு: 26 அக்டோபர் 2026.</span></div>
 </footer>
 <script>
     const menuButton = document.querySelector('.menu-toggle');
