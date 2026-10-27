@@ -189,3 +189,23 @@ sub{font-size:.72em;line-height:0;vertical-align:-0.28em}
     justify-content: flex-start;
   }
 }
+
+/* Deliberate date breaks keep long periods inside a consistent column. */
+.entry > .date .date-line { display: block; white-space: nowrap; }
+.members-timeline .entry {
+  grid-template-columns: 11.5rem minmax(0, 1fr);
+  column-gap: 1.25rem;
+  text-align: left;
+}
+.members-timeline .entry > .date {
+  grid-column: 1;
+  line-height: 1.6;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.members-timeline .entry > div { grid-column: 2; }
+@media (max-width: 760px) {
+  .members-timeline .entry { grid-template-columns: minmax(0, 1fr); row-gap: .55rem; }
+  .members-timeline .entry > .date,
+  .members-timeline .entry > div { grid-column: 1; }
+}
