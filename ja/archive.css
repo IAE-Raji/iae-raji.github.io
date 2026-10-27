@@ -168,3 +168,54 @@ html[lang="ja"] .intro h1,html[lang="ja"] .toolbar h2,html[lang="ja"] .year{word
 .program-box.undergraduate strong{background:rgba(255,181,71,.23)!important}
 
 sub{font-size:.72em;line-height:0;vertical-align:-0.28em}
+
+
+/* News timeline: identical columns keep every title and paragraph aligned. */
+#news-list .entry {
+  grid-template-columns: 11.5rem minmax(0, 1fr) 10rem;
+  column-gap: 1.25rem;
+  row-gap: .5rem;
+  text-align: left;
+}
+#news-list .entry > .date {
+  grid-column: 1;
+  grid-row: 1;
+  line-height: 1.6;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+#news-list .entry > div:not(.entry-actions) {
+  grid-column: 2;
+  grid-row: 1;
+}
+#news-list .entry > a,
+#news-list .entry > .entry-actions {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+  justify-self: end;
+}
+#news-list .entry h3,
+#news-list .entry p { text-align: left; }
+@media (min-width: 761px) and (max-width: 1000px) {
+  #news-list .entry { grid-template-columns: 10rem minmax(0, 1fr); }
+  #news-list .entry > a,
+  #news-list .entry > .entry-actions {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 760px) {
+  #news-list .entry { grid-template-columns: minmax(0, 1fr); row-gap: .55rem; }
+  #news-list .entry > .date { grid-column: 1; grid-row: 1; }
+  #news-list .entry > div:not(.entry-actions) { grid-column: 1; grid-row: 2; }
+  #news-list .entry > a,
+  #news-list .entry > .entry-actions {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+    justify-content: flex-start;
+  }
+}
